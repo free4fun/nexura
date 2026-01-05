@@ -10,7 +10,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-8 mb-16">
             <div className="text-center md:text-left">
-                <h3 className="font-serif text-2xl tracking-[0.2em] text-nexura-white mb-2">NEXURA</h3>
+                <img src="/logo.png" alt="Nexura Logo" className="h-10 w-auto mb-2 mx-auto md:mx-0" />
                 <span className="text-[10px] uppercase tracking-[0.3em] text-nexura-gold">Private Office</span>
             </div>
             

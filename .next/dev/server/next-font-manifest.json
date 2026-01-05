@@ -1,6 +1,18 @@
 {
   "app": {
+    "[project]/app/_not-found/page": [
+      "static/media/cc014fcb166cf364-s.p.e32417d2.woff2",
+      "static/media/a343f882a40d2cc9-s.p.71e1367e.woff2"
+    ],
     "[project]/app/dossier/page": [
+      "static/media/cc014fcb166cf364-s.p.e32417d2.woff2",
+      "static/media/a343f882a40d2cc9-s.p.71e1367e.woff2"
+    ],
+    "[project]/app/legal/ncnda/page": [
+      "static/media/cc014fcb166cf364-s.p.e32417d2.woff2",
+      "static/media/a343f882a40d2cc9-s.p.71e1367e.woff2"
+    ],
+    "[project]/app/legal/terms/page": [
       "static/media/cc014fcb166cf364-s.p.e32417d2.woff2",
       "static/media/a343f882a40d2cc9-s.p.71e1367e.woff2"
     ],

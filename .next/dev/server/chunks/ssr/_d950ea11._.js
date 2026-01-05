@@ -138,22 +138,33 @@ const Hero = ()=>{
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "flex flex-col items-center gap-4",
+                        className: "flex flex-col items-center gap-2 mt-8 group",
                         children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "h-16 w-[1px] bg-gradient-to-b from-nexura-gold to-transparent"
-                            }, void 0, false, {
-                                fileName: "[project]/components/LandingSections.tsx",
-                                lineNumber: 80,
-                                columnNumber: 12
-                            }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                 className: "text-[10px] uppercase tracking-[0.3em] text-nexura-gold/80 animate-pulse",
                                 children: "Scroll to Explore"
                             }, void 0, false, {
                                 fileName: "[project]/components/LandingSections.tsx",
+                                lineNumber: 80,
+                                columnNumber: 11
+                            }, ("TURBOPACK compile-time value", void 0)),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                className: "w-5 h-5 text-nexura-gold mt-1 animate-bounce group-hover:scale-110 transition-transform",
+                                fill: "none",
+                                stroke: "currentColor",
+                                strokeWidth: "2",
+                                viewBox: "0 0 24 24",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(ChevronDown, {
+                                    className: "w-5 h-5 text-nexura-gold mt-1 animate-bounce group-hover:scale-110 transition-transform"
+                                }, void 0, false, {
+                                    fileName: "[project]/components/LandingSections.tsx",
+                                    lineNumber: 82,
+                                    columnNumber: 13
+                                }, ("TURBOPACK compile-time value", void 0))
+                            }, void 0, false, {
+                                fileName: "[project]/components/LandingSections.tsx",
                                 lineNumber: 81,
-                                columnNumber: 12
+                                columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
@@ -191,7 +202,7 @@ const Philosophy = ()=>{
                                     children: "01. Filosofía"
                                 }, void 0, false, {
                                     fileName: "[project]/components/LandingSections.tsx",
-                                    lineNumber: 94,
+                                    lineNumber: 96,
                                     columnNumber: 17
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -199,20 +210,20 @@ const Philosophy = ()=>{
                                     children: "La Regla de Oro"
                                 }, void 0, false, {
                                     fileName: "[project]/components/LandingSections.tsx",
-                                    lineNumber: 95,
+                                    lineNumber: 97,
                                     columnNumber: 17
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "w-12 h-[2px] bg-nexura-gold mb-8"
                                 }, void 0, false, {
                                     fileName: "[project]/components/LandingSections.tsx",
-                                    lineNumber: 96,
+                                    lineNumber: 98,
                                     columnNumber: 17
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/LandingSections.tsx",
-                            lineNumber: 93,
+                            lineNumber: 95,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -221,18 +232,18 @@ const Philosophy = ()=>{
                                 children: '"No operamos en el mercado masivo. Nexura nace para resolver la asimetría de información y la parálisis operativa."'
                             }, void 0, false, {
                                 fileName: "[project]/components/LandingSections.tsx",
-                                lineNumber: 99,
+                                lineNumber: 101,
                                 columnNumber: 17
                             }, ("TURBOPACK compile-time value", void 0))
                         }, void 0, false, {
                             fileName: "[project]/components/LandingSections.tsx",
-                            lineNumber: 98,
+                            lineNumber: 100,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/LandingSections.tsx",
-                    lineNumber: 92,
+                    lineNumber: 94,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -245,7 +256,7 @@ const Philosophy = ()=>{
                                 strokeWidth: 1
                             }, void 0, false, {
                                 fileName: "[project]/components/LandingSections.tsx",
-                                lineNumber: 109,
+                                lineNumber: 111,
                                 columnNumber: 27
                             }, ("TURBOPACK compile-time value", void 0)),
                             desc: "Operaciones Off-Market fuera del radar público."
@@ -257,7 +268,7 @@ const Philosophy = ()=>{
                                 strokeWidth: 1
                             }, void 0, false, {
                                 fileName: "[project]/components/LandingSections.tsx",
-                                lineNumber: 114,
+                                lineNumber: 116,
                                 columnNumber: 27
                             }, ("TURBOPACK compile-time value", void 0)),
                             desc: "Minimizamos el esfuerzo operativo maximizando el retorno del activo."
@@ -269,7 +280,7 @@ const Philosophy = ()=>{
                                 strokeWidth: 1
                             }, void 0, false, {
                                 fileName: "[project]/components/LandingSections.tsx",
-                                lineNumber: 119,
+                                lineNumber: 121,
                                 columnNumber: 27
                             }, ("TURBOPACK compile-time value", void 0)),
                             desc: "Si hay un bloqueo legal, emocional o financiero, Nexura diseña la salida."
@@ -283,7 +294,7 @@ const Philosophy = ()=>{
                                     children: item.title
                                 }, void 0, false, {
                                     fileName: "[project]/components/LandingSections.tsx",
-                                    lineNumber: 125,
+                                    lineNumber: 127,
                                     columnNumber: 21
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -291,29 +302,29 @@ const Philosophy = ()=>{
                                     children: item.desc
                                 }, void 0, false, {
                                     fileName: "[project]/components/LandingSections.tsx",
-                                    lineNumber: 126,
+                                    lineNumber: 128,
                                     columnNumber: 21
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, idx, true, {
                             fileName: "[project]/components/LandingSections.tsx",
-                            lineNumber: 123,
+                            lineNumber: 125,
                             columnNumber: 17
                         }, ("TURBOPACK compile-time value", void 0)))
                 }, void 0, false, {
                     fileName: "[project]/components/LandingSections.tsx",
-                    lineNumber: 105,
+                    lineNumber: 107,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true, {
             fileName: "[project]/components/LandingSections.tsx",
-            lineNumber: 91,
+            lineNumber: 93,
             columnNumber: 7
         }, ("TURBOPACK compile-time value", void 0))
     }, void 0, false, {
         fileName: "[project]/components/LandingSections.tsx",
-        lineNumber: 90,
+        lineNumber: 92,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
@@ -327,7 +338,7 @@ const BusinessUnits = ()=>{
                 strokeWidth: 1
             }, void 0, false, {
                 fileName: "[project]/components/LandingSections.tsx",
-                lineNumber: 142,
+                lineNumber: 144,
                 columnNumber: 13
             }, ("TURBOPACK compile-time value", void 0))
         },
@@ -339,7 +350,7 @@ const BusinessUnits = ()=>{
                 strokeWidth: 1
             }, void 0, false, {
                 fileName: "[project]/components/LandingSections.tsx",
-                lineNumber: 147,
+                lineNumber: 149,
                 columnNumber: 13
             }, ("TURBOPACK compile-time value", void 0))
         },
@@ -351,7 +362,7 @@ const BusinessUnits = ()=>{
                 strokeWidth: 1
             }, void 0, false, {
                 fileName: "[project]/components/LandingSections.tsx",
-                lineNumber: 152,
+                lineNumber: 154,
                 columnNumber: 13
             }, ("TURBOPACK compile-time value", void 0))
         },
@@ -363,7 +374,7 @@ const BusinessUnits = ()=>{
                 strokeWidth: 1
             }, void 0, false, {
                 fileName: "[project]/components/LandingSections.tsx",
-                lineNumber: 157,
+                lineNumber: 159,
                 columnNumber: 13
             }, ("TURBOPACK compile-time value", void 0))
         }
@@ -382,7 +393,7 @@ const BusinessUnits = ()=>{
                             children: "02. Unidades"
                         }, void 0, false, {
                             fileName: "[project]/components/LandingSections.tsx",
-                            lineNumber: 165,
+                            lineNumber: 167,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -390,13 +401,13 @@ const BusinessUnits = ()=>{
                             children: "Divisiones de Estructuración"
                         }, void 0, false, {
                             fileName: "[project]/components/LandingSections.tsx",
-                            lineNumber: 166,
+                            lineNumber: 168,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/LandingSections.tsx",
-                    lineNumber: 164,
+                    lineNumber: 166,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -410,12 +421,12 @@ const BusinessUnits = ()=>{
                                         className: "text-nexura-gold"
                                     }, void 0, false, {
                                         fileName: "[project]/components/LandingSections.tsx",
-                                        lineNumber: 173,
+                                        lineNumber: 175,
                                         columnNumber: 17
                                     }, ("TURBOPACK compile-time value", void 0))
                                 }, void 0, false, {
                                     fileName: "[project]/components/LandingSections.tsx",
-                                    lineNumber: 172,
+                                    lineNumber: 174,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -423,7 +434,7 @@ const BusinessUnits = ()=>{
                                     children: unit.icon
                                 }, void 0, false, {
                                     fileName: "[project]/components/LandingSections.tsx",
-                                    lineNumber: 175,
+                                    lineNumber: 177,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -431,7 +442,7 @@ const BusinessUnits = ()=>{
                                     children: unit.title
                                 }, void 0, false, {
                                     fileName: "[project]/components/LandingSections.tsx",
-                                    lineNumber: 178,
+                                    lineNumber: 180,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -439,29 +450,29 @@ const BusinessUnits = ()=>{
                                     children: unit.description
                                 }, void 0, false, {
                                     fileName: "[project]/components/LandingSections.tsx",
-                                    lineNumber: 179,
+                                    lineNumber: 181,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, idx, true, {
                             fileName: "[project]/components/LandingSections.tsx",
-                            lineNumber: 171,
+                            lineNumber: 173,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0)))
                 }, void 0, false, {
                     fileName: "[project]/components/LandingSections.tsx",
-                    lineNumber: 169,
+                    lineNumber: 171,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true, {
             fileName: "[project]/components/LandingSections.tsx",
-            lineNumber: 163,
+            lineNumber: 165,
             columnNumber: 7
         }, ("TURBOPACK compile-time value", void 0))
     }, void 0, false, {
         fileName: "[project]/components/LandingSections.tsx",
-        lineNumber: 162,
+        lineNumber: 164,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
@@ -502,7 +513,7 @@ const Protocol = ()=>{
                             children: "03. El Protocolo"
                         }, void 0, false, {
                             fileName: "[project]/components/LandingSections.tsx",
-                            lineNumber: 202,
+                            lineNumber: 204,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -510,7 +521,7 @@ const Protocol = ()=>{
                             children: "Sistemática de Precisión"
                         }, void 0, false, {
                             fileName: "[project]/components/LandingSections.tsx",
-                            lineNumber: 203,
+                            lineNumber: 205,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -518,13 +529,13 @@ const Protocol = ()=>{
                             children: "Un proceso replicable para minimizar riesgos y garantizar resultados."
                         }, void 0, false, {
                             fileName: "[project]/components/LandingSections.tsx",
-                            lineNumber: 204,
+                            lineNumber: 206,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/LandingSections.tsx",
-                    lineNumber: 201,
+                    lineNumber: 203,
                     columnNumber: 10
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -534,7 +545,7 @@ const Protocol = ()=>{
                             className: "hidden md:block absolute top-1/2 left-0 w-full h-[1px] bg-nexura-white/10 -translate-y-1/2 z-0"
                         }, void 0, false, {
                             fileName: "[project]/components/LandingSections.tsx",
-                            lineNumber: 208,
+                            lineNumber: 210,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -549,12 +560,12 @@ const Protocol = ()=>{
                                                 children: step.number
                                             }, void 0, false, {
                                                 fileName: "[project]/components/LandingSections.tsx",
-                                                lineNumber: 213,
+                                                lineNumber: 215,
                                                 columnNumber: 19
                                             }, ("TURBOPACK compile-time value", void 0))
                                         }, void 0, false, {
                                             fileName: "[project]/components/LandingSections.tsx",
-                                            lineNumber: 212,
+                                            lineNumber: 214,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -565,7 +576,7 @@ const Protocol = ()=>{
                                                     children: step.title
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/LandingSections.tsx",
-                                                    lineNumber: 216,
+                                                    lineNumber: 218,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -573,41 +584,41 @@ const Protocol = ()=>{
                                                     children: step.description
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/LandingSections.tsx",
-                                                    lineNumber: 217,
+                                                    lineNumber: 219,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/LandingSections.tsx",
-                                            lineNumber: 215,
+                                            lineNumber: 217,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, idx, true, {
                                     fileName: "[project]/components/LandingSections.tsx",
-                                    lineNumber: 211,
+                                    lineNumber: 213,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0)))
                         }, void 0, false, {
                             fileName: "[project]/components/LandingSections.tsx",
-                            lineNumber: 209,
+                            lineNumber: 211,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/LandingSections.tsx",
-                    lineNumber: 207,
+                    lineNumber: 209,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true, {
             fileName: "[project]/components/LandingSections.tsx",
-            lineNumber: 200,
+            lineNumber: 202,
             columnNumber: 7
         }, ("TURBOPACK compile-time value", void 0))
     }, void 0, false, {
         fileName: "[project]/components/LandingSections.tsx",
-        lineNumber: 199,
+        lineNumber: 201,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
@@ -638,7 +649,7 @@ const Opportunities = ()=>{
                                     children: "04. Inventario Activo"
                                 }, void 0, false, {
                                     fileName: "[project]/components/LandingSections.tsx",
-                                    lineNumber: 246,
+                                    lineNumber: 248,
                                     columnNumber: 17
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -646,13 +657,13 @@ const Opportunities = ()=>{
                                     children: "Blind Teasers"
                                 }, void 0, false, {
                                     fileName: "[project]/components/LandingSections.tsx",
-                                    lineNumber: 247,
+                                    lineNumber: 249,
                                     columnNumber: 17
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/LandingSections.tsx",
-                            lineNumber: 245,
+                            lineNumber: 247,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -666,14 +677,14 @@ const Opportunities = ()=>{
                                             className: "text-nexura-gold"
                                         }, void 0, false, {
                                             fileName: "[project]/components/LandingSections.tsx",
-                                            lineNumber: 251,
+                                            lineNumber: 253,
                                             columnNumber: 21
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         "Confidential Data Room"
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/LandingSections.tsx",
-                                    lineNumber: 250,
+                                    lineNumber: 252,
                                     columnNumber: 18
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -686,12 +697,12 @@ const Opportunities = ()=>{
                                                 size: 16
                                             }, void 0, false, {
                                                 fileName: "[project]/components/LandingSections.tsx",
-                                                lineNumber: 256,
+                                                lineNumber: 258,
                                                 columnNumber: 25
                                             }, ("TURBOPACK compile-time value", void 0))
                                         }, void 0, false, {
                                             fileName: "[project]/components/LandingSections.tsx",
-                                            lineNumber: 255,
+                                            lineNumber: 257,
                                             columnNumber: 21
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -701,30 +712,30 @@ const Opportunities = ()=>{
                                                 size: 16
                                             }, void 0, false, {
                                                 fileName: "[project]/components/LandingSections.tsx",
-                                                lineNumber: 259,
+                                                lineNumber: 261,
                                                 columnNumber: 25
                                             }, ("TURBOPACK compile-time value", void 0))
                                         }, void 0, false, {
                                             fileName: "[project]/components/LandingSections.tsx",
-                                            lineNumber: 258,
+                                            lineNumber: 260,
                                             columnNumber: 21
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/LandingSections.tsx",
-                                    lineNumber: 254,
+                                    lineNumber: 256,
                                     columnNumber: 17
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/LandingSections.tsx",
-                            lineNumber: 249,
+                            lineNumber: 251,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/LandingSections.tsx",
-                    lineNumber: 244,
+                    lineNumber: 246,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -743,7 +754,7 @@ const Opportunities = ()=>{
                                                     children: item.category
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/LandingSections.tsx",
-                                                    lineNumber: 273,
+                                                    lineNumber: 275,
                                                     columnNumber: 29
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -754,13 +765,13 @@ const Opportunities = ()=>{
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/components/LandingSections.tsx",
-                                                    lineNumber: 274,
+                                                    lineNumber: 276,
                                                     columnNumber: 29
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/LandingSections.tsx",
-                                            lineNumber: 272,
+                                            lineNumber: 274,
                                             columnNumber: 25
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -768,7 +779,7 @@ const Opportunities = ()=>{
                                             children: item.title
                                         }, void 0, false, {
                                             fileName: "[project]/components/LandingSections.tsx",
-                                            lineNumber: 276,
+                                            lineNumber: 278,
                                             columnNumber: 25
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -781,7 +792,7 @@ const Opportunities = ()=>{
                                                             children: "Retorno (Est)"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/LandingSections.tsx",
-                                                            lineNumber: 281,
+                                                            lineNumber: 283,
                                                             columnNumber: 33
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -789,13 +800,13 @@ const Opportunities = ()=>{
                                                             children: item.roi
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/LandingSections.tsx",
-                                                            lineNumber: 282,
+                                                            lineNumber: 284,
                                                             columnNumber: 33
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/components/LandingSections.tsx",
-                                                    lineNumber: 280,
+                                                    lineNumber: 282,
                                                     columnNumber: 30
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -805,7 +816,7 @@ const Opportunities = ()=>{
                                                             children: "Horizonte"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/LandingSections.tsx",
-                                                            lineNumber: 285,
+                                                            lineNumber: 287,
                                                             columnNumber: 33
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -813,25 +824,25 @@ const Opportunities = ()=>{
                                                             children: item.timeline
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/LandingSections.tsx",
-                                                            lineNumber: 286,
+                                                            lineNumber: 288,
                                                             columnNumber: 33
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/components/LandingSections.tsx",
-                                                    lineNumber: 284,
+                                                    lineNumber: 286,
                                                     columnNumber: 30
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/LandingSections.tsx",
-                                            lineNumber: 279,
+                                            lineNumber: 281,
                                             columnNumber: 25
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/LandingSections.tsx",
-                                    lineNumber: 271,
+                                    lineNumber: 273,
                                     columnNumber: 21
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -843,24 +854,24 @@ const Opportunities = ()=>{
                                             size: 14
                                         }, void 0, false, {
                                             fileName: "[project]/components/LandingSections.tsx",
-                                            lineNumber: 294,
+                                            lineNumber: 296,
                                             columnNumber: 43
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/LandingSections.tsx",
-                                    lineNumber: 290,
+                                    lineNumber: 292,
                                     columnNumber: 21
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, idx, true, {
                             fileName: "[project]/components/LandingSections.tsx",
-                            lineNumber: 270,
+                            lineNumber: 272,
                             columnNumber: 17
                         }, ("TURBOPACK compile-time value", void 0)))
                 }, void 0, false, {
                     fileName: "[project]/components/LandingSections.tsx",
-                    lineNumber: 265,
+                    lineNumber: 267,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -871,7 +882,7 @@ const Opportunities = ()=>{
                             children: "Desliza para ver más"
                         }, void 0, false, {
                             fileName: "[project]/components/LandingSections.tsx",
-                            lineNumber: 301,
+                            lineNumber: 303,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$arrow$2d$right$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ArrowRight$3e$__["ArrowRight"], {
@@ -879,24 +890,24 @@ const Opportunities = ()=>{
                             className: "text-nexura-white/30 animate-pulse"
                         }, void 0, false, {
                             fileName: "[project]/components/LandingSections.tsx",
-                            lineNumber: 302,
+                            lineNumber: 304,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/LandingSections.tsx",
-                    lineNumber: 300,
+                    lineNumber: 302,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true, {
             fileName: "[project]/components/LandingSections.tsx",
-            lineNumber: 243,
+            lineNumber: 245,
             columnNumber: 7
         }, ("TURBOPACK compile-time value", void 0))
     }, void 0, false, {
         fileName: "[project]/components/LandingSections.tsx",
-        lineNumber: 242,
+        lineNumber: 244,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
@@ -909,7 +920,7 @@ const ContactForm = ()=>{
                 className: "absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-nexura-surface to-transparent pointer-events-none opacity-50"
             }, void 0, false, {
                 fileName: "[project]/components/LandingSections.tsx",
-                lineNumber: 312,
+                lineNumber: 314,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -923,7 +934,7 @@ const ContactForm = ()=>{
                                 children: "Solicitud de Evaluación"
                             }, void 0, false, {
                                 fileName: "[project]/components/LandingSections.tsx",
-                                lineNumber: 316,
+                                lineNumber: 318,
                                 columnNumber: 14
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -931,13 +942,13 @@ const ContactForm = ()=>{
                                 children: "Acceso restringido a inversores cualificados y propietarios de activos."
                             }, void 0, false, {
                                 fileName: "[project]/components/LandingSections.tsx",
-                                lineNumber: 317,
+                                lineNumber: 319,
                                 columnNumber: 14
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/LandingSections.tsx",
-                        lineNumber: 315,
+                        lineNumber: 317,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
@@ -954,7 +965,7 @@ const ContactForm = ()=>{
                                                 children: "Identidad"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/LandingSections.tsx",
-                                                lineNumber: 323,
+                                                lineNumber: 325,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -963,13 +974,13 @@ const ContactForm = ()=>{
                                                 className: "w-full bg-transparent border-b border-nexura-white/20 py-3 text-nexura-white placeholder-nexura-white/20 focus:outline-none focus:border-nexura-gold transition-colors font-light text-lg"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/LandingSections.tsx",
-                                                lineNumber: 324,
+                                                lineNumber: 326,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/LandingSections.tsx",
-                                        lineNumber: 322,
+                                        lineNumber: 324,
                                         columnNumber: 17
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -980,7 +991,7 @@ const ContactForm = ()=>{
                                                 children: "Perfil"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/LandingSections.tsx",
-                                                lineNumber: 327,
+                                                lineNumber: 329,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -991,7 +1002,7 @@ const ContactForm = ()=>{
                                                         children: "Tengo un activo bloqueado"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/LandingSections.tsx",
-                                                        lineNumber: 329,
+                                                        lineNumber: 331,
                                                         columnNumber: 25
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -999,25 +1010,25 @@ const ContactForm = ()=>{
                                                         children: "Soy inversor (Deal Flow)"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/LandingSections.tsx",
-                                                        lineNumber: 330,
+                                                        lineNumber: 332,
                                                         columnNumber: 25
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/LandingSections.tsx",
-                                                lineNumber: 328,
+                                                lineNumber: 330,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/LandingSections.tsx",
-                                        lineNumber: 326,
+                                        lineNumber: 328,
                                         columnNumber: 17
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/LandingSections.tsx",
-                                lineNumber: 321,
+                                lineNumber: 323,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1028,7 +1039,7 @@ const ContactForm = ()=>{
                                         children: "Capacidad Operativa (Estimada)"
                                     }, void 0, false, {
                                         fileName: "[project]/components/LandingSections.tsx",
-                                        lineNumber: 336,
+                                        lineNumber: 338,
                                         columnNumber: 17
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1046,7 +1057,7 @@ const ContactForm = ()=>{
                                                         className: "peer sr-only"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/LandingSections.tsx",
-                                                        lineNumber: 340,
+                                                        lineNumber: 342,
                                                         columnNumber: 29
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1054,24 +1065,24 @@ const ContactForm = ()=>{
                                                         children: opt
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/LandingSections.tsx",
-                                                        lineNumber: 341,
+                                                        lineNumber: 343,
                                                         columnNumber: 29
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, opt, true, {
                                                 fileName: "[project]/components/LandingSections.tsx",
-                                                lineNumber: 339,
+                                                lineNumber: 341,
                                                 columnNumber: 25
                                             }, ("TURBOPACK compile-time value", void 0)))
                                     }, void 0, false, {
                                         fileName: "[project]/components/LandingSections.tsx",
-                                        lineNumber: 337,
+                                        lineNumber: 339,
                                         columnNumber: 17
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/LandingSections.tsx",
-                                lineNumber: 335,
+                                lineNumber: 337,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1082,7 +1093,7 @@ const ContactForm = ()=>{
                                         children: "Contexto"
                                     }, void 0, false, {
                                         fileName: "[project]/components/LandingSections.tsx",
-                                        lineNumber: 350,
+                                        lineNumber: 352,
                                         columnNumber: 17
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
@@ -1091,13 +1102,13 @@ const ContactForm = ()=>{
                                         className: "w-full bg-transparent border-b border-nexura-white/20 py-3 text-nexura-white placeholder-nexura-white/20 focus:outline-none focus:border-nexura-gold transition-colors font-light text-lg resize-none"
                                     }, void 0, false, {
                                         fileName: "[project]/components/LandingSections.tsx",
-                                        lineNumber: 351,
+                                        lineNumber: 353,
                                         columnNumber: 17
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/LandingSections.tsx",
-                                lineNumber: 349,
+                                lineNumber: 351,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1109,7 +1120,7 @@ const ContactForm = ()=>{
                                         children: "Iniciar Protocolo"
                                     }, void 0, false, {
                                         fileName: "[project]/components/LandingSections.tsx",
-                                        lineNumber: 355,
+                                        lineNumber: 357,
                                         columnNumber: 17
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1120,38 +1131,38 @@ const ContactForm = ()=>{
                                                 className: "inline mr-1 mb-0.5"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/LandingSections.tsx",
-                                                lineNumber: 359,
+                                                lineNumber: 361,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             "Toda la información es tratada bajo estrictos acuerdos de confidencialidad."
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/LandingSections.tsx",
-                                        lineNumber: 358,
+                                        lineNumber: 360,
                                         columnNumber: 17
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/LandingSections.tsx",
-                                lineNumber: 354,
+                                lineNumber: 356,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/LandingSections.tsx",
-                        lineNumber: 320,
+                        lineNumber: 322,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/LandingSections.tsx",
-                lineNumber: 314,
+                lineNumber: 316,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/components/LandingSections.tsx",
-        lineNumber: 311,
+        lineNumber: 313,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };

@@ -2,7 +2,7 @@
 
 import React, { useRef } from 'react';
 import Link from 'next/link';
-import { Shield, TrendingUp, Key, Lock, ArrowUpRight, Building2, Briefcase, Gem, Fingerprint, ArrowRight, ArrowLeft, ChevronRight } from 'lucide-react';
+import { Shield, TrendingUp, Key, Lock, ArrowUpRight, Building2, Briefcase, Gem, Fingerprint, ArrowRight, ArrowLeft, ChevronRight, ChevronDown } from 'lucide-react';
 
 // Types
 interface VerticalProps {
@@ -75,11 +75,11 @@ export const Hero = () => {
         <p className="font-light text-nexura-white/80 max-w-2xl mx-auto text-sm md:text-lg leading-relaxed mb-10 tracking-wide">
           Estructuramos soluciones para activos complejos y conectamos capital con oportunidades de alta fricción. Sin burocracia, con precisión estratégica.
         </p>
-        
-        <div className="flex flex-col items-center gap-4">
-           <div className="h-16 w-[1px] bg-gradient-to-b from-nexura-gold to-transparent"></div>
-           <span className="text-[10px] uppercase tracking-[0.3em] text-nexura-gold/80 animate-pulse">Scroll to Explore</span>
-        </div>
+      </div>
+
+      {/* ChevronDown fijo abajo, centrado */}
+      <div className="absolute left-1/2 -translate-x-1/2 bottom-8 z-20 flex flex-col items-center group select-none">
+        <ChevronDown className="w-10 h-10 text-nexura-gold mt-1 animate-bounce group-hover:scale-110 transition-transform" />
       </div>
     </section>
   );

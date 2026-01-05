@@ -1,4 +1,7 @@
 {
+  "/_not-found/page": "app/_not-found/page.js",
   "/dossier/page": "app/dossier/page.js",
+  "/legal/ncnda/page": "app/legal/ncnda/page.js",
+  "/legal/terms/page": "app/legal/terms/page.js",
   "/page": "app/page.js"
 }
