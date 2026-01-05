@@ -1,6 +1,46 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@theme {
+  /* Colors */
+  --color-nexura-black: #050505;
+  --color-nexura-white: #F5F5F5;
+  --color-nexura-gold: #B8860B;
+  --color-nexura-gold-light: #D4AF37;
+  --color-nexura-dark: #0A0A0A;
+  --color-nexura-surface: #121212;
+
+  /* Fonts */
+  --font-serif: var(--font-cinzel), serif;
+  --font-sans: var(--font-manrope), sans-serif;
+
+    /* Background images */
+  --bg-gradient-radial: radial-gradient(var(--tw-gradient-stops));
+
+  /* Animations */
+  --animate-fade-in-up: fade-in-up 0.5s ease-out;
+  --animate-fade-in-down: fade-in-down 0.3s ease-out;
+
+  @keyframes fade-in-up {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade-in-down {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
 
 :root {
   --foreground-rgb: 245, 245, 245;
