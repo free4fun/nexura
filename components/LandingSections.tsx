@@ -227,79 +227,241 @@ export const Protocol = () => {
 
 export const Opportunities = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const [currentIndex, setCurrentIndex] = React.useState(0);
+  const [isDragging, setIsDragging] = React.useState(false);
+
+  const cardRefs = React.useRef<Array<HTMLDivElement | null>>([]);
+  const isAutoScrollingRef = React.useRef(false);
+  const autoScrollTokenRef = React.useRef(0);
+  const autoScrollRafRef = React.useRef<number | null>(null);
+
+  const scrollToCard = (index: number) => {
+    const container = scrollRef.current;
+    const card = cardRefs.current[index];
+    if (!container || !card) return;
+
+    // Desktop: si hay una animación en curso, la reemplazamos (clicks rápidos)
+    autoScrollTokenRef.current += 1;
+    const token = autoScrollTokenRef.current;
+    if (autoScrollRafRef.current != null) {
+      cancelAnimationFrame(autoScrollRafRef.current);
+      autoScrollRafRef.current = null;
+    }
+
+    // Centra la card dentro del contenedor (mejor UX que usar clientWidth fijo)
+    const rawTarget = card.offsetLeft - (container.clientWidth - card.clientWidth) / 2;
+    const maxScrollLeft = Math.max(0, container.scrollWidth - container.clientWidth);
+    const target = Math.max(0, Math.min(rawTarget, maxScrollLeft));
+    const start = container.scrollLeft;
+    const distance = target - start;
+    const duration = 700; // un poco más lento/suave
+    const startTime = performance.now();
+
+    isAutoScrollingRef.current = true;
+
+    const animateScroll = (currentTime: number) => {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const easeInOutCubic = progress < 0.5
+        ? 4 * progress * progress * progress
+        : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+
+      container.scrollLeft = start + distance * easeInOutCubic;
+
+      if (progress < 1) {
+        if (token !== autoScrollTokenRef.current) return;
+        autoScrollRafRef.current = requestAnimationFrame(animateScroll);
+        return;
+      }
+
+      // Asegura el valor final (evita clamping raro en extremos)
+      container.scrollLeft = target;
+      if (token === autoScrollTokenRef.current) {
+        isAutoScrollingRef.current = false;
+        autoScrollRafRef.current = null;
+      }
+    };
+
+    autoScrollRafRef.current = requestAnimationFrame(animateScroll);
+  };
 
   const scroll = (direction: 'left' | 'right') => {
-    if (scrollRef.current) {
-      const scrollAmount = 400;
-      scrollRef.current.scrollBy({
-        left: direction === 'left' ? -scrollAmount : scrollAmount,
-        behavior: 'smooth'
-      });
-    }
+    const newIndex = direction === 'left'
+      ? Math.max(0, currentIndex - 1)
+      : Math.min(OPPORTUNITIES.length - 1, currentIndex + 1);
+
+    setCurrentIndex(newIndex);
+    scrollToCard(newIndex);
   };
+
+  const scrollDesktop = (direction: 'left' | 'right') => {
+    setCurrentIndex((prev) => {
+      const next = direction === 'left'
+        ? Math.max(0, prev - 1)
+        : Math.min(OPPORTUNITIES.length - 1, prev + 1);
+      scrollToCard(next);
+      return next;
+    });
+  };
+
+  const scrollToIndex = (index: number) => {
+    setCurrentIndex(index);
+    scrollToCard(index);
+  };
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      if (!scrollRef.current || isDragging || isAutoScrollingRef.current) return;
+
+      const container = scrollRef.current;
+      const center = container.scrollLeft + container.clientWidth / 2;
+
+      let bestIndex = 0;
+      let bestDistance = Number.POSITIVE_INFINITY;
+
+      for (let i = 0; i < OPPORTUNITIES.length; i++) {
+        const card = cardRefs.current[i];
+        if (!card) continue;
+        const cardCenter = card.offsetLeft + card.clientWidth / 2;
+        const distance = Math.abs(cardCenter - center);
+        if (distance < bestDistance) {
+          bestDistance = distance;
+          bestIndex = i;
+        }
+      }
+
+      setCurrentIndex((prev) => (prev === bestIndex ? prev : bestIndex));
+    };
+
+    const scrollElement = scrollRef.current;
+    if (scrollElement) {
+      scrollElement.addEventListener('scroll', handleScroll, { passive: true });
+      return () => {
+        scrollElement.removeEventListener('scroll', handleScroll);
+      };
+    }
+  }, [isDragging]);
 
   return (
     <section id="oportunidades" className="py-24 bg-nexura-surface border-y border-nexura-white/5 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
-            <div>
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6">
+            <div className="flex-1">
                 <span className="text-nexura-gold text-xs font-bold tracking-[0.2em] uppercase mb-4 block">04. Inventario Activo</span>
-                <h2 className="font-serif text-3xl md:text-4xl text-nexura-white">Blind Teasers</h2>
+                <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-nexura-white mb-2">Blind Teasers</h2>
+                <p className="text-nexura-white/50 text-sm max-w-xl">Oportunidades exclusivas verificadas. Acceso restringido mediante NDA.</p>
             </div>
-            <div className="flex items-center gap-6">
-                 <div className="flex items-center gap-2 text-nexura-white/40 text-xs tracking-widest uppercase">
-                    <Lock size={14} className="text-nexura-gold" />
-                    Confidential Data Room
-                </div>
-                <div className="hidden md:flex gap-2">
-                    <button onClick={() => scroll('left')} className="w-10 h-10 border border-nexura-white/20 flex items-center justify-center hover:border-nexura-gold hover:text-nexura-gold transition-colors">
-                        <ArrowLeft size={16} />
-                    </button>
-                    <button onClick={() => scroll('right')} className="w-10 h-10 border border-nexura-white/20 flex items-center justify-center hover:border-nexura-gold hover:text-nexura-gold transition-colors">
-                        <ArrowRight size={16} />
-                    </button>
-                </div>
+            <div className="flex items-center gap-2 text-nexura-white/40 text-xs tracking-widest uppercase">
+                <Lock size={14} className="text-nexura-gold" />
+                <span className="hidden md:inline">Confidential Data Room</span>
+                <span className="md:hidden">Confidencial</span>
             </div>
         </div>
 
-        <div 
+        {/* Carrusel con navegación responsiva */}
+        <div className="relative md:px-14">
+          {/* Desktop: chevrons a los costados, centrados verticalmente */}
+          <button 
+            onClick={() => scrollDesktop('left')} 
+            disabled={currentIndex === 0}
+            className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 z-20 w-12 h-12 border border-nexura-white/20 text-nexura-white/70 items-center justify-center hover:border-nexura-gold hover:text-nexura-gold transition-all duration-300 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:border-nexura-white/20 disabled:hover:text-nexura-white group"
+            aria-label="Anterior"
+          >
+            <ArrowLeft size={18} className="group-hover:scale-110 group-hover:-rotate-12 transition-transform duration-300" />
+          </button>
+
+          <button 
+            onClick={() => scrollDesktop('right')} 
+            disabled={currentIndex === OPPORTUNITIES.length - 1}
+            className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 z-20 w-12 h-12 border border-nexura-white/20 text-nexura-white/70 items-center justify-center hover:border-nexura-gold hover:text-nexura-gold transition-all duration-300 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:border-nexura-white/20 disabled:hover:text-nexura-white group"
+            aria-label="Siguiente"
+          >
+            <ArrowRight size={18} className="group-hover:scale-110 group-hover:rotate-12 transition-transform duration-300" />
+          </button>
+
+          <div
             ref={scrollRef}
-            className="flex gap-8 overflow-x-auto pb-8 snap-x snap-mandatory scrollbar-hide -mx-6 px-6 md:mx-0 md:px-0"
-        >
-            {OPPORTUNITIES.map((item, idx) => (
-                <div key={idx} className="min-w-[85vw] md:min-w-[450px] snap-center bg-nexura-black border border-nexura-white/5 p-8 hover:border-nexura-gold/50 transition-colors duration-300 flex flex-col justify-between group">
+            onMouseDown={() => setIsDragging(true)}
+            onMouseUp={() => setIsDragging(false)}
+            onMouseLeave={() => setIsDragging(false)}
+            className="flex gap-6 md:gap-8 overflow-x-auto pb-8 snap-x snap-mandatory scrollbar-hide -mx-6 px-6 md:mx-0 md:px-0 cursor-grab active:cursor-grabbing"
+            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+          >
+              {OPPORTUNITIES.map((item, idx) => (
+                <div 
+                  key={idx} 
+                  ref={(el) => { cardRefs.current[idx] = el; }}
+                  className={`min-w-[90vw] sm:min-w-[85vw] md:min-w-[420px] lg:min-w-[480px] snap-center bg-nexura-black border p-6 md:p-10 transition-all duration-500 flex flex-col justify-between group md:hover:shadow-2xl md:hover:shadow-nexura-gold/5 md:hover:-translate-y-1 ${idx === currentIndex ? 'border-nexura-gold/40 blur-none md:blur-none' : 'border-nexura-white/5 blur-sm md:blur-sm'}`}
+                >
                     <div>
                         <div className="flex justify-between items-start mb-6">
-                            <span className="bg-nexura-gold/10 text-nexura-gold text-[10px] uppercase font-bold px-3 py-1 tracking-wider rounded">{item.category}</span>
-                            <span className="text-nexura-white/30 text-xs font-serif">REF: {item.ref}</span>
+                            <span className="bg-nexura-gold/10 text-nexura-gold text-[10px] uppercase font-bold px-3 py-1.5 tracking-wider border border-nexura-gold/20">{item.category}</span>
+                            <span className="text-nexura-white/30 text-xs font-mono">REF: {item.ref}</span>
                         </div>
-                        <h3 className="text-xl text-nexura-white mb-6 font-serif leading-snug">
+                        <h3 className="text-xl md:text-2xl text-nexura-white mb-6 font-serif leading-snug group-hover:text-nexura-gold/90 transition-colors duration-300">
                             {item.title}
                         </h3>
-                        <div className="flex gap-6 mb-8 border-t border-nexura-white/10 pt-4">
+                        <div className="grid grid-cols-2 gap-6 mb-8 border-t border-nexura-white/10 pt-6">
                              <div>
-                                <span className="block text-[10px] text-nexura-white/40 uppercase tracking-wider mb-1">Retorno (Est)</span>
-                                <span className="text-nexura-gold text-lg font-serif">{item.roi}</span>
+                                <span className="block text-[10px] text-nexura-white/40 uppercase tracking-wider mb-2">Retorno (Est)</span>
+                                <span className="text-nexura-gold text-2xl font-serif">{item.roi}</span>
                              </div>
                              <div>
-                                <span className="block text-[10px] text-nexura-white/40 uppercase tracking-wider mb-1">Horizonte</span>
-                                <span className="text-nexura-white text-lg font-serif">{item.timeline}</span>
+                                <span className="block text-[10px] text-nexura-white/40 uppercase tracking-wider mb-2">Horizonte</span>
+                                <span className="text-nexura-white text-2xl font-serif">{item.timeline}</span>
                              </div>
                         </div>
                     </div>
                     <Link 
                       href={`/dossier?ref=${item.ref}`}
-                      className="w-full border border-nexura-white/20 text-nexura-white text-xs uppercase tracking-widest py-4 hover:bg-nexura-gold hover:border-nexura-gold hover:text-nexura-black transition-all duration-300 flex items-center justify-center gap-2"
+                      className="w-full border-2 border-nexura-white/20 text-nexura-white text-xs uppercase tracking-widest py-4 hover:bg-nexura-gold hover:border-nexura-gold hover:text-nexura-black transition-all duration-300 flex items-center justify-center gap-2 group-hover:border-nexura-gold/50 font-semibold"
                     >
-                        Solicitar Dossier <ChevronRight size={14} />
+                        Solicitar Dossier <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />
                     </Link>
                 </div>
-            ))}
+              ))}
+          </div>
+        </div>
+
+        {/* Botones de navegación en mobile */}
+        <div className="flex md:hidden justify-center items-center gap-4 mt-8">
+          <button 
+            onClick={() => scroll('left')} 
+            disabled={currentIndex === 0}
+            className="w-10 h-10 border border-nexura-white/20 flex items-center justify-center hover:border-nexura-gold hover:text-nexura-gold transition-all duration-300 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:border-nexura-white/20 disabled:hover:text-nexura-white group"
+          >
+              <ArrowLeft size={16} className="group-hover:scale-110 group-hover:-rotate-12 transition-transform duration-300" />
+          </button>
+          <button 
+            onClick={() => scroll('right')} 
+            disabled={currentIndex === OPPORTUNITIES.length - 1}
+            className="w-10 h-10 border border-nexura-white/20 flex items-center justify-center hover:border-nexura-gold hover:text-nexura-gold transition-all duration-300 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:border-nexura-white/20 disabled:hover:text-nexura-white group"
+          >
+              <ArrowRight size={16} className="group-hover:scale-110 group-hover:rotate-12 transition-transform duration-300" />
+          </button>
         </div>
         
-        <div className="md:hidden flex justify-center mt-4 gap-2">
-            <span className="text-[10px] text-nexura-white/30 uppercase tracking-widest">Desliza para ver más</span>
-            <ArrowRight size={12} className="text-nexura-white/30 animate-pulse" />
+        {/* Indicadores de progreso */}
+        <div className="flex justify-center items-center mt-8 gap-3">
+          {OPPORTUNITIES.map((_, idx) => (
+            <button
+              key={idx}
+              onClick={() => scrollToIndex(idx)}
+              className={`transition-all duration-300 ${
+                idx === currentIndex 
+                  ? 'w-12 h-1.5 bg-nexura-gold' 
+                  : 'w-8 h-1.5 bg-nexura-white/20 hover:bg-nexura-white/40'
+              }`}
+              aria-label={`Ir a oportunidad ${idx + 1}`}
+            />
+          ))}
+        </div>
+
+        {/* Contador */}
+        <div className="flex justify-center items-center mt-6 gap-2">
+          <span className="text-nexura-gold font-serif text-lg">{String(currentIndex + 1).padStart(2, '0')}</span>
+          <span className="text-nexura-white/30 text-sm">/</span>
+          <span className="text-nexura-white/30 font-serif text-lg">{String(OPPORTUNITIES.length).padStart(2, '0')}</span>
         </div>
       </div>
     </section>

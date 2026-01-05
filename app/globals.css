@@ -18,6 +18,7 @@
   /* Animations */
   --animate-fade-in-up: fade-in-up 0.5s ease-out;
   --animate-fade-in-down: fade-in-down 0.3s ease-out;
+  --animate-card-swap-mobile: card-swap-mobile 260ms ease-out;
 
   @keyframes fade-in-up {
     0% {
@@ -38,6 +39,17 @@
     100% {
       opacity: 1;
       transform: translateY(0);
+    }
+  }
+
+  @keyframes card-swap-mobile {
+    0% {
+      opacity: 0.92;
+      transform: scale(0.995);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
     }
   }
 }
