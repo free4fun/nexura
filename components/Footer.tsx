@@ -3,8 +3,11 @@
 import React from 'react';
 import Link from 'next/link';
 import { CheckCircle2 } from 'lucide-react';
+import { useAuth } from '@/context/AuthContext';
 
 export default function Footer() {
+    const { isLoggedIn } = useAuth();
+
   return (
     <footer className="bg-nexura-black border-t border-nexura-white/10 pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-6">
@@ -12,6 +15,14 @@ export default function Footer() {
             <div className="text-center md:text-left">
                 <img src="/logo.png" alt="Nexura Logo" className="h-10 w-auto mb-2 mx-auto md:mx-0" />
                 <span className="text-[10px] uppercase tracking-[0.3em] text-nexura-gold">Private Office</span>
+                                <div className="mt-5">
+                                    <Link
+                                        href={isLoggedIn ? '/dashboard' : '/?login=1'}
+                                        className="inline-flex items-center justify-center border border-nexura-gold/30 text-nexura-gold px-4 py-2 text-[10px] uppercase tracking-widest hover:border-nexura-gold hover:bg-nexura-gold/10 transition-colors"
+                                    >
+                                        Acceso Privado
+                                    </Link>
+                                </div>
             </div>
             
             <div className="flex flex-col md:flex-row gap-8 md:gap-16 text-center md:text-right">

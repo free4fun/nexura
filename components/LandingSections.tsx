@@ -2,7 +2,7 @@
 
 import React, { useRef } from 'react';
 import Link from 'next/link';
-import { Shield, TrendingUp, Key, Lock, ArrowUpRight, Building2, Briefcase, Gem, Fingerprint, ArrowRight, ArrowLeft, ChevronRight, ChevronDown } from 'lucide-react';
+import { Shield, TrendingUp, Key, Lock, ArrowUpRight, Building2, Briefcase, Gem, Fingerprint, ArrowRight, ArrowLeft, ChevronRight, ChevronDown, Search, Settings2, Network } from 'lucide-react';
 
 // Types
 interface VerticalProps {
@@ -11,9 +11,9 @@ interface VerticalProps {
   icon: React.ReactNode;
 }
 interface StepProps {
-  number: string;
   title: string;
   description: string;
+  icon: React.ReactNode;
 }
 
 // Data
@@ -57,7 +57,7 @@ const OPPORTUNITIES = [
 
 export const Hero = () => {
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden">
+    <section id="hero" className="relative h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         <img 
           src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop" 
@@ -78,7 +78,7 @@ export const Hero = () => {
       </div>
 
       {/* ChevronDown fijo abajo, centrado */}
-      <div className="absolute left-1/2 -translate-x-1/2 bottom-8 z-20 flex flex-col items-center group select-none">
+      <div className="absolute left-1/2 -translate-x-1/2 bottom-15 z-20 flex flex-col items-center group select-none">
         <ChevronDown className="w-10 h-10 text-nexura-gold mt-1 animate-bounce group-hover:scale-110 transition-transform" />
       </div>
     </section>
@@ -189,10 +189,10 @@ export const BusinessUnits = () => {
 
 export const Protocol = () => {
   const steps: StepProps[] = [
-    { number: "01", title: "Auditoría de Fricción", description: "Analizamos por qué el activo está estancado." },
-    { number: "02", title: "Ingeniería de la Operación", description: "Limpiamos la estructura legal y financiera para hacerla atractiva." },
-    { number: "03", title: "Sourcing Privado", description: "Activamos nuestra red de contactos y nodos de poder sin anuncios públicos." },
-    { number: "04", title: "Captura de Valor", description: "Cierre de la transacción y transferencia de activos." },
+    { title: "Auditoría de Fricción", description: "Analizamos por qué el activo está estancado.", icon: <Search size={18} strokeWidth={1.5} /> },
+    { title: "Ingeniería de la Operación", description: "Limpiamos la estructura legal y financiera para hacerla atractiva.", icon: <Settings2 size={18} strokeWidth={1.5} /> },
+    { title: "Sourcing Privado", description: "Activamos nuestra red de contactos y nodos de poder sin anuncios públicos.", icon: <Network size={18} strokeWidth={1.5} /> },
+    { title: "Captura de Valor", description: "Cierre de la transacción y transferencia de activos.", icon: <TrendingUp size={18} strokeWidth={1.5} /> },
   ];
 
   return (
@@ -209,8 +209,13 @@ export const Protocol = () => {
           <div className="grid md:grid-cols-4 gap-8 relative z-10">
             {steps.map((step, idx) => (
               <div key={idx} className="group relative">
-                <div className="w-12 h-12 bg-nexura-black border border-nexura-white/20 text-nexura-white flex items-center justify-center rounded-full mx-auto mb-6 group-hover:border-nexura-gold group-hover:text-nexura-gold transition-all duration-300 relative z-10">
-                  <span className="font-serif text-sm">{step.number}</span>
+                {idx !== steps.length - 1 && (
+                  <div className="hidden md:block absolute top-[22px] -right-6 z-0 text-nexura-gold/40">
+                    <ArrowRight size={18} />
+                  </div>
+                )}
+                <div className="w-12 h-12 bg-nexura-gold/10 border border-nexura-gold/25 text-nexura-gold flex items-center justify-center rounded-full mx-auto mb-6 group-hover:border-nexura-gold group-hover:text-nexura-gold transition-all duration-300 relative z-10">
+                  {step.icon}
                 </div>
                 <div className="text-center px-4">
                   <h3 className="text-nexura-white font-serif text-lg mb-3">{step.title}</h3>

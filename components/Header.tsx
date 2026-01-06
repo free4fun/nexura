@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { Menu, X, User, LogOut, Lock } from 'lucide-react';
 import { useAuth } from '@/context/AuthContext';
 
@@ -58,6 +58,8 @@ export default function Header() {
   const { isLoggedIn, logout } = useAuth();
   const pathname = usePathname();
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const handledLoginParamRef = React.useRef(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -67,11 +69,24 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (handledLoginParamRef.current) return;
+    if (searchParams.get('login') === '1') {
+      handledLoginParamRef.current = true;
+      if (isLoggedIn) {
+        router.replace('/dashboard');
+        return;
+      }
+      setIsLoginOpen(true);
+      router.replace('/');
+    }
+  }, [searchParams, router, isLoggedIn]);
+
   const navLinks = [
-    { name: '01. Filosofía', href: '/#filosofia' },
-    { name: '02. Unidades', href: '/#unidades' },
-    { name: '03. Protocolo', href: '/#protocolo' },
-    { name: '04. Oportunidades', href: '/#oportunidades' },
+    { name: 'Filosofía', href: '/#filosofia' },
+    { name: 'Unidades', href: '/#unidades' },
+    { name: 'Protocolo', href: '/#protocolo' },
+    { name: 'Oportunidades', href: '/#oportunidades' },
   ];
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -88,14 +103,18 @@ export default function Header() {
 
   return (
     <>
-      <header className={`fixed w-full z-50 transition-all duration-500 ${isScrolled || pathname !== '/' ? 'bg-nexura-black/95 backdrop-blur-md py-4' : 'bg-transparent py-6'}`}>
+      <header className={`fixed w-full z-50 transition-all duration-500 ${isScrolled || pathname !== '/' ? 'bg-nexura-black/95 backdrop-blur-md py-4' : 'bg-transparent py-4'}`}>
         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-          <Link href="/" className="font-serif text-2xl tracking-[0.2em] text-nexura-white hover:text-nexura-gold transition-colors duration-300">
+          <a
+            href="/#hero"
+            onClick={(e) => handleNavClick(e, '/#hero')}
+            className="font-serif text-2xl tracking-[0.2em] text-nexura-white hover:text-nexura-gold transition-colors duration-300"
+          >
             <img src="/logo.png" alt="Nexura Logo" className="h-10 w-auto" />
-          </Link>
+          </a>
 
           <nav className="hidden md:flex items-center gap-8">
-            {!isLoggedIn && navLinks.map((link) => (
+            {navLinks.map((link) => (
               <a 
                 key={link.name} 
                 href={link.href}
@@ -136,8 +155,14 @@ export default function Header() {
 
         {isMenuOpen && (
           <div className="absolute top-full left-0 w-full bg-nexura-black border-b border-nexura-white/10 md:hidden flex flex-col p-6 gap-6 shadow-2xl animate-fade-in-down">
-            <Link href="/" onClick={() => setIsMenuOpen(false)} className="text-left text-sm uppercase tracking-widest text-nexura-white/80">Inicio</Link>
-            {!isLoggedIn && navLinks.map((link) => (
+            <a
+              href="/#hero"
+              onClick={(e) => handleNavClick(e, '/#hero')}
+              className="text-left text-sm uppercase tracking-widest text-nexura-white/80"
+            >
+              Inicio
+            </a>
+            {navLinks.map((link) => (
               <a key={link.name} href={link.href} onClick={(e) => handleNavClick(e, link.href)} className="text-left text-sm uppercase tracking-widest text-nexura-white/80">
                 {link.name}
               </a>
