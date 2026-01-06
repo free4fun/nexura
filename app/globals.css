@@ -8,6 +8,10 @@
   --color-nexura-dark: #0A0A0A;
   --color-nexura-surface: #121212;
 
+  /* Brand */
+  --color-linkedin: #0A66C2;
+  --color-substack: #FF6719;
+
   /* Fonts */
   --font-serif: var(--font-cinzel), serif;
   --font-sans: var(--font-manrope), sans-serif;

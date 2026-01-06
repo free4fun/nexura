@@ -86,11 +86,11 @@ export const Hero = () => {
     <section id="hero" className="relative h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         <img 
-          src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop" 
+          src="/background.webp" 
           alt="Abstract Architecture" 
           className="w-full h-full object-cover opacity-40 grayscale"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-nexura-black/60 via-nexura-black/40 to-nexura-black"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-nexura-black/10 via-nexura-black/30 to-nexura-black"></div>
       </div>
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
@@ -231,7 +231,6 @@ export const Protocol = () => {
         </div>
 
         <div className="relative mt-20">
-          <div className="hidden md:block absolute top-1/2 left-0 w-full h-[1px] bg-nexura-white/10 -translate-y-1/2 z-0"></div>
           <div className="grid md:grid-cols-4 gap-8 relative z-10">
             {steps.map((step, idx) => (
               <div key={idx} className="group relative">
@@ -245,6 +244,7 @@ export const Protocol = () => {
                 </div>
                 <div className="text-center px-4">
                   <h3 className="text-nexura-white font-serif text-lg mb-3">{step.title}</h3>
+                  <div className="w-12 h-[1px] bg-nexura-white/10 mx-auto mb-4"></div>
                   <p className="text-xs text-nexura-white/50 leading-relaxed uppercase tracking-wider">{step.description}</p>
                 </div>
               </div>
