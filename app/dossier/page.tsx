@@ -2,7 +2,7 @@
 
 import React, { Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
-import { Lock } from 'lucide-react';
+import { LuLock as Lock } from 'react-icons/lu';
 
 function DossierContent() {
   const searchParams = useSearchParams();

@@ -1,7 +1,13 @@
 'use client';
 
 import React from 'react';
-import { Search, FileCheck, TrendingUp, FileText, Download } from 'lucide-react';
+import {
+  LuSearch as Search,
+  LuFileCheck as FileCheck,
+  LuTrendingUp as TrendingUp,
+  LuFileText as FileText,
+  LuDownload as Download,
+} from 'react-icons/lu';
 import { useAuth } from '@/context/AuthContext';
 import { useRouter } from 'next/navigation';
 

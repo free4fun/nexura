@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
-import { Menu, X, User, LogOut, Lock } from 'lucide-react';
+import { LuMenu, LuX, LuUser, LuLogOut, LuLock } from 'react-icons/lu';
 import { useAuth } from '@/context/AuthContext';
 
 const LoginModal = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) => {
@@ -22,11 +22,11 @@ const LoginModal = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
       <div className="absolute inset-0 bg-nexura-black/90 backdrop-blur-sm" onClick={onClose}></div>
       <div className="relative z-10 bg-nexura-surface border border-nexura-gold/20 p-8 md:p-12 max-w-md w-full shadow-2xl animate-fade-in-up">
         <button onClick={onClose} className="absolute top-4 right-4 text-nexura-white/40 hover:text-nexura-gold transition-colors">
-          <X size={20} />
+          <LuX size={20} />
         </button>
         <div className="text-center mb-8">
           <div className="w-12 h-12 bg-nexura-gold/10 rounded-full flex items-center justify-center mx-auto mb-4 text-nexura-gold">
-            <Lock size={24} />
+            <LuLock size={24} />
           </div>
           <h3 className="font-serif text-2xl text-nexura-white mb-2">Acceso Cliente</h3>
           <p className="text-xs text-nexura-white/50 uppercase tracking-widest">Plataforma Segura</p>
@@ -55,11 +55,16 @@ export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLoginOpen, setIsLoginOpen] = useState(false);
+  const [hasMounted, setHasMounted] = useState(false);
   const { isLoggedIn, logout } = useAuth();
   const pathname = usePathname();
   const router = useRouter();
   const searchParams = useSearchParams();
   const handledLoginParamRef = React.useRef(false);
+
+  useEffect(() => {
+    setHasMounted(true);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -125,7 +130,7 @@ export default function Header() {
               </a>
             ))}
 
-            {isLoggedIn ? (
+            {hasMounted && isLoggedIn ? (
               <div className="flex items-center gap-6">
                 <Link href="/dashboard" className="text-[10px] uppercase tracking-widest text-nexura-white/40 flex items-center gap-2 hover:text-nexura-gold">
                     <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
@@ -135,7 +140,7 @@ export default function Header() {
                   onClick={logout}
                   className="border border-red-900/50 text-red-400 px-6 py-2 text-xs uppercase tracking-widest hover:bg-red-900/20 transition-all duration-300 flex items-center gap-2"
                 >
-                  <LogOut size={14} /> Salir
+                  <LuLogOut size={14} /> Salir
                 </button>
               </div>
             ) : (
@@ -143,13 +148,13 @@ export default function Header() {
                 onClick={() => setIsLoginOpen(true)}
                 className="border border-nexura-gold text-nexura-gold px-6 py-2 text-xs uppercase tracking-widest hover:bg-nexura-gold hover:text-nexura-black transition-all duration-300 flex items-center gap-2"
               >
-                <User size={14} /> Acceso Privado
+                <LuUser size={14} /> Acceso Privado
               </button>
             )}
           </nav>
 
           <button className="md:hidden text-nexura-white hover:text-nexura-gold" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMenuOpen ? <LuX size={24} /> : <LuMenu size={24} />}
           </button>
         </div>
 
@@ -181,8 +186,8 @@ export default function Header() {
                 </button>
               </>
             ) : (
-              <button onClick={() => { setIsMenuOpen(false); setIsLoginOpen(true); }} className="text-center w-full bg-nexura-gold text-nexura-black px-6 py-3 text-xs uppercase tracking-widest font-semibold">
-                Acceso Privado
+              <button onClick={() => { setIsMenuOpen(false); setIsLoginOpen(true); }} className="text-center w-full bg-nexura-gold text-nexura-black px-6 py-3 text-xs uppercase tracking-widest font-semibold flex items-center justify-center gap-2">
+                  <LuUser size={14} /> Acceso Privado
               </button>
             )}
           </div>

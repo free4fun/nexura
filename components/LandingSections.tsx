@@ -2,7 +2,33 @@
 
 import React, { useRef } from 'react';
 import Link from 'next/link';
-import { Shield, TrendingUp, Key, Lock, ArrowUpRight, Building2, Briefcase, Gem, Fingerprint, ArrowRight, ArrowLeft, ChevronRight, ChevronDown, Search, Settings2, Network } from 'lucide-react';
+import {
+  LuTrendingUp as TrendingUp,
+  LuLock as Lock,
+  LuEyeOff as EyeOff,
+  LuLayers as Layers,
+  LuBadgeCheck as BadgeCheck,
+  LuTag as Tag,
+  LuChartBar as ChartBar,
+  LuClock3 as Clock3,
+  LuIdCard as IdCard,
+  LuBriefcase as FormBriefcase,
+  LuWallet as Wallet,
+  LuFileText as FileText,
+  LuSend as Send,
+  LuArrowUpRight as ArrowUpRight,
+  LuBuilding2 as Building2,
+  LuBriefcase as Briefcase,
+  LuGem as Gem,
+  LuFingerprint as Fingerprint,
+  LuArrowRight as ArrowRight,
+  LuArrowLeft as ArrowLeft,
+  LuChevronRight as ChevronRight,
+  LuChevronDown as ChevronDown,
+  LuSearch as Search,
+  LuSettings2 as Settings2,
+  LuNetwork as Network,
+} from 'react-icons/lu';
 
 // Types
 interface VerticalProps {
@@ -106,17 +132,17 @@ export const Philosophy = () => {
             {[
                 {
                     title: "Discreción",
-                    icon: <Shield className="w-8 h-8 text-nexura-gold mb-4" strokeWidth={1} />,
+              icon: <EyeOff className="w-8 h-8 text-nexura-gold mb-4" strokeWidth={1} />,
                     desc: "Operaciones Off-Market fuera del radar público."
                 },
                 {
                     title: "Apalancamiento",
-                    icon: <TrendingUp className="w-8 h-8 text-nexura-gold mb-4" strokeWidth={1} />,
+                  icon: <Layers className="w-8 h-8 text-nexura-gold mb-4" strokeWidth={1} />,
                     desc: "Minimizamos el esfuerzo operativo maximizando el retorno del activo."
                 },
                 {
                     title: "Resolución",
-                    icon: <Key className="w-8 h-8 text-nexura-gold mb-4" strokeWidth={1} />,
+                  icon: <BadgeCheck className="w-8 h-8 text-nexura-gold mb-4" strokeWidth={1} />,
                     desc: "Si hay un bloqueo legal, emocional o financiero, Nexura diseña la salida."
                 }
             ].map((item, idx) => (
@@ -172,7 +198,7 @@ export const BusinessUnits = () => {
               <div className="absolute top-0 right-0 p-6 opacity-20 group-hover:opacity-100 transition-opacity duration-500">
                 <ArrowUpRight className="text-nexura-gold" />
               </div>
-              <div className="mb-6 text-nexura-gold bg-nexura-gold/5 w-16 h-16 rounded-full flex items-center justify-center">
+              <div className="mb-6 text-nexura-gold bg-nexura-gold/5 w-16 h-16 rounded-full flex items-center justify-center border border-nexura-gold/25">
                 {unit.icon}
               </div>
               <h3 className="font-serif text-2xl text-nexura-white mb-4">{unit.title}</h3>
@@ -210,7 +236,7 @@ export const Protocol = () => {
             {steps.map((step, idx) => (
               <div key={idx} className="group relative">
                 {idx !== steps.length - 1 && (
-                  <div className="hidden md:block absolute top-[22px] -right-6 z-0 text-nexura-gold/40">
+                  <div className="hidden md:block absolute top-[22px] -right-6 z-0 text-nexura-white/50">
                     <ArrowRight size={18} />
                   </div>
                 )}
@@ -429,18 +455,27 @@ export const Opportunities = () => {
                     <div>
                         <div className="flex justify-between items-start mb-6">
                             <span className="bg-nexura-gold/10 text-nexura-gold text-[10px] uppercase font-bold px-3 py-1.5 tracking-wider border border-nexura-gold/20">{item.category}</span>
-                            <span className="text-nexura-white/30 text-xs font-mono">REF: {item.ref}</span>
+                            <span className="text-nexura-white/30 text-xs font-mono flex items-center gap-2">
+                              <Tag size={12} className="text-nexura-gold" />
+                              REF: {item.ref}
+                            </span>
                         </div>
                         <h3 className="text-xl md:text-2xl text-nexura-white mb-6 font-serif leading-snug group-hover:text-nexura-gold/90 transition-colors duration-300">
                             {item.title}
                         </h3>
                         <div className="grid grid-cols-2 gap-6 mb-8 border-t border-nexura-white/10 pt-6">
                              <div>
-                                <span className="block text-[10px] text-nexura-white/40 uppercase tracking-wider mb-2">Retorno (Est)</span>
+                                <span className="flex items-center gap-2 text-[10px] text-nexura-white/40 uppercase tracking-wider mb-2">
+                                  <ChartBar size={12} className="text-nexura-gold" />
+                                  Retorno (Est)
+                                </span>
                                 <span className="text-nexura-gold text-2xl font-serif">{item.roi}</span>
                              </div>
                              <div>
-                                <span className="block text-[10px] text-nexura-white/40 uppercase tracking-wider mb-2">Horizonte</span>
+                                <span className="flex items-center gap-2 text-[10px] text-nexura-white/40 uppercase tracking-wider mb-2">
+                                  <Clock3 size={12} className="text-nexura-gold" />
+                                  Horizonte
+                                </span>
                                 <span className="text-nexura-white text-2xl font-serif">{item.timeline}</span>
                              </div>
                         </div>
@@ -515,11 +550,17 @@ export const ContactForm = () => {
         <form className="space-y-12">
             <div className="grid md:grid-cols-2 gap-12">
                 <div className="group">
-                    <label className="block text-[10px] uppercase tracking-widest text-nexura-gold mb-2">Identidad</label>
+                    <label className="flex items-center gap-2 text-[10px] uppercase tracking-widest text-nexura-white mb-2">
+                      <IdCard size={12} className="text-nexura-gold" />
+                Identidad
+              </label>
                     <input type="text" placeholder="Nombre y Organización" className="w-full bg-transparent border-b border-nexura-white/20 py-3 text-nexura-white placeholder-nexura-white/20 focus:outline-none focus:border-nexura-gold transition-colors font-light text-lg" />
                 </div>
                 <div className="group">
-                    <label className="block text-[10px] uppercase tracking-widest text-nexura-gold mb-2">Perfil</label>
+                    <label className="flex items-center gap-2 text-[10px] uppercase tracking-widest text-nexura-white mb-2">
+                      <FormBriefcase size={12} className="text-nexura-gold" />
+                Perfil
+              </label>
                     <select className="w-full bg-transparent border-b border-nexura-white/20 py-3 text-nexura-white focus:outline-none focus:border-nexura-gold transition-colors font-light text-lg appearance-none rounded-none cursor-pointer">
                         <option className="bg-nexura-black">Tengo un activo bloqueado</option>
                         <option className="bg-nexura-black">Soy inversor (Deal Flow)</option>
@@ -528,7 +569,10 @@ export const ContactForm = () => {
             </div>
 
             <div className="group">
-                <label className="block text-[10px] uppercase tracking-widest text-nexura-gold mb-2">Capacidad Operativa (Estimada)</label>
+                <label className="flex items-center gap-2 text-[10px] uppercase tracking-widest text-nexura-white mb-2">
+                  <Wallet size={12} className="text-nexura-gold" />
+              Capacidad Operativa (Estimada)
+            </label>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
                     {['< USD 50k', 'USD 50k - 200k', '+ USD 200k'].map((opt) => (
                         <label key={opt} className="cursor-pointer">
@@ -542,13 +586,17 @@ export const ContactForm = () => {
             </div>
 
             <div className="group">
-                <label className="block text-[10px] uppercase tracking-widest text-nexura-gold mb-2">Contexto</label>
+                <label className="flex items-center gap-2 text-[10px] uppercase tracking-widest text-nexura-white mb-2">
+                  <FileText size={12} className="text-nexura-gold" />
+                Contexto
+              </label>
                 <textarea rows={4} placeholder="Descripción breve del bloqueo o interés estratégico..." className="w-full bg-transparent border-b border-nexura-white/20 py-3 text-nexura-white placeholder-nexura-white/20 focus:outline-none focus:border-nexura-gold transition-colors font-light text-lg resize-none"></textarea>
             </div>
 
             <div className="pt-8">
-                <button type="submit" className="w-full bg-nexura-white text-nexura-black font-serif uppercase tracking-widest py-5 text-sm hover:bg-nexura-gold transition-colors duration-500 shadow-[0_0_20px_rgba(255,255,255,0.1)]">
-                    Iniciar Protocolo
+              <button type="submit" className="w-full bg-nexura-white text-nexura-black font-serif uppercase tracking-widest py-5 text-sm hover:bg-nexura-gold transition-colors duration-500 shadow-[0_0_20px_rgba(255,255,255,0.1)] inline-flex items-center justify-center gap-2">
+                <Send size={16} />
+                Iniciar Protocolo
                 </button>
                 <p className="text-center text-[10px] text-nexura-white/30 mt-6 uppercase tracking-widest">
                     <Lock size={10} className="inline mr-1 mb-0.5" />

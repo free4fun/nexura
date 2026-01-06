@@ -1,6 +1,7 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { Cinzel, Manrope } from 'next/font/google';
+import { Suspense } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { AuthProvider } from '@/context/AuthContext';
@@ -31,7 +32,9 @@ export default function RootLayout({
     <html lang="es" className={`${cinzel.variable} ${manrope.variable}`}>
       <body className="bg-nexura-black text-nexura-white selection:bg-nexura-gold selection:text-nexura-black">
         <AuthProvider>
-          <Header />
+          <Suspense fallback={null}>
+            <Header />
+          </Suspense>
           <main className="min-h-screen">
             {children}
           </main>

@@ -1,12 +1,21 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { CheckCircle2 } from 'lucide-react';
+import { LuMail } from 'react-icons/lu';
+import { FaLinkedin } from 'react-icons/fa6';
+import { SiSubstack } from 'react-icons/si';
 import { useAuth } from '@/context/AuthContext';
 
 export default function Footer() {
     const { isLoggedIn } = useAuth();
+    const [hasMounted, setHasMounted] = useState(false);
+
+    useEffect(() => {
+        setHasMounted(true);
+    }, []);
+
+    const privateAccessHref = hasMounted && isLoggedIn ? '/dashboard' : '/?login=1';
 
   return (
     <footer className="bg-nexura-black border-t border-nexura-white/10 pt-16 pb-8">
@@ -17,7 +26,7 @@ export default function Footer() {
                 <span className="text-[10px] uppercase tracking-[0.3em] text-nexura-gold">Private Office</span>
                                 <div className="mt-5">
                                     <Link
-                                        href={isLoggedIn ? '/dashboard' : '/?login=1'}
+                                        href={privateAccessHref}
                                         className="inline-flex items-center justify-center border border-nexura-gold/30 text-nexura-gold px-4 py-2 text-[10px] uppercase tracking-widest hover:border-nexura-gold hover:bg-nexura-gold/10 transition-colors"
                                     >
                                         Acceso Privado
@@ -44,10 +53,36 @@ export default function Footer() {
             <p className="text-[10px] text-nexura-white/20 uppercase tracking-widest mb-4 md:mb-0">
                 © {new Date().getFullYear()} Nexura Private Office. All Rights Reserved.
             </p>
-            <a href="#" className="flex items-center gap-2 text-xs uppercase tracking-widest text-nexura-white/40 hover:text-nexura-gold transition-colors">
-                <CheckCircle2 size={12} />
-                LinkedIn Official
-            </a>
+                        <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6">
+                            <a
+                                href="mailto:contacto@nexura.lat"
+                                className="flex items-center gap-2 text-xs tracking-widest text-nexura-white/40 hover:text-nexura-gold transition-colors"
+                            >
+                                <LuMail size={14} className="text-nexura-gold" />
+                                contacto@nexura.lat
+                            </a>
+
+                            <div className="flex items-center gap-3">
+                                <a
+                                    href="https://www.linkedin.com"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="w-9 h-9 rounded-full border border-nexura-white/15 flex items-center justify-center text-nexura-gold hover:border-nexura-gold/60 hover:bg-nexura-gold/10 transition-colors"
+                                    aria-label="LinkedIn"
+                                >
+                                    <FaLinkedin size={18} />
+                                </a>
+                                <a
+                                    href="https://substack.com"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="w-9 h-9 rounded-full border border-nexura-white/15 flex items-center justify-center text-nexura-gold hover:border-nexura-gold/60 hover:bg-nexura-gold/10 transition-colors"
+                                    aria-label="Substack"
+                                >
+                                    <SiSubstack size={16} />
+                                </a>
+                            </div>
+                        </div>
         </div>
       </div>
     </footer>
