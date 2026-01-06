@@ -309,6 +309,28 @@ export const Opportunities = () => {
     scrollToCard(index);
   };
 
+  // Reinicia siempre a la primera card al recargar la página (evita restauración de scroll horizontal)
+  React.useEffect(() => {
+    const container = scrollRef.current;
+    if (!container) return;
+
+    isAutoScrollingRef.current = true;
+    autoScrollTokenRef.current += 1;
+    if (autoScrollRafRef.current != null) {
+      cancelAnimationFrame(autoScrollRafRef.current);
+      autoScrollRafRef.current = null;
+    }
+
+    container.scrollLeft = 0;
+    setCurrentIndex(0);
+
+    const raf = requestAnimationFrame(() => {
+      isAutoScrollingRef.current = false;
+    });
+
+    return () => cancelAnimationFrame(raf);
+  }, []);
+
   React.useEffect(() => {
     const handleScroll = () => {
       if (!scrollRef.current || isDragging || isAutoScrollingRef.current) return;
@@ -391,7 +413,13 @@ export const Opportunities = () => {
                 <div 
                   key={idx} 
                   ref={(el) => { cardRefs.current[idx] = el; }}
-                  className={`min-w-[90vw] sm:min-w-[85vw] md:min-w-[420px] lg:min-w-[480px] snap-center bg-nexura-black border p-6 md:p-10 transition-all duration-500 flex flex-col justify-between group md:hover:shadow-2xl md:hover:shadow-nexura-gold/5 md:hover:-translate-y-1 ${idx === currentIndex ? 'border-nexura-gold/40 blur-none md:blur-none' : 'border-nexura-white/5 blur-sm md:blur-sm'}`}
+                  onClick={(e) => {
+                    if (idx === currentIndex) return;
+                    const target = e.target as HTMLElement | null;
+                    if (target?.closest('a,button')) return;
+                    scrollToIndex(idx);
+                  }}
+                  className={`min-w-[90vw] sm:min-w-[85vw] md:min-w-[420px] lg:min-w-[480px] snap-center bg-nexura-black border p-6 md:p-10 transition-all duration-500 flex flex-col justify-between group md:hover:shadow-2xl md:hover:shadow-nexura-gold/5 md:hover:-translate-y-1 ${idx === currentIndex ? 'border-nexura-gold/40 ring-1 ring-inset ring-nexura-gold/40 blur-none md:blur-none' : 'border-nexura-white/5 blur-sm md:blur-sm'}`}
                 >
                     <div>
                         <div className="flex justify-between items-start mb-6">

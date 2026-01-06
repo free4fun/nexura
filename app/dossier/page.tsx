@@ -10,7 +10,8 @@ function DossierContent() {
 
   return (
     <div className="pt-32 pb-24 px-6 min-h-screen bg-nexura-black">
-      <div className="max-w-3xl mx-auto">
+      <div className="max-w-7xl mx-auto">
+        <div className="max-w-3xl">
         <div className="mb-12 border-b border-nexura-white/10 pb-8">
             <div className="flex items-center gap-2 text-nexura-gold text-xs tracking-widest uppercase mb-4">
               <Lock size={14} /> Solicitud de Documentación
@@ -62,6 +63,7 @@ function DossierContent() {
                 Enviar Solicitud Formal
             </button>
         </form>
+        </div>
       </div>
     </div>
   );

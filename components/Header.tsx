@@ -108,9 +108,9 @@ export default function Header() {
 
             {isLoggedIn ? (
               <div className="flex items-center gap-6">
-                 <Link href="/dashboard" className="text-[10px] uppercase tracking-widest text-nexura-white/40 flex items-center gap-2 hover:text-nexura-gold">
+                <Link href="/dashboard" className="text-[10px] uppercase tracking-widest text-nexura-white/40 flex items-center gap-2 hover:text-nexura-gold">
                     <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                    Conexión Segura
+                  Dashboard
                  </Link>
                  <button 
                   onClick={logout}
@@ -143,9 +143,18 @@ export default function Header() {
               </a>
             ))}
             {isLoggedIn ? (
-               <button onClick={() => { logout(); setIsMenuOpen(false); }} className="text-center w-full bg-red-900/20 border border-red-900/50 text-red-400 px-6 py-3 text-xs uppercase tracking-widest font-semibold">
-                 Cerrar Sesión
-               </button>
+              <>
+                <Link
+                  href="/dashboard"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="text-left text-sm uppercase tracking-widest text-nexura-white/80"
+                >
+                  Dashboard
+                </Link>
+                <button onClick={() => { logout(); setIsMenuOpen(false); }} className="text-center w-full bg-red-900/20 border border-red-900/50 text-red-400 px-6 py-3 text-xs uppercase tracking-widest font-semibold">
+                  Cerrar Sesión
+                </button>
+              </>
             ) : (
               <button onClick={() => { setIsMenuOpen(false); setIsLoginOpen(true); }} className="text-center w-full bg-nexura-gold text-nexura-black px-6 py-3 text-xs uppercase tracking-widest font-semibold">
                 Acceso Privado
