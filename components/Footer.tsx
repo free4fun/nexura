@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { LuMail } from 'react-icons/lu';
+import { LuMail, LuUser } from 'react-icons/lu';
 import { FaLinkedinIn } from 'react-icons/fa6';
 import { SiSubstack } from 'react-icons/si';
 import { useAuth } from '@/context/AuthContext';
@@ -27,8 +27,9 @@ export default function Footer() {
                                 <div className="mt-5 flex justify-center">
                                     <Link
                                         href={privateAccessHref}
-                                        className="relative box-border inline-flex items-center justify-center border border-nexura-gold/30 !text-nexura-gold visited:!text-nexura-gold hover:!text-nexura-gold px-4 py-2 text-[10px] uppercase tracking-widest hover:border-nexura-gold hover:bg-nexura-gold/10 transition-colors after:hidden md:after:block after:content-[''] after:absolute after:top-0 after:bottom-0 after:right-0 after:w-px after:bg-nexura-gold/30"
+                                        className="box-border inline-flex items-center justify-center gap-2 border border-nexura-gold !text-nexura-gold visited:!text-nexura-gold px-6 py-2 text-xs uppercase tracking-widest hover:bg-nexura-gold hover:!text-nexura-black transition-all duration-300"
                                     >
+                                        <LuUser size={14} />
                                         Acceso Privado
                                     </Link>
                                 </div>
@@ -50,7 +51,7 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col md:flex-row justify-between items-center border-t border-nexura-white/5 pt-8">
-            <p className="text-[10px] text-nexura-white/20 uppercase tracking-widest mb-4 md:mb-0">
+            <p className="text-[10px] text-nexura-white/40 uppercase tracking-widest mb-4 md:mb-0">
                 © {new Date().getFullYear()} Nexura Group. All Rights Reserved.
             </p>
                         <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6">

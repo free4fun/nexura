@@ -122,16 +122,16 @@ export default function Header() {
             className="flex items-center gap-3 font-serif text-2xl tracking-[0.2em] text-nexura-white hover:text-nexura-gold transition-colors duration-300"
           >
             <img src="/nexura.svg" alt="Nexura Logo" className="h-12 lg:h-14 w-auto" />
-            <span className="uppercase tracking-[0.2em]">Nexura</span>
+            <span className="uppercase tracking-[0.2em] inline md:hidden lg:inline">Nexura</span>
           </a>
 
-          <nav className="hidden lg:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-6 lg:gap-8">
             {navLinks.map((link) => (
               <a 
                 key={link.name} 
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
-                className="text-xs uppercase tracking-widest text-nexura-white/70 hover:text-nexura-gold transition-colors duration-300"
+                className="text-[10px] lg:text-xs uppercase tracking-widest text-nexura-white/70 hover:text-nexura-gold transition-colors duration-300"
               >
                 {link.name}
               </a>
@@ -153,20 +153,20 @@ export default function Header() {
             ) : (
               <button 
                 onClick={() => setIsLoginOpen(true)}
-                className="border border-nexura-gold text-nexura-gold px-6 py-2 text-xs uppercase tracking-widest hover:bg-nexura-gold hover:text-nexura-black transition-all duration-300 flex items-center gap-2"
+                className="border border-nexura-gold text-nexura-gold px-4 lg:px-6 py-2 text-[10px] lg:text-xs uppercase tracking-widest hover:bg-nexura-gold hover:text-nexura-black transition-all duration-300 flex items-center gap-2"
               >
                 <LuUser size={14} /> Acceso Privado
               </button>
             )}
           </nav>
 
-          <button className="lg:hidden text-nexura-white hover:text-nexura-gold" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          <button className="md:hidden text-nexura-white hover:text-nexura-gold" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             {isMenuOpen ? <LuX size={24} /> : <LuMenu size={24} />}
           </button>
         </div>
 
         {isMenuOpen && (
-          <div className="absolute top-full left-0 w-full bg-nexura-black border-b border-nexura-white/10 lg:hidden flex flex-col p-6 gap-6 shadow-2xl animate-fade-in-down">
+          <div className="absolute top-full left-0 w-full bg-nexura-black border-b border-nexura-white/10 md:hidden flex flex-col p-6 gap-6 shadow-2xl animate-fade-in-down">
             <a
               href="/#hero"
               onClick={(e) => handleNavClick(e, '/#hero')}

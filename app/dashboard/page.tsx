@@ -174,12 +174,12 @@ export default function Dashboard() {
                         </div>
                         <div>
                            <p className="text-sm text-nexura-white font-serif">{meta.context}</p>
-                           <p className="text-xs text-nexura-white/30">{meta.note} · {file.name}</p>
-                           <p className="text-xs text-nexura-white/30 mt-1">{file.date}</p>
+                          <p className="text-xs text-nexura-white/40">{meta.note} · {file.name}</p>
+                          <p className="text-xs text-nexura-white/40 mt-1">{file.date}</p>
                         </div>
                     </div>
                     <div className="flex items-center gap-6 mt-4 md:mt-0 w-full md:w-auto justify-end">
-                       <span className="text-xs text-nexura-white/20 font-mono">{file.size}</span>
+                        <span className="text-xs text-nexura-white/30 font-mono">{file.size}</span>
                        <button
                          className="text-nexura-white/40 hover:text-nexura-gold transition-colors"
                          aria-label="Acceso habilitado"
@@ -196,7 +196,7 @@ export default function Dashboard() {
            </div>
 
            <div className="mt-10 pt-8 border-t border-nexura-white/10">
-             <p className="text-[10px] uppercase tracking-widest text-nexura-white/30">
+             <p className="text-[10px] uppercase tracking-widest text-nexura-white/40">
                Este entorno no constituye una oferta pública. La información se habilita por invitación y bajo criterios de confidencialidad.
              </p>
            </div>

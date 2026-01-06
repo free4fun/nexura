@@ -148,32 +148,54 @@ export const Philosophy = () => {
             </div>
         </div>
 
-        <div className="grid md:grid-cols-3 lg:grid-cols-3 gap-8 border-t border-nexura-white/10 pt-12">
+        <div className="mt-2">
+          <div className="flex items-center gap-4">
+            <div className="h-px flex-1 bg-nexura-white/10" />
+            <p className="text-xs lg:text-sm uppercase tracking-[0.2em] text-nexura-white/40 text-center whitespace-nowrap">
+              Criterios operativos
+            </p>
+            <div className="h-px flex-1 bg-nexura-white/10" />
+          </div>
+        </div>
+
+        <div className="grid md:grid-cols-3 lg:grid-cols-3 gap-6 lg:gap-8 pt-10 lg:pt-12">
             {[
                 {
                     title: "Discreción",
-              icon: <EyeOff className="w-8 h-8 text-nexura-gold mb-4" strokeWidth={1} />,
+              icon: <EyeOff className="w-7 h-7 text-nexura-gold" strokeWidth={1} />,
                   desc: "Canales privados, exposición mínima y criterio selectivo. El acceso es por referencia, no por volumen."
                 },
                 {
                     title: "Apalancamiento",
-                  icon: <Layers className="w-8 h-8 text-nexura-gold mb-4" strokeWidth={1} />,
+                  icon: <Layers className="w-7 h-7 text-nexura-gold" strokeWidth={1} />,
                   desc: "Estructura, información y timing. Operamos sin inventario y sin desgaste operativo innecesario."
                 },
                 {
                     title: "Resolución",
-                  icon: <BadgeCheck className="w-8 h-8 text-nexura-gold mb-4" strokeWidth={1} />,
+                  icon: <BadgeCheck className="w-7 h-7 text-nexura-gold" strokeWidth={1} />,
                   desc: "Cuando hay fricción, la reducimos. Cuando no la hay, optimizamos la estructura para facilitar el movimiento del valor."
                 }
             ].map((item, idx) => (
-                <div key={idx} className="group p-8 border border-nexura-white/5 md:border-nexura-white/10 lg:border-nexura-white/5 bg-nexura-surface hover:border-nexura-gold/30 transition-all duration-500">
-                    {item.icon}
-                    <h3 className="font-serif text-xl text-nexura-white mb-3 group-hover:text-nexura-gold transition-colors">{item.title}</h3>
+                <div key={idx} className="group p-6 lg:p-8 border border-nexura-white/5 md:border-nexura-white/10 lg:border-nexura-white/5 bg-nexura-surface hover:border-nexura-gold/30 transition-all duration-500">
+                    <div className="flex items-center gap-2 mb-3">
+                      {item.icon}
+                      <h3 className="font-serif text-xl text-nexura-white group-hover:text-nexura-gold transition-colors">{item.title}</h3>
+                    </div>
                     <p className="text-sm text-nexura-white/60 leading-relaxed font-light">
                         {item.desc}
                     </p>
                 </div>
             ))}
+        </div>
+
+        <div className="mt-12">
+          <div className="flex items-center gap-4">
+            <div className="h-px flex-1 bg-nexura-white/10" />
+            <p className="text-xs lg:text-sm uppercase tracking-[0.2em] text-nexura-white/40 text-center whitespace-nowrap">
+              Marco operativo
+            </p>
+            <div className="h-px flex-1 bg-nexura-white/10" />
+          </div>
         </div>
 
         <div className="mt-12 grid md:grid-cols-2 gap-6">
@@ -223,22 +245,22 @@ export const BusinessUnits = () => {
     {
       title: "Real Estate",
       description: "Activos inmobiliarios de alto valor, con estructuras simples o complejas, dentro y fuera de mercado.",
-      icon: <Building2 size={24} strokeWidth={1} />
+      icon: <Building2 size={28} strokeWidth={1} />
     },
     {
       title: "M&A & Business",
       description: "Venta confidencial de empresas operativas y unidades de negocio llave en mano.",
-      icon: <Briefcase size={24} strokeWidth={1} />
+      icon: <Briefcase size={28} strokeWidth={1} />
     },
     {
       title: "Luxury Assets",
       description: "Estructuración de uso, rotación o salida para activos de alto valor subutilizados o estratégicos.",
-      icon: <Gem size={24} strokeWidth={1} />
+      icon: <Gem size={28} strokeWidth={1} />
     },
     {
       title: "Strategic IP",
       description: "Licenciamiento de marcas, patentes y genética de alto rendimiento (Pedigree).",
-      icon: <Fingerprint size={24} strokeWidth={1} />
+      icon: <Fingerprint size={28} strokeWidth={1} />
     }
   ];
 
@@ -251,16 +273,21 @@ export const BusinessUnits = () => {
             <div className="w-12 h-[2px] bg-nexura-gold"></div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-px bg-nexura-white/10 md:bg-nexura-white/15 lg:bg-nexura-white/10 border border-nexura-white/10 md:border-nexura-white/15 lg:border-nexura-white/10">
+        <div className="grid md:grid-cols-2 gap-0 md:gap-8 lg:gap-10 border border-nexura-white/10 md:border-0 divide-y divide-nexura-white/10 md:divide-y-0">
           {units.map((unit, idx) => (
-            <div key={idx} className="bg-nexura-black p-12 hover:bg-nexura-surface transition-colors duration-500 group relative overflow-hidden">
+            <div
+              key={idx}
+              className="bg-nexura-black p-10 hover:bg-nexura-surface transition-colors duration-500 group relative overflow-hidden md:border md:border-nexura-white/15 lg:border-nexura-white/10"
+            >
               <div className="absolute top-0 right-0 p-6 opacity-20 group-hover:opacity-100 transition-opacity duration-500">
                 <ArrowUpRight className="text-nexura-gold" />
               </div>
-              <div className="mb-6 text-nexura-gold bg-nexura-gold/5 w-16 h-16 rounded-full flex items-center justify-center border border-nexura-gold/25">
-                {unit.icon}
+              <div className="flex items-center gap-4 mb-4">
+                <div className="text-nexura-gold bg-nexura-gold/5 w-14 h-14 rounded-full flex items-center justify-center border border-nexura-gold/25 shrink-0">
+                  {unit.icon}
+                </div>
+                <h3 className="font-serif text-2xl text-nexura-white">{unit.title}</h3>
               </div>
-              <h3 className="font-serif text-2xl text-nexura-white mb-4">{unit.title}</h3>
               <p className="text-nexura-white/60 font-light leading-relaxed max-w-sm">
                 {unit.description}
               </p>
@@ -279,6 +306,8 @@ export const Protocol = () => {
     { title: "Canal Privado", description: "Registramos interés, validamos perfiles y habilitamos acceso selectivo bajo acuerdos de confidencialidad y no elusión.", icon: <Network size={18} strokeWidth={1.5} /> },
     { title: "Cierre", description: "Coordinamos a las partes y acompañamos el proceso hasta la transferencia y salida ordenada.", icon: <TrendingUp size={18} strokeWidth={1.5} /> },
   ];
+
+  const roman = ["I", "II", "III", "IV", "V", "VI"];
 
   return (
     <section id="protocolo" className="py-24 bg-nexura-black">
@@ -299,9 +328,15 @@ export const Protocol = () => {
                     <ArrowRight size={18} />
                   </div>
                 )}
+
+                <span className="absolute left-4 top-4 text-nexura-gold text-[10px] font-bold tracking-widest leading-none">
+                  FASE {roman[idx] ?? String(idx + 1)}
+                </span>
+
                 <div className="w-12 h-12 bg-nexura-gold/10 border border-nexura-gold/25 text-nexura-gold flex items-center justify-center rounded-full mx-auto mb-6 group-hover:border-nexura-gold group-hover:text-nexura-gold transition-all duration-300 relative z-10">
                   {step.icon}
                 </div>
+
                 <div className="text-center px-4">
                   <h3 className="text-nexura-white font-serif text-lg mb-3">{step.title}</h3>
                   <div className="w-12 h-[1px] bg-nexura-white/10 mx-auto mb-4"></div>
@@ -515,7 +550,10 @@ export const Opportunities = () => {
                 >
                     <div>
                         <div className="flex justify-between items-start mb-6">
-                            <span className="bg-nexura-gold/10 text-nexura-gold text-[10px] uppercase font-bold px-3 py-1.5 tracking-wider border border-nexura-gold/20">{item.category}</span>
+                            <div className="flex items-start gap-2">
+                              <span className="bg-nexura-gold/10 text-nexura-gold text-[10px] uppercase font-bold px-3 py-1.5 tracking-wider border border-nexura-gold/20">{item.category}</span>
+                              <span className="bg-nexura-red/10 text-nexura-red text-[10px] uppercase font-bold px-3 py-1.5 tracking-wider border border-nexura-red/30">DEMO</span>
+                            </div>
                             <span className="text-nexura-white/30 text-xs font-mono flex items-center gap-2">
                               <Tag size={12} className="text-nexura-gold" />
                               REF: {item.ref}
@@ -652,7 +690,7 @@ export const ContactForm = () => {
                       <IdCard size={12} className="text-nexura-gold" />
                 Identidad
               </label>
-                    <input type="text" placeholder="Nombre y Organización" className="w-full bg-transparent border-b border-nexura-white/20 py-3 text-nexura-white placeholder-nexura-white/20 focus:outline-none focus:border-nexura-gold transition-colors font-light text-lg" />
+                    <input type="text" placeholder="Nombre y Organización" className="w-full bg-transparent border-b border-nexura-white/20 py-3 text-nexura-white placeholder-nexura-white/30 focus:outline-none focus:border-nexura-gold transition-colors font-light text-lg" />
                 </div>
                 <div className="group">
                     <label className="flex items-center gap-2 text-[10px] uppercase tracking-widest text-nexura-white mb-2">
@@ -688,7 +726,7 @@ export const ContactForm = () => {
                   <FileText size={12} className="text-nexura-gold" />
                 Contexto
               </label>
-                <textarea rows={4} placeholder="Descripción breve del bloqueo o interés estratégico..." className="w-full bg-transparent border-b border-nexura-white/20 py-3 text-nexura-white placeholder-nexura-white/20 focus:outline-none focus:border-nexura-gold transition-colors font-light text-lg resize-none"></textarea>
+                <textarea rows={4} placeholder="Descripción breve del bloqueo o interés estratégico..." className="w-full bg-transparent border-b border-nexura-white/20 py-3 text-nexura-white placeholder-nexura-white/30 focus:outline-none focus:border-nexura-gold transition-colors font-light text-lg resize-none"></textarea>
             </div>
 
             <div className="pt-8">
@@ -726,11 +764,13 @@ export const ContactForm = () => {
                   </label>
                 </div>
               </div>
-              <button type="submit" className="w-full bg-nexura-white text-nexura-black font-serif uppercase tracking-widest py-5 text-sm hover:bg-nexura-gold transition-colors duration-500 shadow-[0_0_20px_rgba(255,255,255,0.1)] inline-flex items-center justify-center gap-2">
-                <Send size={16} />
-                Iniciar Protocolo
-                </button>
-                <p className="text-center text-[10px] text-nexura-white/30 mt-6 uppercase tracking-widest">
+              <button
+                type="submit"
+                className="group w-full border-2 border-nexura-white/20 md:border-nexura-white/35 lg:border-nexura-white/20 text-nexura-white text-xs uppercase tracking-widest py-4 hover:bg-nexura-gold hover:border-nexura-gold hover:text-nexura-black transition-all duration-300 inline-flex items-center justify-center gap-2 font-semibold"
+              >
+                Iniciar Protocolo <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />
+              </button>
+                <p className="text-center text-[10px] text-nexura-white/40 mt-6 uppercase tracking-widest">
                     <Lock size={10} className="inline mr-1 mb-0.5" />
                     Toda la información es tratada bajo estrictos acuerdos de confidencialidad.
                 </p>

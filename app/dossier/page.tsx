@@ -12,7 +12,7 @@ function DossierContent() {
   return (
     <div className="pt-32 pb-24 px-6 min-h-screen bg-nexura-black">
       <div className="max-w-7xl mx-auto">
-        <div className="max-w-3xl">
+        <div className="max-w-3xl mx-auto">
         <div className="mb-12 border-b border-nexura-white/10 pb-8">
             <div className="flex items-center gap-2 text-nexura-gold text-xs tracking-widest uppercase mb-4">
               <Lock size={14} /> Solicitud de Documentación
@@ -131,7 +131,7 @@ function DossierContent() {
             <p className="text-center text-[10px] uppercase tracking-widest text-nexura-white/30">
             Se habilita solo bajo acuerdos.
             </p>
-            <div className="text-xs text-nexura-white/50 font-light leading-relaxed space-y-2">
+            <div className="text-xs text-nexura-white/50 font-light leading-relaxed space-y-2 text-center">
             <p>Nexura habilita documentación de forma progresiva según el estado de cada operación.</p>
             <p>Si la solicitud encaja, enviaremos el NDA correspondiente y el siguiente paso.</p>
             <p>Tiempo estimado de respuesta: 48–72 hs hábiles.</p>
