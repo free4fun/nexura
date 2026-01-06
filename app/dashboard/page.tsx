@@ -12,9 +12,10 @@ import { useAuth } from '@/context/AuthContext';
 import { useRouter } from 'next/navigation';
 
 function formatActivityStamp(date: Date): string {
-  const day = date.toLocaleString('en-GB', { day: '2-digit' });
-  const month = date.toLocaleString('en-GB', { month: 'short' });
-  const time = date.toLocaleString('en-GB', { hour: '2-digit', minute: '2-digit', hour12: false });
+  const day = date.toLocaleString('es-ES', { day: '2-digit' });
+  const monthRaw = date.toLocaleString('es-ES', { month: 'short' });
+  const month = monthRaw.replace('.', '').toLowerCase();
+  const time = date.toLocaleString('es-ES', { hour: '2-digit', minute: '2-digit', hour12: false });
   return `${day} ${month} · ${time}`;
 }
 
@@ -52,36 +53,105 @@ export default function Dashboard() {
   return (
     <div className="pt-32 pb-24 px-6 min-h-screen">
       <div className="max-w-7xl mx-auto">
-        <div className="flex justify-between items-end mb-12">
-           <div>
-              <span className="text-nexura-gold text-xs font-bold tracking-[0.2em] uppercase mb-4 block">Acceso Privado · Estado de Cartera</span>
-              <h2 className="font-serif text-3xl md:text-4xl text-nexura-white">Panorama de Activos</h2>
-              <p className="mt-3 text-[10px] uppercase tracking-widest text-nexura-white/40">
-               Perfil validado · Acceso restringido · Nivel: Privado
-              </p>
-           </div>
-           <div className="text-right">
-              <span className="text-xs text-nexura-white/40 uppercase tracking-widest">Registro de actividad</span>
-              <p className="text-nexura-white mt-1 font-mono text-sm">{activityStamp}</p>
-           </div>
+        <div className="flex flex-col md:flex-row md:justify-between md:items-end gap-6 mb-8 md:mb-12">
+          <div>
+            <div className="flex flex-wrap items-center gap-3 mb-3">
+              <span className="text-nexura-gold text-xs font-bold tracking-[0.2em] uppercase">Acceso Privado · Estado de Cartera</span>
+              <span className="inline-flex items-center px-3 py-1 border border-nexura-red/30 bg-nexura-red/10 text-nexura-red text-[10px] uppercase tracking-widest">
+                Demo
+              </span>
+            </div>
+            <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl text-nexura-white">Panorama de Activos</h2>
+            <p className="mt-2 text-[10px] uppercase tracking-widest text-nexura-white/40">
+              Perfil validado · Acceso restringido · Nivel: Privado
+            </p>
+          </div>
+
+          <div className="md:text-right">
+            <span className="text-xs text-nexura-white/40 uppercase tracking-widest whitespace-nowrap">
+              <span className="md:hidden">Actividad</span>
+              <span className="hidden md:inline">Registro de actividad</span>
+            </span>
+            <p className="text-nexura-white mt-1 font-mono text-sm whitespace-nowrap">{activityStamp}</p>
+          </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
-            {[
-              { label: "Activos en Encadre", val: "3", icon: <Search size={16} /> },
-              { label: "Estructuras en Análisis", val: "1", icon: <FileCheck size={16} /> },
-              { label: "Procesos Abiertos", val: "0", icon: <TrendingUp size={16} /> },
-              { label: "Documentación Activa", val: "12", icon: <FileText size={16} /> },
-            ].map((stat, i) => (
-              <div key={i} className="bg-nexura-surface border border-nexura-white/5 p-6 rounded-sm">
-                <div className="flex justify-between items-start mb-4 text-nexura-gold">
-                   {stat.icon}
+        {(() => {
+          const stats = [
+            {
+              label: 'Activos en Encuadre',
+              labelShort: 'Encuadre',
+              val: '3',
+              iconMobile: <Search size={14} />,
+              iconDesktop: <Search size={16} />,
+            },
+            {
+              label: 'Estructuras en Análisis',
+              labelShort: 'Análisis',
+              val: '1',
+              iconMobile: <FileCheck size={14} />,
+              iconDesktop: <FileCheck size={16} />,
+            },
+            {
+              label: 'Procesos Abiertos',
+              labelShort: 'Abiertos',
+              val: '0',
+              iconMobile: <TrendingUp size={14} />,
+              iconDesktop: <TrendingUp size={16} />,
+            },
+            {
+              label: 'Documentación Activa',
+              labelShort: 'Docs',
+              val: '12',
+              iconMobile: <FileText size={14} />,
+              iconDesktop: <FileText size={16} />,
+            },
+          ];
+
+          return (
+            <>
+              {/* Mobile: una sola línea (sin bloques) */}
+              <div className="md:hidden mb-10">
+                <div className="bg-nexura-surface border border-nexura-white/5">
+                  <div className="grid grid-cols-4 divide-x divide-nexura-white/10">
+                    {stats.map((stat, i) => (
+                      <div key={i} className="px-2 py-3 text-center">
+                        <div className="flex items-center justify-center gap-1.5 text-nexura-gold">
+                          {stat.iconMobile}
+                          <span className="font-serif text-lg text-nexura-white leading-none">
+                            {stat.val === '0' ? '—' : stat.val}
+                          </span>
+                        </div>
+                        <div className="mt-1 text-[9px] uppercase tracking-widest text-nexura-white/40 whitespace-nowrap">
+                          {stat.labelShort}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-                <div className="text-3xl font-serif text-nexura-white mb-2">{stat.val === '0' ? '—' : stat.val}</div>
-                <div className="text-[10px] uppercase tracking-widest text-nexura-white/40">{stat.label}</div>
               </div>
-            ))}
-        </div>
+
+              {/* Desktop: cards */}
+              <div className="hidden md:grid grid-cols-4 gap-6 mb-12">
+                {stats.map((stat, i) => (
+                  <div key={i} className="bg-nexura-surface border border-nexura-white/5 p-6 rounded-sm">
+                    <div className="flex flex-col items-center justify-center text-center gap-5">
+                      <div className="w-12 h-12 bg-nexura-gold/10 border border-nexura-gold/20 rounded-full flex items-center justify-center text-nexura-gold">
+                        {stat.iconDesktop}
+                      </div>
+                      <div className="text-3xl font-serif text-nexura-white leading-none">
+                        {stat.val === '0' ? '—' : stat.val}
+                      </div>
+                      <div className="text-[10px] uppercase tracking-widest text-nexura-white/40 leading-snug">
+                        {stat.label}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </>
+          );
+        })()}
 
         <div className="bg-nexura-black border border-nexura-white/10 p-8">
            <h3 className="text-lg font-serif text-nexura-white mb-8 border-b border-nexura-white/5 pb-4">Documentación Activa</h3>

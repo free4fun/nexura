@@ -29,6 +29,12 @@ const LoginModal = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
             <LuLock size={24} />
           </div>
           <h3 className="font-serif text-2xl text-nexura-white mb-2">Acceso Cliente</h3>
+          <div className="mt-3 inline-flex items-center gap-2 px-3 py-1 border border-nexura-red/30 bg-nexura-red/10 text-nexura-red text-[10px] uppercase tracking-widest">
+            Demo
+          </div>
+          <p className="mt-3 text-[10px] text-nexura-white/50 uppercase tracking-widest">
+            Entorno de demostración
+          </p>
           <p className="text-xs text-nexura-white/50 uppercase tracking-widest">Plataforma Segura</p>
         </div>
         <form onSubmit={handleLogin} className="space-y-6">
