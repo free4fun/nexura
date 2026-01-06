@@ -114,9 +114,9 @@ export const Hero = () => {
       </div>
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
-        <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl leading-tight text-nexura-white mb-6 tracking-tight">
-          Donde el valor <br/>
-          <span className="text-nexura-gold italic">encuentra su destino.</span>
+        <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl leading-relaxed text-nexura-white mb-6 tracking-tight">
+          Capital estratégico.<br/>Activos relevantes.<br/>
+          <span className="text-nexura-gold">Claridad operativa.</span>
         </h1>
         <p className="font-light text-nexura-white/80 max-w-2xl mx-auto text-sm md:text-lg leading-relaxed mb-10 tracking-wide">
           Estructuramos condiciones para que activos de alto valor se muevan de forma eficiente. Intervenimos cuando el ticket, la estructura y el impacto justifican un abordaje dedicado, con o sin fricción operativa.
@@ -629,7 +629,7 @@ export const ContactForm = () => {
               Criterios de entrada
             </h4>
             <ul className="space-y-2 text-sm text-nexura-white/60 font-light leading-relaxed">
-              <li>Fricción real: bloqueo legal, operativo o estructural verificable.</li>
+              <li>Activo con potencial relevante que requiere encuadre estratégico.</li>
               <li>Mandato: capacidad de decisión o representación formal.</li>
               <li>Confidencialidad: compartimos detalles sólo bajo acuerdo.</li>
             </ul>
