@@ -125,7 +125,7 @@ export default function Header() {
             <span className="uppercase tracking-[0.2em] inline md:hidden lg:inline">Nexura</span>
           </a>
 
-          <nav className="hidden md:flex items-center gap-6 lg:gap-8">
+          <nav className="hidden md:flex items-center gap-6 lg:gap-8 md:pr-px">
             {navLinks.map((link) => (
               <a 
                 key={link.name} 
@@ -145,9 +145,9 @@ export default function Header() {
                  </Link>
                  <button 
                   onClick={logout}
-                  className="border border-red-900/50 text-red-400 px-6 py-2 text-xs uppercase tracking-widest hover:bg-red-900/20 transition-all duration-300 flex items-center gap-2"
+                  className="ring-1 ring-inset ring-red-900/50 text-red-400 px-6 py-2 text-xs uppercase tracking-widest hover:bg-red-900/20 transition-all duration-300 flex items-center gap-2"
                 >
-                  <LuLogOut size={14} /> Salir
+                  <LuLogOut size={14} /> Cerrar Sesión
                 </button>
               </div>
             ) : (

@@ -158,7 +158,7 @@ export const Philosophy = () => {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-3 lg:grid-cols-3 gap-6 lg:gap-8 pt-6 lg:pt-8">
+        <div className="grid md:grid-cols-3 lg:grid-cols-3 gap-6 lg:gap-8 pt-6 lg:pt-8 md:pr-px lg:pr-0">
             {[
                 {
                     title: "Discreción",
@@ -198,7 +198,7 @@ export const Philosophy = () => {
           </div>
         </div>
 
-        <div className="mt-8 grid md:grid-cols-2 gap-6">
+        <div className="mt-8 grid md:grid-cols-2 gap-6 md:pr-px lg:pr-0">
           <div className="p-8 border border-nexura-white/5 md:border-nexura-white/10 lg:border-nexura-white/5 bg-nexura-surface">
             <h4 className="flex items-center gap-2 text-xs uppercase tracking-widest text-nexura-white mb-4">
               <Wrench className="w-4 h-4 text-nexura-gold" />
@@ -223,7 +223,7 @@ export const Philosophy = () => {
           </div>
         </div>
 
-        <div className="mt-6">
+        <div className="mt-6 md:pr-px lg:pr-0">
           <div className="p-8 border border-nexura-white/5 md:border-nexura-white/10 lg:border-nexura-white/5 bg-nexura-surface">
             <h4 className="flex items-center gap-2 text-xs uppercase tracking-widest text-nexura-white mb-4">
               <Filter className="w-4 h-4 text-nexura-gold" />
@@ -273,11 +273,11 @@ export const BusinessUnits = () => {
             <div className="w-12 h-[2px] bg-nexura-gold"></div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-0 md:gap-8 lg:gap-10 border border-nexura-white/10 md:border-0 divide-y divide-nexura-white/10 md:divide-y-0">
+        <div className="grid md:grid-cols-2 gap-0 md:gap-8 lg:gap-10 border border-nexura-white/10 md:border-0 divide-y divide-nexura-white/10 md:divide-y-0 md:pr-px lg:pr-0">
           {units.map((unit, idx) => (
             <div
               key={idx}
-              className="bg-nexura-black p-10 hover:bg-nexura-surface transition-colors duration-500 group relative overflow-hidden md:border md:border-nexura-white/15 lg:border-nexura-white/10"
+              className="bg-nexura-black p-10 hover:bg-nexura-surface transition-colors duration-500 group relative overflow-hidden md:ring-1 md:ring-inset md:ring-nexura-white/15 lg:ring-nexura-white/10"
             >
               <div className="absolute top-0 right-0 p-6 opacity-20 group-hover:opacity-100 transition-opacity duration-500">
                 <ArrowUpRight className="text-nexura-gold" />
