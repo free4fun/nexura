@@ -179,7 +179,7 @@ export const Philosophy = () => {
                 <div key={idx} className="group p-6 lg:p-8 border border-nexura-white/5 md:border-nexura-white/10 lg:border-nexura-white/5 bg-nexura-surface hover:border-nexura-gold/30 transition-all duration-500">
                     <div className="flex items-center gap-2 mb-3">
                       {item.icon}
-                      <h3 className="font-serif text-xl text-nexura-white group-hover:text-nexura-gold transition-colors">{item.title}</h3>
+                      <h3 className="font-sans text-xl text-nexura-white group-hover:text-nexura-gold transition-colors">{item.title}</h3>
                     </div>
                     <p className="text-sm text-nexura-white/60 leading-relaxed font-light">
                         {item.desc}
@@ -286,7 +286,7 @@ export const BusinessUnits = () => {
                 <div className="text-nexura-gold bg-nexura-gold/5 w-14 h-14 rounded-full flex items-center justify-center border border-nexura-gold/25 shrink-0">
                   {unit.icon}
                 </div>
-                <h3 className="font-serif text-2xl text-nexura-white">{unit.title}</h3>
+                <h3 className="font-sans text-2xl text-nexura-white">{unit.title}</h3>
               </div>
               <p className="text-nexura-white/60 font-light leading-relaxed max-w-sm">
                 {unit.description}
@@ -329,7 +329,7 @@ export const Protocol = () => {
                   </div>
                 )}
 
-                <span className="absolute left-4 top-4 text-nexura-gold text-[10px] font-bold tracking-widest leading-none">
+                <span className="absolute left-4 top-4 text-nexura-gold text-[10px] font-sans font-bold tracking-widest leading-none">
                   FASE {roman[idx] ?? String(idx + 1)}
                 </span>
 
@@ -338,7 +338,7 @@ export const Protocol = () => {
                 </div>
 
                 <div className="text-center px-4">
-                  <h3 className="text-nexura-white font-serif text-lg mb-3">{step.title}</h3>
+                  <h3 className="text-nexura-white font-sans text-lg mb-3">{step.title}</h3>
                   <div className="w-12 h-[1px] bg-nexura-white/10 mx-auto mb-4"></div>
                   <p className="text-xs text-nexura-white/50 leading-relaxed uppercase tracking-wider">{step.description}</p>
                 </div>
@@ -559,7 +559,7 @@ export const Opportunities = () => {
                               REF: {item.ref}
                             </span>
                         </div>
-                        <h3 className="text-xl md:text-2xl text-nexura-white mb-6 font-serif leading-snug">
+                        <h3 className="text-xl md:text-2xl text-nexura-white mb-6 font-sans leading-snug">
                             {item.title}
                         </h3>
                         <div className="mb-8 border-t border-nexura-white/10 pt-6 space-y-6">

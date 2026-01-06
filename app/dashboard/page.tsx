@@ -174,9 +174,9 @@ export default function Dashboard() {
                            <FileText size={24} className="hidden md:block" strokeWidth={1} />
                         </div>
                         <div>
-                           <p className="text-base md:text-lg text-nexura-white font-serif">{meta.context}</p>
+                           <p className="text-base md:text-lg text-nexura-white font-sans">{meta.context}</p>
                           <p className="text-sm md:text-base text-nexura-white/40">
-                            {meta.note} · <span className="font-mono">{file.name}</span>
+                            {meta.note} - <span className="font-mono">{file.name}</span>
                           </p>
                           <p className="text-sm md:text-base text-nexura-white/40 mt-1">{file.date}</p>
                         </div>

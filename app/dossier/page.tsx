@@ -27,7 +27,7 @@ function DossierContent() {
 
         <form className="space-y-8">
             <div className="bg-nexura-surface p-8 border border-nexura-white/5">
-            <h3 className="text-nexura-white font-serif text-xl mb-6">Validación de Perfil</h3>
+            <h3 className="text-nexura-white font-sans text-xl mb-6">Validación de Perfil</h3>
                 
                 <div className="space-y-6">
                     <div className="group">
