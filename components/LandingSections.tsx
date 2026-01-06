@@ -8,6 +8,11 @@ import {
   LuEyeOff as EyeOff,
   LuLayers as Layers,
   LuBadgeCheck as BadgeCheck,
+  LuWrench as Wrench,
+  LuBan as Ban,
+  LuFilter as Filter,
+  LuKeyRound as KeyRound,
+  LuActivity as Activity,
   LuTag as Tag,
   LuClock3 as Clock3,
   LuIdCard as IdCard,
@@ -173,7 +178,10 @@ export const Philosophy = () => {
 
         <div className="mt-12 grid md:grid-cols-2 gap-6">
           <div className="p-8 border border-nexura-white/5 bg-nexura-surface">
-            <h4 className="text-xs uppercase tracking-widest text-nexura-white/40 mb-4">Qué hacemos</h4>
+            <h4 className="flex items-center gap-2 text-xs uppercase tracking-widest text-nexura-white/40 mb-4">
+              <Wrench className="w-4 h-4 text-nexura-gold" />
+              Qué hacemos
+            </h4>
             <ul className="space-y-2 text-sm text-nexura-white/60 font-light leading-relaxed">
               <li>Estructuración legal, financiera y operativa para desbloquear activos complejos.</li>
               <li>Operaciones off-market con confidencialidad y criterio.</li>
@@ -181,7 +189,10 @@ export const Philosophy = () => {
             </ul>
           </div>
           <div className="p-8 border border-nexura-white/5 bg-nexura-surface">
-            <h4 className="text-xs uppercase tracking-widest text-nexura-white/40 mb-4">Qué no hacemos</h4>
+            <h4 className="flex items-center gap-2 text-xs uppercase tracking-widest text-nexura-white/40 mb-4">
+              <Ban className="w-4 h-4 text-nexura-gold" />
+              Qué no hacemos
+            </h4>
             <ul className="space-y-2 text-sm text-nexura-white/60 font-light leading-relaxed">
               <li>Captación masiva ni intermediación pública.</li>
               <li>Promesas de retornos o resultados garantizados.</li>
@@ -192,7 +203,10 @@ export const Philosophy = () => {
 
         <div className="mt-6">
           <div className="p-8 border border-nexura-white/5 bg-nexura-surface">
-            <h4 className="text-xs uppercase tracking-widest text-nexura-white/40 mb-4">Criterio de selección</h4>
+            <h4 className="flex items-center gap-2 text-xs uppercase tracking-widest text-nexura-white/40 mb-4">
+              <Filter className="w-4 h-4 text-nexura-gold" />
+              Criterio de selección
+            </h4>
             <p className="text-sm text-nexura-white/60 font-light leading-relaxed">
               Nexura interviene en activos y operaciones donde el ticket, la estructura y el impacto justifican un abordaje dedicado.
               La fricción puede estar presente, pero no es condición excluyente.
@@ -515,7 +529,7 @@ export const Opportunities = () => {
                             <div>
                               <span className="flex items-center gap-2 text-[10px] text-nexura-white/40 uppercase tracking-wider mb-2">
                                 <Settings2 size={12} className="text-nexura-gold" />
-                                Fricción
+                                Configuración
                               </span>
                               <p className="text-sm text-nexura-white/60 font-light leading-relaxed">
                                 {item.friction}
@@ -523,7 +537,7 @@ export const Opportunities = () => {
                             </div>
                             <div>
                               <span className="flex items-center gap-2 text-[10px] text-nexura-white/40 uppercase tracking-wider mb-2">
-                                <BadgeCheck size={12} className="text-nexura-gold" />
+                                <Activity size={12} className="text-nexura-gold" />
                                 Estado
                               </span>
                               <p className="text-sm text-nexura-white/60 font-light leading-relaxed">
@@ -610,7 +624,10 @@ export const ContactForm = () => {
 
         <div className="grid md:grid-cols-2 gap-6 mb-12 border-t border-nexura-white/10 pt-8">
           <div className="border border-nexura-white/5 bg-nexura-surface p-6">
-            <h4 className="text-xs uppercase tracking-widest text-nexura-white/40 mb-4">Criterios de entrada</h4>
+            <h4 className="flex items-center gap-2 text-xs uppercase tracking-widest text-nexura-white/40 mb-4">
+              <KeyRound className="w-4 h-4 text-nexura-gold" />
+              Criterios de entrada
+            </h4>
             <ul className="space-y-2 text-sm text-nexura-white/60 font-light leading-relaxed">
               <li>Fricción real: bloqueo legal, operativo o estructural verificable.</li>
               <li>Mandato: capacidad de decisión o representación formal.</li>
@@ -618,7 +635,10 @@ export const ContactForm = () => {
             </ul>
           </div>
           <div className="border border-nexura-white/5 bg-nexura-surface p-6">
-            <h4 className="text-xs uppercase tracking-widest text-nexura-white/40 mb-4">Tiempo de respuesta</h4>
+            <h4 className="flex items-center gap-2 text-xs uppercase tracking-widest text-nexura-white/40 mb-4">
+              <Clock3 className="w-4 h-4 text-nexura-gold" />
+              Tiempo de respuesta
+            </h4>
             <p className="text-sm text-nexura-white/60 font-light leading-relaxed">
               Respondemos en 48–72 h hábiles con próximos pasos o requerimientos mínimos.
             </p>
