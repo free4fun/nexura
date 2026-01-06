@@ -158,7 +158,7 @@ export const Philosophy = () => {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-3 lg:grid-cols-3 gap-6 lg:gap-8 pt-10 lg:pt-12">
+        <div className="grid md:grid-cols-3 lg:grid-cols-3 gap-6 lg:gap-8 pt-6 lg:pt-8">
             {[
                 {
                     title: "Discreción",
@@ -188,7 +188,7 @@ export const Philosophy = () => {
             ))}
         </div>
 
-        <div className="mt-12">
+        <div className="mt-10">
           <div className="flex items-center gap-4">
             <div className="h-px flex-1 bg-nexura-white/10" />
             <p className="text-xs lg:text-sm uppercase tracking-[0.2em] text-nexura-white/40 text-center whitespace-nowrap">
@@ -198,7 +198,7 @@ export const Philosophy = () => {
           </div>
         </div>
 
-        <div className="mt-12 grid md:grid-cols-2 gap-6">
+        <div className="mt-8 grid md:grid-cols-2 gap-6">
           <div className="p-8 border border-nexura-white/5 md:border-nexura-white/10 lg:border-nexura-white/5 bg-nexura-surface">
             <h4 className="flex items-center gap-2 text-xs uppercase tracking-widest text-nexura-white mb-4">
               <Wrench className="w-4 h-4 text-nexura-gold" />
@@ -697,9 +697,14 @@ export const ContactForm = () => {
                       <FormBriefcase size={12} className="text-nexura-gold" />
                 Perfil
               </label>
-                    <select className="w-full bg-transparent border-b border-nexura-white/20 py-3 text-nexura-white focus:outline-none focus:border-nexura-gold transition-colors font-light text-lg appearance-none rounded-none cursor-pointer">
-                        <option className="bg-nexura-black">Tengo un activo bloqueado</option>
-                        <option className="bg-nexura-black">Soy inversor (Deal Flow)</option>
+                    <select
+                      required
+                      defaultValue=""
+                      className="w-full bg-transparent border-b border-nexura-white/20 py-3 text-nexura-white invalid:text-nexura-white/30 focus:outline-none focus:border-nexura-gold transition-colors font-light text-lg appearance-none rounded-none cursor-pointer"
+                    >
+                        <option value="" disabled hidden className="bg-nexura-black">Seleccionar perfil</option>
+                        <option value="Tengo un activo bloqueado" className="bg-nexura-black">Tengo un activo bloqueado</option>
+                        <option value="Soy inversor (Deal Flow)" className="bg-nexura-black">Soy inversor (Deal Flow)</option>
                     </select>
                 </div>
             </div>
