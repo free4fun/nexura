@@ -178,7 +178,7 @@ export const Philosophy = () => {
 
         <div className="mt-12 grid md:grid-cols-2 gap-6">
           <div className="p-8 border border-nexura-white/5 bg-nexura-surface">
-            <h4 className="flex items-center gap-2 text-xs uppercase tracking-widest text-nexura-white/40 mb-4">
+            <h4 className="flex items-center gap-2 text-xs uppercase tracking-widest text-nexura-white mb-4">
               <Wrench className="w-4 h-4 text-nexura-gold" />
               Qué hacemos
             </h4>
@@ -189,7 +189,7 @@ export const Philosophy = () => {
             </ul>
           </div>
           <div className="p-8 border border-nexura-white/5 bg-nexura-surface">
-            <h4 className="flex items-center gap-2 text-xs uppercase tracking-widest text-nexura-white/40 mb-4">
+            <h4 className="flex items-center gap-2 text-xs uppercase tracking-widest text-nexura-white mb-4">
               <Ban className="w-4 h-4 text-nexura-gold" />
               Qué no hacemos
             </h4>
@@ -203,7 +203,7 @@ export const Philosophy = () => {
 
         <div className="mt-6">
           <div className="p-8 border border-nexura-white/5 bg-nexura-surface">
-            <h4 className="flex items-center gap-2 text-xs uppercase tracking-widest text-nexura-white/40 mb-4">
+            <h4 className="flex items-center gap-2 text-xs uppercase tracking-widest text-nexura-white mb-4">
               <Filter className="w-4 h-4 text-nexura-gold" />
               Criterio de selección
             </h4>
@@ -511,7 +511,7 @@ export const Opportunities = () => {
                     if (target?.closest('a,button')) return;
                     scrollToIndex(idx);
                   }}
-                  className={`min-w-[90vw] sm:min-w-[85vw] md:min-w-[420px] lg:min-w-[480px] snap-center bg-nexura-black border p-6 md:p-10 transition-all duration-500 flex flex-col justify-between group md:hover:shadow-2xl md:hover:shadow-nexura-gold/5 md:hover:-translate-y-1 ${idx === currentIndex ? 'border-nexura-gold/40 ring-1 ring-inset ring-nexura-gold/40 blur-none md:blur-none' : 'border-nexura-white/5 blur-sm md:blur-sm'}`}
+                  className={`min-w-[90vw] sm:min-w-[85vw] md:min-w-[420px] lg:min-w-[480px] snap-center bg-nexura-black border p-6 md:p-10 transition-all duration-500 flex flex-col justify-between group ${idx === currentIndex ? 'border-nexura-gold/40 ring-1 ring-inset ring-nexura-gold/40 blur-none md:blur-none' : 'border-nexura-white/5 blur-sm md:blur-sm'}`}
                 >
                     <div>
                         <div className="flex justify-between items-start mb-6">
@@ -521,7 +521,7 @@ export const Opportunities = () => {
                               REF: {item.ref}
                             </span>
                         </div>
-                        <h3 className="text-xl md:text-2xl text-nexura-white mb-6 font-serif leading-snug group-hover:text-nexura-gold/90 transition-colors duration-300">
+                        <h3 className="text-xl md:text-2xl text-nexura-white mb-6 font-serif leading-snug">
                             {item.title}
                         </h3>
                         <div className="mb-8 border-t border-nexura-white/10 pt-6 space-y-6">
@@ -624,7 +624,7 @@ export const ContactForm = () => {
 
         <div className="grid md:grid-cols-2 gap-6 mb-12 border-t border-nexura-white/10 pt-8">
           <div className="border border-nexura-white/5 bg-nexura-surface p-6">
-            <h4 className="flex items-center gap-2 text-xs uppercase tracking-widest text-nexura-white/40 mb-4">
+            <h4 className="flex items-center gap-2 text-xs uppercase tracking-widest text-nexura-white mb-4">
               <KeyRound className="w-4 h-4 text-nexura-gold" />
               Criterios de entrada
             </h4>
@@ -635,7 +635,7 @@ export const ContactForm = () => {
             </ul>
           </div>
           <div className="border border-nexura-white/5 bg-nexura-surface p-6">
-            <h4 className="flex items-center gap-2 text-xs uppercase tracking-widest text-nexura-white/40 mb-4">
+            <h4 className="flex items-center gap-2 text-xs uppercase tracking-widest text-nexura-white mb-4">
               <Clock3 className="w-4 h-4 text-nexura-gold" />
               Tiempo de respuesta
             </h4>
