@@ -132,7 +132,7 @@ export default function Dashboard() {
               </div>
 
               {/* Desktop: cards */}
-              <div className="hidden md:grid grid-cols-4 gap-6 mb-12">
+              <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 mb-12">
                 {stats.map((stat, i) => (
                   <div key={i} className="bg-nexura-surface border border-nexura-white/5 p-6 rounded-sm">
                     <div className="flex flex-col items-center justify-center text-center gap-5">

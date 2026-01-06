@@ -17,7 +17,7 @@ function DossierContent() {
             <div className="flex items-center gap-2 text-nexura-gold text-xs tracking-widest uppercase mb-4">
               <Lock size={14} /> Solicitud de Documentación
             </div>
-            <h1 className="font-serif text-3xl md:text-5xl text-nexura-white mb-4">Dossier Privado</h1>
+            <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl text-nexura-white mb-4">Dossier Privado</h1>
             {assetRef ? (
                <p className="text-nexura-white/60">Solicitando acceso al activo referencia: <span className="text-nexura-gold font-mono">{assetRef}</span></p>
             ) : (

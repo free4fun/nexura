@@ -148,7 +148,7 @@ export const Philosophy = () => {
             </div>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 border-t border-nexura-white/10 pt-12">
+        <div className="grid md:grid-cols-3 lg:grid-cols-3 gap-8 border-t border-nexura-white/10 pt-12">
             {[
                 {
                     title: "Discreción",
@@ -166,7 +166,7 @@ export const Philosophy = () => {
                   desc: "Cuando hay fricción, la reducimos. Cuando no la hay, optimizamos la estructura para facilitar el movimiento del valor."
                 }
             ].map((item, idx) => (
-                <div key={idx} className="group p-8 border border-nexura-white/5 bg-nexura-surface hover:border-nexura-gold/30 transition-all duration-500">
+                <div key={idx} className="group p-8 border border-nexura-white/5 md:border-nexura-white/10 lg:border-nexura-white/5 bg-nexura-surface hover:border-nexura-gold/30 transition-all duration-500">
                     {item.icon}
                     <h3 className="font-serif text-xl text-nexura-white mb-3 group-hover:text-nexura-gold transition-colors">{item.title}</h3>
                     <p className="text-sm text-nexura-white/60 leading-relaxed font-light">
@@ -177,7 +177,7 @@ export const Philosophy = () => {
         </div>
 
         <div className="mt-12 grid md:grid-cols-2 gap-6">
-          <div className="p-8 border border-nexura-white/5 bg-nexura-surface">
+          <div className="p-8 border border-nexura-white/5 md:border-nexura-white/10 lg:border-nexura-white/5 bg-nexura-surface">
             <h4 className="flex items-center gap-2 text-xs uppercase tracking-widest text-nexura-white mb-4">
               <Wrench className="w-4 h-4 text-nexura-gold" />
               Qué hacemos
@@ -188,7 +188,7 @@ export const Philosophy = () => {
               <li>Orden del escenario para ejecutar una salida viable.</li>
             </ul>
           </div>
-          <div className="p-8 border border-nexura-white/5 bg-nexura-surface">
+          <div className="p-8 border border-nexura-white/5 md:border-nexura-white/10 lg:border-nexura-white/5 bg-nexura-surface">
             <h4 className="flex items-center gap-2 text-xs uppercase tracking-widest text-nexura-white mb-4">
               <Ban className="w-4 h-4 text-nexura-gold" />
               Qué no hacemos
@@ -202,7 +202,7 @@ export const Philosophy = () => {
         </div>
 
         <div className="mt-6">
-          <div className="p-8 border border-nexura-white/5 bg-nexura-surface">
+          <div className="p-8 border border-nexura-white/5 md:border-nexura-white/10 lg:border-nexura-white/5 bg-nexura-surface">
             <h4 className="flex items-center gap-2 text-xs uppercase tracking-widest text-nexura-white mb-4">
               <Filter className="w-4 h-4 text-nexura-gold" />
               Criterio de selección
@@ -251,7 +251,7 @@ export const BusinessUnits = () => {
             <div className="w-12 h-[2px] bg-nexura-gold"></div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-px bg-nexura-white/10 border border-nexura-white/10">
+        <div className="grid md:grid-cols-2 gap-px bg-nexura-white/10 md:bg-nexura-white/15 lg:bg-nexura-white/10 border border-nexura-white/10 md:border-nexura-white/15 lg:border-nexura-white/10">
           {units.map((unit, idx) => (
             <div key={idx} className="bg-nexura-black p-12 hover:bg-nexura-surface transition-colors duration-500 group relative overflow-hidden">
               <div className="absolute top-0 right-0 p-6 opacity-20 group-hover:opacity-100 transition-opacity duration-500">
@@ -291,11 +291,11 @@ export const Protocol = () => {
         </div>
 
         <div className="relative mt-20">
-          <div className="grid md:grid-cols-4 gap-8 relative z-10">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
             {steps.map((step, idx) => (
               <div key={idx} className="group relative">
                 {idx !== steps.length - 1 && (
-                  <div className="hidden md:block absolute top-[22px] -right-6 z-0 text-nexura-white/50">
+                  <div className="hidden lg:block absolute top-[22px] -right-6 z-0 text-nexura-white/50">
                     <ArrowRight size={18} />
                   </div>
                 )}
@@ -473,12 +473,12 @@ export const Opportunities = () => {
         </div>
 
         {/* Carrusel con navegación responsiva */}
-        <div className="relative md:px-14">
+        <div className="relative lg:px-14">
           {/* Desktop: chevrons a los costados, centrados verticalmente */}
           <button 
             onClick={() => scrollDesktop('left')} 
             disabled={currentIndex === 0}
-            className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 z-20 w-12 h-12 border border-nexura-white/20 text-nexura-white/70 items-center justify-center hover:border-nexura-gold hover:text-nexura-gold transition-all duration-300 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:border-nexura-white/20 disabled:hover:text-nexura-white group"
+            className="hidden lg:flex absolute left-0 top-1/2 -translate-y-1/2 z-20 w-12 h-12 border border-nexura-white/20 text-nexura-white/70 items-center justify-center hover:border-nexura-gold hover:text-nexura-gold transition-all duration-300 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:border-nexura-white/20 disabled:hover:text-nexura-white group"
             aria-label="Anterior"
           >
             <ArrowLeft size={18} className="group-hover:scale-110 group-hover:-rotate-12 transition-transform duration-300" />
@@ -487,7 +487,7 @@ export const Opportunities = () => {
           <button 
             onClick={() => scrollDesktop('right')} 
             disabled={currentIndex === OPPORTUNITIES.length - 1}
-            className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 z-20 w-12 h-12 border border-nexura-white/20 text-nexura-white/70 items-center justify-center hover:border-nexura-gold hover:text-nexura-gold transition-all duration-300 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:border-nexura-white/20 disabled:hover:text-nexura-white group"
+            className="hidden lg:flex absolute right-0 top-1/2 -translate-y-1/2 z-20 w-12 h-12 border border-nexura-white/20 text-nexura-white/70 items-center justify-center hover:border-nexura-gold hover:text-nexura-gold transition-all duration-300 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:border-nexura-white/20 disabled:hover:text-nexura-white group"
             aria-label="Siguiente"
           >
             <ArrowRight size={18} className="group-hover:scale-110 group-hover:rotate-12 transition-transform duration-300" />
@@ -511,7 +511,7 @@ export const Opportunities = () => {
                     if (target?.closest('a,button')) return;
                     scrollToIndex(idx);
                   }}
-                  className={`min-w-[90vw] sm:min-w-[85vw] md:min-w-[420px] lg:min-w-[480px] snap-center bg-nexura-black border p-6 md:p-10 transition-all duration-500 flex flex-col justify-between group ${idx === currentIndex ? 'border-nexura-gold/40 ring-1 ring-inset ring-nexura-gold/40 blur-none md:blur-none' : 'border-nexura-white/5 blur-sm md:blur-sm'}`}
+                  className={`min-w-[90vw] sm:min-w-[85vw] md:min-w-[420px] lg:min-w-[480px] snap-center bg-nexura-black border p-6 md:p-10 transition-all duration-500 flex flex-col justify-between group ${idx === currentIndex ? 'border-nexura-gold/40 ring-1 ring-inset ring-nexura-gold/40 blur-none md:blur-none' : 'border-nexura-white/5 md:border-nexura-white/10 lg:border-nexura-white/5 blur-sm md:blur-sm'}`}
                 >
                     <div>
                         <div className="flex justify-between items-start mb-6">
@@ -557,7 +557,7 @@ export const Opportunities = () => {
                     </div>
                     <Link 
                       href={`/dossier?ref=${item.ref}`}
-                      className="w-full border-2 border-nexura-white/20 text-nexura-white text-xs uppercase tracking-widest py-4 hover:bg-nexura-gold hover:border-nexura-gold hover:text-nexura-black transition-all duration-300 flex items-center justify-center gap-2 group-hover:border-nexura-gold/50 font-semibold"
+                      className="w-full border-2 border-nexura-white/20 md:border-nexura-white/35 lg:border-nexura-white/20 text-nexura-white text-xs uppercase tracking-widest py-4 hover:bg-nexura-gold hover:border-nexura-gold hover:text-nexura-black transition-all duration-300 flex items-center justify-center gap-2 group-hover:border-nexura-gold/50 font-semibold"
                     >
                         Solicitar Dossier <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />
                     </Link>
@@ -571,14 +571,14 @@ export const Opportunities = () => {
           <button 
             onClick={() => scroll('left')} 
             disabled={currentIndex === 0}
-            className="w-10 h-10 border border-nexura-white/20 flex items-center justify-center hover:border-nexura-gold hover:text-nexura-gold transition-all duration-300 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:border-nexura-white/20 disabled:hover:text-nexura-white group"
+            className="w-10 h-10 border border-nexura-white/20 md:border-nexura-white/35 lg:border-nexura-white/20 flex items-center justify-center hover:border-nexura-gold hover:text-nexura-gold transition-all duration-300 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:border-nexura-white/20 disabled:hover:text-nexura-white group"
           >
               <ArrowLeft size={16} className="group-hover:scale-110 group-hover:-rotate-12 transition-transform duration-300" />
           </button>
           <button 
             onClick={() => scroll('right')} 
             disabled={currentIndex === OPPORTUNITIES.length - 1}
-            className="w-10 h-10 border border-nexura-white/20 flex items-center justify-center hover:border-nexura-gold hover:text-nexura-gold transition-all duration-300 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:border-nexura-white/20 disabled:hover:text-nexura-white group"
+            className="w-10 h-10 border border-nexura-white/20 md:border-nexura-white/35 lg:border-nexura-white/20 flex items-center justify-center hover:border-nexura-gold hover:text-nexura-gold transition-all duration-300 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:border-nexura-white/20 disabled:hover:text-nexura-white group"
           >
               <ArrowRight size={16} className="group-hover:scale-110 group-hover:rotate-12 transition-transform duration-300" />
           </button>
@@ -618,12 +618,12 @@ export const ContactForm = () => {
 
       <div className="max-w-3xl mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
-             <h2 className="font-serif text-3xl md:text-5xl text-nexura-white mb-4">Solicitud de Evaluación</h2>
+               <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-nexura-white mb-4">Solicitud de Evaluación</h2>
              <p className="text-nexura-white/50 font-light">Acceso restringido a inversores cualificados y propietarios de activos.</p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-6 mb-12 border-t border-nexura-white/10 pt-8">
-          <div className="border border-nexura-white/5 bg-nexura-surface p-6">
+          <div className="border border-nexura-white/5 md:border-nexura-white/10 lg:border-nexura-white/5 bg-nexura-surface p-6">
             <h4 className="flex items-center gap-2 text-xs uppercase tracking-widest text-nexura-white mb-4">
               <KeyRound className="w-4 h-4 text-nexura-gold" />
               Criterios de entrada
@@ -634,7 +634,7 @@ export const ContactForm = () => {
               <li>Confidencialidad: compartimos detalles sólo bajo acuerdo.</li>
             </ul>
           </div>
-          <div className="border border-nexura-white/5 bg-nexura-surface p-6">
+          <div className="border border-nexura-white/5 md:border-nexura-white/10 lg:border-nexura-white/5 bg-nexura-surface p-6">
             <h4 className="flex items-center gap-2 text-xs uppercase tracking-widest text-nexura-white mb-4">
               <Clock3 className="w-4 h-4 text-nexura-gold" />
               Tiempo de respuesta

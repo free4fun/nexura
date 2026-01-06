@@ -22,27 +22,27 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-8 mb-16">
             <div className="text-center md:text-left">
-                <img src="/nexura.svg" alt="Nexura Logo" className="h-20 w-auto mb-2 mx-auto md:mx-auto" />
+                <img src="/nexura.svg" alt="Nexura Logo" className="h-20 w-auto mb-2 mx-auto" />
                 <span className="block w-fit mx-auto text-[14px] uppercase tracking-[0.3em] text-nexura-white">Nexura Group</span>
                                 <div className="mt-5 flex justify-center">
                                     <Link
                                         href={privateAccessHref}
-                                        className="inline-flex items-center justify-center border border-nexura-gold/30 text-nexura-gold px-4 py-2 text-[10px] uppercase tracking-widest hover:border-nexura-gold hover:bg-nexura-gold/10 transition-colors"
+                                        className="relative box-border inline-flex items-center justify-center border border-nexura-gold/30 !text-nexura-gold visited:!text-nexura-gold hover:!text-nexura-gold px-4 py-2 text-[10px] uppercase tracking-widest hover:border-nexura-gold hover:bg-nexura-gold/10 transition-colors after:hidden md:after:block after:content-[''] after:absolute after:top-0 after:bottom-0 after:right-0 after:w-px after:bg-nexura-gold/30"
                                     >
                                         Acceso Privado
                                     </Link>
                                 </div>
             </div>
             
-            <div className="flex flex-col md:flex-row gap-8 md:gap-16 text-center md:text-right">
-                <div>
+            <div className="flex flex-col md:flex-row gap-8 md:gap-16 text-center md:text-left">
+                <div className="md:text-left">
                     <h4 className="text-xs uppercase tracking-widest text-nexura-white/40 mb-4">Legal</h4>
                     <ul className="space-y-2">
                         <li><Link href="/legal/terms" className="text-sm text-nexura-white/70 hover:text-nexura-gold transition-colors">Términos de Confidencialidad</Link></li>
                         <li><Link href="/legal/ncnda" className="text-sm text-nexura-white/70 hover:text-nexura-gold transition-colors">Política de No-Elusión (NCNDA)</Link></li>
                     </ul>
                 </div>
-                <div>
+                <div className="md:text-left">
                     <h4 className="text-xs uppercase tracking-widest text-nexura-white/40 mb-4">Ubicación</h4>
                     <span className="text-sm text-nexura-white/70">Operaciones Globales</span>
                 </div>

@@ -5,7 +5,7 @@ export default function Terms() {
     <div className="pt-32 pb-24 px-6 min-h-screen">
           <div className="max-w-7xl mx-auto">
           <span className="text-nexura-gold text-xs font-bold tracking-[0.2em] uppercase mb-4 block">Documentación Legal</span>
-          <h1 className="font-serif text-3xl md:text-5xl text-nexura-white mb-12">Términos de Confidencialidad y Acceso Restringido</h1>
+          <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl text-nexura-white mb-12">Términos de Confidencialidad y Acceso Restringido</h1>
           
           <div className="prose prose-invert prose-lg text-nexura-white/70 font-light leading-relaxed">
              <p>
