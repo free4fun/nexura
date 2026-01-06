@@ -9,7 +9,6 @@ import {
   LuLayers as Layers,
   LuBadgeCheck as BadgeCheck,
   LuTag as Tag,
-  LuChartBar as ChartBar,
   LuClock3 as Clock3,
   LuIdCard as IdCard,
   LuBriefcase as FormBriefcase,
@@ -42,42 +41,58 @@ interface StepProps {
   icon: React.ReactNode;
 }
 
+type OpportunityStatus = 'Disponible' | 'En diligencia' | 'En revisión';
+
+interface Opportunity {
+  category: string;
+  ref: string;
+  title: string;
+  friction: string;
+  timeline: string;
+  status: OpportunityStatus;
+}
+
 // Data
-const OPPORTUNITIES = [
+const OPPORTUNITIES: Opportunity[] = [
   {
-    category: "Logística",
-    ref: "NX-8842",
-    title: "Activo inmobiliario en zona logística estratégica. Documentación en fase final de saneamiento.",
-    roi: "18%",
-    timeline: "14 Meses"
+    category: 'Logística',
+    ref: 'NX-8842',
+    title: 'Activo inmobiliario en zona logística estratégica. Documentación en fase final de saneamiento.',
+    friction: 'Saneamiento registral y orden documental',
+    timeline: '6–14 meses',
+    status: 'En diligencia'
   },
   {
-    category: "M&A",
-    ref: "NX-2109",
-    title: "Unidad de negocio operativa en sector servicios. Facturación estable. Salida inmediata.",
-    roi: "Estable",
-    timeline: "Inmediata"
+    category: 'M&A',
+    ref: 'NX-2109',
+    title: 'Unidad de negocio operativa en sector servicios. Transición de mando y ajuste de estructura.',
+    friction: 'Estructura societaria y handover operativo',
+    timeline: '0–3 meses',
+    status: 'Disponible'
   },
   {
-    category: "Hotelero",
-    ref: "NX-9931",
-    title: "Resort boutique en costa mediterránea. Requiere reestructuración de deuda senior.",
-    roi: "22%",
-    timeline: "24 Meses"
+    category: 'Hotelero',
+    ref: 'NX-9931',
+    title: 'Activo hotelero boutique. Necesita reordenamiento de pasivos y acuerdo con acreedores.',
+    friction: 'Reestructuración de deuda y coordinación multi-parte',
+    timeline: '12–24 meses',
+    status: 'En revisión'
   },
   {
-    category: "Energía",
-    ref: "NX-5502",
-    title: "Paquete de licencias fotovoltaicas (Ready-to-Build) con PPA firmado.",
-    roi: "15%",
-    timeline: "6 Meses"
+    category: 'Energía',
+    ref: 'NX-5502',
+    title: 'Paquete de licencias con ingeniería avanzada. Estructura contractual a optimizar.',
+    friction: 'Permisos y encaje contractual',
+    timeline: '4–8 meses',
+    status: 'Disponible'
   },
   {
-    category: "Industrial",
-    ref: "NX-3004",
-    title: "Planta de procesamiento alimentario con maquinaria de última generación. Venta de activo.",
-    roi: "12%",
-    timeline: "12 Meses"
+    category: 'Industrial',
+    ref: 'NX-3004',
+    title: 'Activo industrial con continuidad operativa. Proceso de salida bajo confidencialidad.',
+    friction: 'Due diligence y coordinación operativa',
+    timeline: '6–12 meses',
+    status: 'En diligencia'
   }
 ];
 
@@ -87,7 +102,7 @@ export const Hero = () => {
       <div className="absolute inset-0 z-0">
         <img 
           src="/background.webp" 
-          alt="Abstract Architecture" 
+          alt="Abstract structural field" 
           className="w-full h-full object-cover opacity-40 grayscale"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-nexura-black/10 via-nexura-black/30 to-nexura-black"></div>
@@ -99,7 +114,7 @@ export const Hero = () => {
           <span className="text-nexura-gold italic">encuentra su destino.</span>
         </h1>
         <p className="font-light text-nexura-white/80 max-w-2xl mx-auto text-sm md:text-lg leading-relaxed mb-10 tracking-wide">
-          Estructuramos soluciones para activos complejos y conectamos capital con oportunidades de alta fricción. Sin burocracia, con precisión estratégica.
+          Estructuramos condiciones para que activos de alto valor se muevan de forma eficiente. Intervenimos cuando el ticket, la estructura y el impacto justifican un abordaje dedicado, con o sin fricción operativa.
         </p>
       </div>
 
@@ -123,7 +138,7 @@ export const Philosophy = () => {
             </div>
             <div>
                 <p className="text-nexura-white/70 font-light leading-relaxed text-lg">
-                    "No operamos en el mercado masivo. Nexura nace para resolver la asimetría de información y la parálisis operativa."
+                  “No operamos en el mercado masivo. Nexura interviene cuando el valor amerita una estructura específica, independientemente de la complejidad o fricción existente.”
                 </p>
             </div>
         </div>
@@ -133,17 +148,17 @@ export const Philosophy = () => {
                 {
                     title: "Discreción",
               icon: <EyeOff className="w-8 h-8 text-nexura-gold mb-4" strokeWidth={1} />,
-                    desc: "Operaciones Off-Market fuera del radar público."
+                  desc: "Canales privados, exposición mínima y criterio selectivo. El acceso es por referencia, no por volumen."
                 },
                 {
                     title: "Apalancamiento",
                   icon: <Layers className="w-8 h-8 text-nexura-gold mb-4" strokeWidth={1} />,
-                    desc: "Minimizamos el esfuerzo operativo maximizando el retorno del activo."
+                  desc: "Estructura, información y timing. Operamos sin inventario y sin desgaste operativo innecesario."
                 },
                 {
                     title: "Resolución",
                   icon: <BadgeCheck className="w-8 h-8 text-nexura-gold mb-4" strokeWidth={1} />,
-                    desc: "Si hay un bloqueo legal, emocional o financiero, Nexura diseña la salida."
+                  desc: "Cuando hay fricción, la reducimos. Cuando no la hay, optimizamos la estructura para facilitar el movimiento del valor."
                 }
             ].map((item, idx) => (
                 <div key={idx} className="group p-8 border border-nexura-white/5 bg-nexura-surface hover:border-nexura-gold/30 transition-all duration-500">
@@ -155,6 +170,35 @@ export const Philosophy = () => {
                 </div>
             ))}
         </div>
+
+        <div className="mt-12 grid md:grid-cols-2 gap-6">
+          <div className="p-8 border border-nexura-white/5 bg-nexura-surface">
+            <h4 className="text-xs uppercase tracking-widest text-nexura-white/40 mb-4">Qué hacemos</h4>
+            <ul className="space-y-2 text-sm text-nexura-white/60 font-light leading-relaxed">
+              <li>Estructuración legal, financiera y operativa para desbloquear activos complejos.</li>
+              <li>Operaciones off-market con confidencialidad y criterio.</li>
+              <li>Orden del escenario para ejecutar una salida viable.</li>
+            </ul>
+          </div>
+          <div className="p-8 border border-nexura-white/5 bg-nexura-surface">
+            <h4 className="text-xs uppercase tracking-widest text-nexura-white/40 mb-4">Qué no hacemos</h4>
+            <ul className="space-y-2 text-sm text-nexura-white/60 font-light leading-relaxed">
+              <li>Captación masiva ni intermediación pública.</li>
+              <li>Promesas de retornos o resultados garantizados.</li>
+              <li>Publicaciones abiertas que atraigan curiosos y ruido.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="mt-6">
+          <div className="p-8 border border-nexura-white/5 bg-nexura-surface">
+            <h4 className="text-xs uppercase tracking-widest text-nexura-white/40 mb-4">Criterio de selección</h4>
+            <p className="text-sm text-nexura-white/60 font-light leading-relaxed">
+              Nexura interviene en activos y operaciones donde el ticket, la estructura y el impacto justifican un abordaje dedicado.
+              La fricción puede estar presente, pero no es condición excluyente.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   );
@@ -164,7 +208,7 @@ export const BusinessUnits = () => {
   const units: VerticalProps[] = [
     {
       title: "Real Estate",
-      description: "Activos con trabas legales, herencias o paquetes de inversión corporativa.",
+      description: "Activos inmobiliarios de alto valor, con estructuras simples o complejas, dentro y fuera de mercado.",
       icon: <Building2 size={24} strokeWidth={1} />
     },
     {
@@ -174,7 +218,7 @@ export const BusinessUnits = () => {
     },
     {
       title: "Luxury Assets",
-      description: "Gestión de liquidez para activos de movilidad (Yates, Aviones) y piezas de colección.",
+      description: "Estructuración de uso, rotación o salida para activos de alto valor subutilizados o estratégicos.",
       icon: <Gem size={24} strokeWidth={1} />
     },
     {
@@ -187,9 +231,10 @@ export const BusinessUnits = () => {
   return (
     <section id="unidades" className="py-24 bg-nexura-dark">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="mb-16">
+        <div className="mb-20">
             <span className="text-nexura-gold text-xs font-bold tracking-[0.2em] uppercase mb-4 block">02. Unidades</span>
-            <h2 className="font-serif text-3xl md:text-4xl text-nexura-white">Divisiones de Estructuración</h2>
+            <h2 className="font-serif text-3xl md:text-4xl text-nexura-white mb-6">Divisiones de Estructuración</h2>
+            <div className="w-12 h-[2px] bg-nexura-gold"></div>
         </div>
 
         <div className="grid md:grid-cols-2 gap-px bg-nexura-white/10 border border-nexura-white/10">
@@ -215,19 +260,20 @@ export const BusinessUnits = () => {
 
 export const Protocol = () => {
   const steps: StepProps[] = [
-    { title: "Auditoría de Fricción", description: "Analizamos por qué el activo está estancado.", icon: <Search size={18} strokeWidth={1.5} /> },
-    { title: "Ingeniería de la Operación", description: "Limpiamos la estructura legal y financiera para hacerla atractiva.", icon: <Settings2 size={18} strokeWidth={1.5} /> },
-    { title: "Sourcing Privado", description: "Activamos nuestra red de contactos y nodos de poder sin anuncios públicos.", icon: <Network size={18} strokeWidth={1.5} /> },
-    { title: "Captura de Valor", description: "Cierre de la transacción y transferencia de activos.", icon: <TrendingUp size={18} strokeWidth={1.5} /> },
+    { title: "Auditoría de Contexto", description: "Evaluamos el activo, el ticket y el escenario para determinar viabilidad y encuadre operativo.", icon: <Search size={18} strokeWidth={1.5} /> },
+    { title: "Estructura de Operación", description: "Definimos el formato adecuado: documental, legal y narrativo, según el perfil del activo y las partes.", icon: <Settings2 size={18} strokeWidth={1.5} /> },
+    { title: "Canal Privado", description: "Registramos interés, validamos perfiles y habilitamos acceso selectivo bajo acuerdos de confidencialidad y no elusión.", icon: <Network size={18} strokeWidth={1.5} /> },
+    { title: "Cierre", description: "Coordinamos a las partes y acompañamos el proceso hasta la transferencia y salida ordenada.", icon: <TrendingUp size={18} strokeWidth={1.5} /> },
   ];
 
   return (
     <section id="protocolo" className="py-24 bg-nexura-black">
       <div className="max-w-7xl mx-auto px-6">
-         <div className="mb-16 text-center">
+        <div className="mb-16">
             <span className="text-nexura-gold text-xs font-bold tracking-[0.2em] uppercase mb-4 block">03. El Protocolo</span>
-            <h2 className="font-serif text-3xl md:text-4xl text-nexura-white mb-4">Sistemática de Precisión</h2>
-            <p className="text-nexura-white/50 max-w-xl mx-auto text-sm">Un proceso replicable para minimizar riesgos y garantizar resultados.</p>
+          <h2 className="font-serif text-3xl md:text-4xl text-nexura-white mb-6">Sistemática de Precisión</h2>
+          <div className="w-12 h-[2px] bg-nexura-gold mb-8"></div>
+            <p className="text-nexura-white/50 max-w-xl text-sm">Un sistema probado para estructurar operaciones de alto valor, reducir fricción cuando existe y habilitar cierres ordenados bajo criterios de confidencialidad y control.</p>
         </div>
 
         <div className="relative mt-20">
@@ -401,8 +447,9 @@ export const Opportunities = () => {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6">
             <div className="flex-1">
                 <span className="text-nexura-gold text-xs font-bold tracking-[0.2em] uppercase mb-4 block">04. Inventario Activo</span>
-                <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-nexura-white mb-2">Blind Teasers</h2>
-                <p className="text-nexura-white/50 text-sm max-w-xl">Oportunidades exclusivas verificadas. Acceso restringido mediante NDA.</p>
+                <h2 className="font-serif text-3xl md:text-4xl text-nexura-white mb-6">Blind Teasers</h2>
+                <div className="w-12 h-[2px] bg-nexura-gold mb-8"></div>
+                <p className="text-nexura-white/50 text-sm max-w-xl">Oportunidades verificadas de alto valor, con estructuras simples o especiales. Acceso restringido.</p>
             </div>
             <div className="flex items-center gap-2 text-nexura-white/40 text-xs tracking-widest uppercase">
                 <Lock size={14} className="text-nexura-gold" />
@@ -463,21 +510,35 @@ export const Opportunities = () => {
                         <h3 className="text-xl md:text-2xl text-nexura-white mb-6 font-serif leading-snug group-hover:text-nexura-gold/90 transition-colors duration-300">
                             {item.title}
                         </h3>
-                        <div className="grid grid-cols-2 gap-6 mb-8 border-t border-nexura-white/10 pt-6">
-                             <div>
-                                <span className="flex items-center gap-2 text-[10px] text-nexura-white/40 uppercase tracking-wider mb-2">
-                                  <ChartBar size={12} className="text-nexura-gold" />
-                                  Retorno (Est)
-                                </span>
-                                <span className="text-nexura-gold text-2xl font-serif">{item.roi}</span>
-                             </div>
-                             <div>
-                                <span className="flex items-center gap-2 text-[10px] text-nexura-white/40 uppercase tracking-wider mb-2">
-                                  <Clock3 size={12} className="text-nexura-gold" />
-                                  Horizonte
-                                </span>
-                                <span className="text-nexura-white text-2xl font-serif">{item.timeline}</span>
-                             </div>
+                        <div className="mb-8 border-t border-nexura-white/10 pt-6 space-y-6">
+                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                              <span className="flex items-center gap-2 text-[10px] text-nexura-white/40 uppercase tracking-wider mb-2">
+                                <Settings2 size={12} className="text-nexura-gold" />
+                                Fricción
+                              </span>
+                              <p className="text-sm text-nexura-white/60 font-light leading-relaxed">
+                                {item.friction}
+                              </p>
+                            </div>
+                            <div>
+                              <span className="flex items-center gap-2 text-[10px] text-nexura-white/40 uppercase tracking-wider mb-2">
+                                <BadgeCheck size={12} className="text-nexura-gold" />
+                                Estado
+                              </span>
+                              <p className="text-sm text-nexura-white/60 font-light leading-relaxed">
+                                {item.status}
+                              </p>
+                            </div>
+                          </div>
+
+                          <div>
+                            <span className="flex items-center gap-2 text-[10px] text-nexura-white/40 uppercase tracking-wider mb-2">
+                              <Clock3 size={12} className="text-nexura-gold" />
+                              Horizonte
+                            </span>
+                            <span className="text-nexura-white text-2xl font-serif">{item.timeline}</span>
+                          </div>
                         </div>
                     </div>
                     <Link 
@@ -545,6 +606,23 @@ export const ContactForm = () => {
         <div className="text-center mb-16">
              <h2 className="font-serif text-3xl md:text-5xl text-nexura-white mb-4">Solicitud de Evaluación</h2>
              <p className="text-nexura-white/50 font-light">Acceso restringido a inversores cualificados y propietarios de activos.</p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-6 mb-12 border-t border-nexura-white/10 pt-8">
+          <div className="border border-nexura-white/5 bg-nexura-surface p-6">
+            <h4 className="text-xs uppercase tracking-widest text-nexura-white/40 mb-4">Criterios de entrada</h4>
+            <ul className="space-y-2 text-sm text-nexura-white/60 font-light leading-relaxed">
+              <li>Fricción real: bloqueo legal, operativo o estructural verificable.</li>
+              <li>Mandato: capacidad de decisión o representación formal.</li>
+              <li>Confidencialidad: compartimos detalles sólo bajo acuerdo.</li>
+            </ul>
+          </div>
+          <div className="border border-nexura-white/5 bg-nexura-surface p-6">
+            <h4 className="text-xs uppercase tracking-widest text-nexura-white/40 mb-4">Tiempo de respuesta</h4>
+            <p className="text-sm text-nexura-white/60 font-light leading-relaxed">
+              Respondemos en 48–72 h hábiles con próximos pasos o requerimientos mínimos.
+            </p>
+          </div>
         </div>
 
         <form className="space-y-12">

@@ -108,14 +108,15 @@ export default function Header() {
 
   return (
     <>
-      <header className={`fixed w-full z-50 transition-all duration-500 ${isScrolled || pathname !== '/' ? 'bg-nexura-black/95 backdrop-blur-md py-4' : 'bg-transparent py-4'}`}>
+      <header className={`fixed w-full z-50 transition-all duration-500 ${isScrolled || pathname !== '/' ? 'bg-nexura-black/95 backdrop-blur-md py-1' : 'bg-transparent py-6'}`}>
         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
           <a
             href="/#hero"
             onClick={(e) => handleNavClick(e, '/#hero')}
-            className="font-serif text-2xl tracking-[0.2em] text-nexura-white hover:text-nexura-gold transition-colors duration-300"
+            className="flex items-center gap-3 font-serif text-2xl tracking-[0.2em] text-nexura-white hover:text-nexura-gold transition-colors duration-300"
           >
-            <img src="/logo.png" alt="Nexura Logo" className="h-10 w-auto" />
+            <img src="/nexura.svg" alt="Nexura Logo" className="h-14 md:h-18 w-auto" />
+            <span className="uppercase tracking-[0.2em]">Nexura</span>
           </a>
 
           <nav className="hidden md:flex items-center gap-8">
