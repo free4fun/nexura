@@ -56,14 +56,14 @@ export default function Dashboard() {
         <div className="flex flex-col md:flex-row md:justify-between md:items-end gap-6 mb-8 md:mb-12">
           <div>
             <div className="flex flex-wrap items-center gap-3 mb-3">
-              <span className="text-nexura-gold text-xs font-bold tracking-[0.2em] uppercase">Acceso Privado · Estado de Cartera</span>
+              <span className="text-nexura-gold text-xs font-bold tracking-[0.2em] uppercase">Acceso Privado - Estado de Cartera</span>
               <span className="inline-flex items-center px-3 py-1 border border-nexura-red/30 bg-nexura-red/10 text-nexura-red text-[10px] uppercase tracking-widest">
                 Demo
               </span>
             </div>
             <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl text-nexura-white">Panorama de Activos</h2>
             <p className="mt-2 text-[10px] uppercase tracking-widest text-nexura-white/40">
-              Perfil validado · Acceso restringido · Nivel: Privado
+              Perfil: No validado - Nivel: Privado
             </p>
           </div>
 
@@ -82,29 +82,29 @@ export default function Dashboard() {
               label: 'Activos en Encuadre',
               labelShort: 'Encuadre',
               val: '3',
-              iconMobile: <Search size={14} />,
-              iconDesktop: <Search size={16} />,
+              iconMobile: <Search size={18} />,
+              iconDesktop: <Search size={28} />,
             },
             {
               label: 'Estructuras en Análisis',
               labelShort: 'Análisis',
               val: '1',
-              iconMobile: <FileCheck size={14} />,
-              iconDesktop: <FileCheck size={16} />,
+              iconMobile: <FileCheck size={18} />,
+              iconDesktop: <FileCheck size={28} />,
             },
             {
               label: 'Procesos Abiertos',
               labelShort: 'Abiertos',
               val: '0',
-              iconMobile: <TrendingUp size={14} />,
-              iconDesktop: <TrendingUp size={16} />,
+              iconMobile: <TrendingUp size={18} />,
+              iconDesktop: <TrendingUp size={28} />,
             },
             {
               label: 'Documentación Activa',
               labelShort: 'Docs',
               val: '12',
-              iconMobile: <FileText size={14} />,
-              iconDesktop: <FileText size={16} />,
+              iconMobile: <FileText size={18} />,
+              iconDesktop: <FileText size={28} />,
             },
           ];
 
@@ -118,7 +118,7 @@ export default function Dashboard() {
                       <div key={i} className="px-2 py-3 text-center">
                         <div className="flex items-center justify-center gap-1.5 text-nexura-gold">
                           {stat.iconMobile}
-                          <span className="font-serif text-lg text-nexura-white leading-none">
+                          <span className="font-sans text-lg text-nexura-white leading-none">
                             {stat.val === '0' ? '—' : stat.val}
                           </span>
                         </div>
@@ -139,7 +139,7 @@ export default function Dashboard() {
                       <div className="w-12 h-12 bg-nexura-gold/10 border border-nexura-gold/20 rounded-full flex items-center justify-center text-nexura-gold">
                         {stat.iconDesktop}
                       </div>
-                      <div className="text-3xl font-serif text-nexura-white leading-none">
+                      <div className="text-3xl font-sans text-nexura-white leading-none">
                         {stat.val === '0' ? '—' : stat.val}
                       </div>
                       <div className="text-[10px] uppercase tracking-widest text-nexura-white/40 leading-snug">
@@ -153,9 +153,9 @@ export default function Dashboard() {
           );
         })()}
 
-        <div className="bg-nexura-black border border-nexura-white/10 p-8">
-           <h3 className="text-lg font-serif text-nexura-white mb-8 border-b border-nexura-white/5 pb-4">Documentación Activa</h3>
-           <p className="text-xs text-nexura-white/50 font-light mb-8">
+          <div className="bg-nexura-black border border-nexura-white/10 p-8">
+            <h3 className="text-xl md:text-2xl font-serif text-nexura-white mb-8 border-b border-nexura-white/5 pb-4">Documentación Activa</h3>
+            <p className="text-center lg:text-left text-sm md:text-base text-nexura-white/50 font-light mb-8">
              La información se habilita de forma progresiva según el estado de cada operación.
            </p>
            <div className="space-y-4">
@@ -169,24 +169,28 @@ export default function Dashboard() {
                   return (
                 <div key={idx} className="flex flex-col md:flex-row items-center justify-between p-4 hover:bg-nexura-white/5 transition-colors border border-transparent hover:border-nexura-white/5 group cursor-pointer">
                     <div className="flex items-center gap-4 w-full md:w-auto">
-                        <div className="w-10 h-10 bg-nexura-white/5 flex items-center justify-center text-nexura-gold">
-                           <FileText size={20} strokeWidth={1} />
+                        <div className="w-11 h-11 md:w-12 md:h-12 bg-nexura-white/5 flex items-center justify-center text-nexura-gold">
+                           <FileText size={22} className="md:hidden" strokeWidth={1} />
+                           <FileText size={24} className="hidden md:block" strokeWidth={1} />
                         </div>
                         <div>
-                           <p className="text-sm text-nexura-white font-serif">{meta.context}</p>
-                          <p className="text-xs text-nexura-white/40">{meta.note} · {file.name}</p>
-                          <p className="text-xs text-nexura-white/40 mt-1">{file.date}</p>
+                           <p className="text-base md:text-lg text-nexura-white font-serif">{meta.context}</p>
+                          <p className="text-sm md:text-base text-nexura-white/40">
+                            {meta.note} · <span className="font-mono">{file.name}</span>
+                          </p>
+                          <p className="text-sm md:text-base text-nexura-white/40 mt-1">{file.date}</p>
                         </div>
                     </div>
                     <div className="flex items-center gap-6 mt-4 md:mt-0 w-full md:w-auto justify-end">
-                        <span className="text-xs text-nexura-white/30 font-mono">{file.size}</span>
+                        <span className="text-sm md:text-base text-nexura-white/30 font-mono">{file.size}</span>
                        <button
                          className="text-nexura-white/40 hover:text-nexura-gold transition-colors"
                          aria-label="Acceso habilitado"
                          title="Acceso habilitado"
                          type="button"
                        >
-                          <Eye size={18} />
+                          <Eye size={20} className="md:hidden" />
+                          <Eye size={22} className="hidden md:block" />
                        </button>
                     </div>
                 </div>
@@ -196,7 +200,7 @@ export default function Dashboard() {
            </div>
 
            <div className="mt-10 pt-8 border-t border-nexura-white/10">
-             <p className="text-[10px] uppercase tracking-widest text-nexura-white/40">
+             <p className="text-[11px] md:text-xs uppercase tracking-widest text-nexura-white/40 text-center md:text-left">
                Este entorno no constituye una oferta pública. La información se habilita por invitación y bajo criterios de confidencialidad.
              </p>
            </div>

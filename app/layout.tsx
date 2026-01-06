@@ -1,6 +1,6 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { Cinzel, Manrope } from 'next/font/google';
+import { Cinzel, Manrope, JetBrains_Mono } from 'next/font/google';
 import { Suspense } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -18,6 +18,13 @@ const manrope = Manrope({
   display: 'swap',
 });
 
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  variable: '--font-jetbrains-mono',
+  display: 'swap',
+  weight: ['400', '500'],
+});
+
 export const metadata: Metadata = {
   title: 'NEXURA | Private Office',
   description: 'Soluciones de estructuración para activos complejos.',
@@ -29,8 +36,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es" className={`${cinzel.variable} ${manrope.variable}`}>
-      <body className="bg-nexura-black text-nexura-white selection:bg-nexura-gold selection:text-nexura-black">
+    <html lang="es" className={`${cinzel.variable} ${manrope.variable} ${jetbrainsMono.variable}`}>
+      <body className="bg-nexura-black text-nexura-white font-sans selection:bg-nexura-gold selection:text-nexura-black">
         <AuthProvider>
           <Suspense fallback={null}>
             <Header />

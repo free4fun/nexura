@@ -16,6 +16,7 @@
   /* Fonts */
   --font-serif: var(--font-cinzel), serif;
   --font-sans: var(--font-manrope), sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 
     /* Background images */
   --bg-gradient-radial: radial-gradient(var(--tw-gradient-stops));

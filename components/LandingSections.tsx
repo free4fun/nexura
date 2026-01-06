@@ -589,7 +589,7 @@ export const Opportunities = () => {
                               <Clock3 size={12} className="text-nexura-gold" />
                               Horizonte
                             </span>
-                            <span className="text-nexura-white text-2xl font-serif">{item.timeline}</span>
+                            <span className="text-nexura-white text-2xl font-sans">{item.timeline}</span>
                           </div>
                         </div>
                     </div>
@@ -640,9 +640,9 @@ export const Opportunities = () => {
 
         {/* Contador */}
         <div className="flex justify-center items-center mt-6 gap-2">
-          <span className="text-nexura-gold font-serif text-lg">{String(currentIndex + 1).padStart(2, '0')}</span>
+          <span className="text-nexura-gold font-sans text-lg">{String(currentIndex + 1).padStart(2, '0')}</span>
           <span className="text-nexura-white/30 text-sm">/</span>
-          <span className="text-nexura-white/30 font-serif text-lg">{String(OPPORTUNITIES.length).padStart(2, '0')}</span>
+          <span className="text-nexura-white/30 font-sans text-lg">{String(OPPORTUNITIES.length).padStart(2, '0')}</span>
         </div>
       </div>
     </section>
