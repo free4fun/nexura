@@ -1,6 +1,7 @@
 'use client';
 
 import React, { Suspense } from 'react';
+import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import { LuLock as Lock } from 'react-icons/lu';
 
@@ -85,11 +86,40 @@ function DossierContent() {
                 />
               </div>
 
-                     <div className="flex items-start gap-4 pt-4">
-                        <input type="checkbox" className="mt-1 bg-nexura-black border-nexura-white/20" />
-                        <p className="text-xs text-nexura-white/50 leading-relaxed">
-                  Confirmo que la solicitud es seria y que aceptaré firmar acuerdos de confidencialidad y no elusión antes de acceder a documentación completa.
-                        </p>
+                    <div className="pt-4 space-y-3">
+                      <div className="flex items-start gap-4">
+                        <input
+                          id="accept-terms"
+                          name="acceptTerms"
+                          type="checkbox"
+                          required
+                          className="mt-1 bg-nexura-black border-nexura-white/20"
+                        />
+                        <label htmlFor="accept-terms" className="text-xs text-nexura-white/50 leading-relaxed">
+                          He leído y acepto los{' '}
+                          <Link href="/legal/terms" className="text-nexura-gold hover:text-nexura-gold/80 underline underline-offset-4">
+                            Términos de Confidencialidad
+                          </Link>
+                          .
+                        </label>
+                      </div>
+
+                      <div className="flex items-start gap-4">
+                        <input
+                          id="accept-ncnda"
+                          name="acceptNcnda"
+                          type="checkbox"
+                          required
+                          className="mt-1 bg-nexura-black border-nexura-white/20"
+                        />
+                        <label htmlFor="accept-ncnda" className="text-xs text-nexura-white/50 leading-relaxed">
+                          He leído y acepto la{' '}
+                          <Link href="/legal/ncnda" className="text-nexura-gold hover:text-nexura-gold/80 underline underline-offset-4">
+                            Política de No Elusión
+                          </Link>
+                          .
+                        </label>
+                      </div>
                     </div>
                 </div>
             </div>

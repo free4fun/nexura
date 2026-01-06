@@ -692,6 +692,40 @@ export const ContactForm = () => {
             </div>
 
             <div className="pt-8">
+              <div className="mb-8 space-y-3">
+                <div className="flex items-start gap-3">
+                  <input
+                    id="contact-accept-terms"
+                    name="acceptTerms"
+                    type="checkbox"
+                    required
+                    className="mt-1 bg-nexura-black border-nexura-white/20"
+                  />
+                  <label htmlFor="contact-accept-terms" className="text-[10px] text-nexura-white/50 uppercase tracking-widest leading-relaxed">
+                    He leído y acepto los{' '}
+                    <Link href="/legal/terms" className="text-nexura-gold hover:text-nexura-gold/80 underline underline-offset-4">
+                      Términos de Confidencialidad
+                    </Link>
+                    .
+                  </label>
+                </div>
+                <div className="flex items-start gap-3">
+                  <input
+                    id="contact-accept-ncnda"
+                    name="acceptNcnda"
+                    type="checkbox"
+                    required
+                    className="mt-1 bg-nexura-black border-nexura-white/20"
+                  />
+                  <label htmlFor="contact-accept-ncnda" className="text-[10px] text-nexura-white/50 uppercase tracking-widest leading-relaxed">
+                    He leído y acepto la{' '}
+                    <Link href="/legal/ncnda" className="text-nexura-gold hover:text-nexura-gold/80 underline underline-offset-4">
+                      Política de No Elusión
+                    </Link>
+                    .
+                  </label>
+                </div>
+              </div>
               <button type="submit" className="w-full bg-nexura-white text-nexura-black font-serif uppercase tracking-widest py-5 text-sm hover:bg-nexura-gold transition-colors duration-500 shadow-[0_0_20px_rgba(255,255,255,0.1)] inline-flex items-center justify-center gap-2">
                 <Send size={16} />
                 Iniciar Protocolo
