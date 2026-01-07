@@ -25,6 +25,8 @@ import {
   LuBriefcase as Briefcase,
   LuGem as Gem,
   LuFingerprint as Fingerprint,
+  LuSparkles as Sparkles,
+  LuRadar as Radar,
   LuArrowRight as ArrowRight,
   LuArrowLeft as ArrowLeft,
   LuChevronRight as ChevronRight,
@@ -282,24 +284,35 @@ export const BusinessUnits = () => {
   const units: VerticalProps[] = [
     {
       title: "Real Estate",
-      description: "Activos inmobiliarios de alto valor, con estructuras simples o complejas, dentro y fuera de mercado.",
+      description: "Activos inmobiliarios de alto valor, con estructuras simples o complejas, dentro y fuera de mercado. Incluye operaciones especiales, paquetes de inversión y activos con potencial de reposicionamiento.",
       icon: <Building2 size={28} strokeWidth={1.5} />
     },
     {
       title: "M&A & Business",
-      description: "Venta confidencial de empresas operativas y unidades de negocio llave en mano.",
+      description: "Venta confidencial y estructuración de salidas para empresas operativas, unidades de negocio y activos productivos. Procesos off-market orientados a eficiencia, discreción y cierre.",
       icon: <Briefcase size={28} strokeWidth={1.5} />
     },
     {
       title: "Luxury Assets",
-      description: "Estructuración de uso, rotación o salida para activos de alto valor subutilizados o estratégicos.",
+      description: "Estructuración de uso, rotación o salida para activos de alto valor subutilizados o estratégicos. Movilidad, colección y activos patrimoniales que requieren gestión especializada de liquidez.",
       icon: <Gem size={28} strokeWidth={1.5} />
     },
     {
       title: "Strategic IP",
-      description: "Licenciamiento de marcas, patentes y genética de alto rendimiento (Pedigree).",
+      description: "Licenciamiento, transferencia y estructuración de propiedad intelectual, marcas, patentes y genética de alto rendimiento. Modelos de monetización sin operación directa.",
       icon: <Fingerprint size={28} strokeWidth={1.5} />
+    },
+    {
+      title: "Talent & Image Capital",
+      description: "Gestión estructural de oportunidades off-field para perfiles de alto rendimiento. Imagen, patrocinios, posicionamiento y vehículos de inversión vinculados a trayectorias profesionales.",
+      icon: <Sparkles size={28} strokeWidth={1.5} />
+    },
+    {
+      title: "Attention Brokerage",
+      description: "Intermediación privada de atención, audiencias y espacios estratégicos. Conexión entre marcas, activos y públicos cualificados bajo esquemas de revenue share o acuerdos específicos.",
+      icon: <Radar size={28} strokeWidth={1.5} />
     }
+
   ];
 
   return (
