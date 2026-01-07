@@ -26,8 +26,42 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'NEXURA | Private Office',
-  description: 'Soluciones de estructuración para activos complejos.',
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'https://nexura.lat'),
+  title: {
+    default: 'NEXURA',
+    template: '%s | NEXURA',
+  },
+  description:
+    'Soluciones de estructuración para activos complejos. Una plataforma exclusiva para operaciones off-market y gestión de activos de alto valor.',
+  icons: {
+    icon: [
+      { url: '/nexuraFondoNegro.svg', type: 'image/svg+xml' },
+      { url: '/nexura.png', type: 'image/png' },
+    ],
+    shortcut: ['/nexuraFondoNegro.svg'],
+    apple: [{ url: '/nexura.png' }],
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'es_ES',
+    siteName: 'NEXURA',
+    title: 'NEXURA',
+    description:
+      'Soluciones de estructuración para activos complejos. Una plataforma exclusiva para operaciones off-market y gestión de activos de alto valor.',
+    images: [
+      {
+        url: '/nexura.png',
+        alt: 'Nexura',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'NEXURA',
+    description:
+      'Soluciones de estructuración para activos complejos. Una plataforma exclusiva para operaciones off-market y gestión de activos de alto valor.',
+    images: ['/nexura.png'],
+  },
 };
 
 export default function RootLayout({
