@@ -4,10 +4,10 @@ export default function NCNDA() {
   return (
     <div className="pt-32 pb-24 px-6 min-h-screen">
           <div className="max-w-7xl mx-auto">
-          <span className="text-nexura-gold text-xs font-bold tracking-[0.2em] uppercase mb-4 block">Documentación Legal</span>
-          <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl text-nexura-white mb-12">Política de No Elusión y Relación de Intermediación</h1>
-          
-          <div className="prose prose-invert prose-lg text-nexura-white/70 font-light leading-relaxed font-mono">
+          <span className="text-nexura-gold text-xs font-bold tracking-[0.2em] uppercase mb-4 block">VIII. Documentación Legal</span>
+          <h1 className="font-serif text-3xl md:text-4xl text-nexura-white mb-6">Política de No Elusión y Relación de Intermediación</h1>
+          <div className="w-12 h-[2px] bg-nexura-gold mb-8"></div>
+          <div className="prose prose-invert prose-lg text-nexura-white/70 font-light leading-relaxed font-sans">
              <p>
                La presente política establece los principios que rigen la relación de intermediación de NEXURA respecto de las oportunidades, activos y contrapartes presentadas a través de esta plataforma.
              </p>

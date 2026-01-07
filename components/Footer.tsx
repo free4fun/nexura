@@ -29,7 +29,7 @@ export default function Footer() {
                                 <div className="mt-5 flex justify-center w-full">
                                     <Link
                                         href={privateAccessHref}
-                                        className="box-border inline-flex items-center justify-center gap-2 border border-nexura-gold !text-nexura-gold visited:!text-nexura-gold px-6 py-2 text-xs uppercase tracking-widest hover:bg-nexura-gold hover:!text-nexura-black transition-all duration-300"
+                                        className="box-border inline-flex items-center justify-center gap-2 ring-1 ring-inset ring-nexura-gold !text-nexura-gold visited:!text-nexura-gold px-6 py-2 text-xs uppercase tracking-widest hover:bg-nexura-gold hover:!text-nexura-black transition-all duration-300"
                                     >
                                         <LuUser size={14} />
                                         Acceso Privado

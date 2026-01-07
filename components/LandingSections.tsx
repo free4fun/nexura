@@ -41,6 +41,7 @@ interface VerticalProps {
   icon: React.ReactNode;
 }
 interface StepProps {
+  fase: string;
   title: string;
   description: string;
   icon: React.ReactNode;
@@ -137,7 +138,7 @@ export const Philosophy = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
             <div>
-                <span className="text-nexura-gold text-xs font-bold tracking-[0.2em] uppercase mb-4 block">01. Filosofía</span>
+                <span className="text-nexura-gold text-xs font-bold tracking-[0.2em] uppercase mb-4 block">I. Filosofía</span>
                 <h2 className="font-serif text-3xl md:text-4xl text-nexura-white mb-6">La Regla de Oro</h2>
                 <div className="w-12 h-[2px] bg-nexura-gold mb-8"></div>
             </div>
@@ -268,7 +269,7 @@ export const BusinessUnits = () => {
     <section id="unidades" className="py-24 bg-nexura-dark">
       <div className="max-w-7xl mx-auto px-6">
         <div className="mb-20">
-            <span className="text-nexura-gold text-xs font-bold tracking-[0.2em] uppercase mb-4 block">02. Unidades</span>
+            <span className="text-nexura-gold text-xs font-bold tracking-[0.2em] uppercase mb-4 block">II. Unidades</span>
             <h2 className="font-serif text-3xl md:text-4xl text-nexura-white mb-6">Divisiones de Estructuración</h2>
             <div className="w-12 h-[2px] bg-nexura-gold"></div>
         </div>
@@ -301,19 +302,17 @@ export const BusinessUnits = () => {
 
 export const Protocol = () => {
   const steps: StepProps[] = [
-    { title: "Auditoría de Contexto", description: "Evaluamos el activo, el ticket y el escenario para determinar viabilidad y encuadre operativo.", icon: <Search size={18} strokeWidth={1.5} /> },
-    { title: "Estructura de Operación", description: "Definimos el formato adecuado: documental, legal y narrativo, según el perfil del activo y las partes.", icon: <Settings2 size={18} strokeWidth={1.5} /> },
-    { title: "Canal Privado", description: "Registramos interés, validamos perfiles y habilitamos acceso selectivo bajo acuerdos de confidencialidad y no elusión.", icon: <Network size={18} strokeWidth={1.5} /> },
-    { title: "Cierre", description: "Coordinamos a las partes y acompañamos el proceso hasta la transferencia y salida ordenada.", icon: <TrendingUp size={18} strokeWidth={1.5} /> },
+    { fase: "1", title: "Auditoría de Contexto", description: "Evaluamos el activo, el ticket y el escenario para determinar viabilidad y encuadre operativo.", icon: <Search size={18} strokeWidth={1.5} /> },
+    { fase: "2", title: "Estructura de Operación", description: "Definimos el formato adecuado: documental, legal y narrativo, según el perfil del activo y las partes.", icon: <Settings2 size={18} strokeWidth={1.5} /> },
+    { fase: "3", title: "Canal Privado", description: "Registramos interés, validamos perfiles y habilitamos acceso selectivo bajo acuerdos de confidencialidad y no elusión.", icon: <Network size={18} strokeWidth={1.5} /> },
+    { fase: "4", title: "Cierre", description: "Coordinamos a las partes y acompañamos el proceso hasta la transferencia y salida ordenada.", icon: <TrendingUp size={18} strokeWidth={1.5} /> },
   ];
-
-  const roman = ["I", "II", "III", "IV", "V", "VI"];
 
   return (
     <section id="protocolo" className="py-24 bg-nexura-black">
       <div className="max-w-7xl mx-auto px-6">
         <div className="mb-16">
-            <span className="text-nexura-gold text-xs font-bold tracking-[0.2em] uppercase mb-4 block">03. El Protocolo</span>
+            <span className="text-nexura-gold text-xs font-bold tracking-[0.2em] uppercase mb-4 block">III. El Protocolo</span>
           <h2 className="font-serif text-3xl md:text-4xl text-nexura-white mb-6">Sistemática de Precisión</h2>
           <div className="w-12 h-[2px] bg-nexura-gold mb-8"></div>
             <p className="text-nexura-white/50 max-w-xl text-sm">Un sistema probado para estructurar operaciones de alto valor, reducir fricción cuando existe y habilitar cierres ordenados bajo criterios de confidencialidad y control.</p>
@@ -330,7 +329,7 @@ export const Protocol = () => {
                 )}
 
                 <span className="absolute left-4 top-4 text-nexura-gold text-[10px] font-sans font-bold tracking-widest leading-none">
-                  FASE {roman[idx] ?? String(idx + 1)}
+                  FASE {step.fase}
                 </span>
 
                 <div className="w-12 h-12 bg-nexura-gold/10 border border-nexura-gold/25 text-nexura-gold flex items-center justify-center rounded-full mx-auto mb-6 group-hover:border-nexura-gold group-hover:text-nexura-gold transition-all duration-300 relative z-10">
@@ -495,7 +494,7 @@ export const Opportunities = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6">
             <div className="flex-1">
-                <span className="text-nexura-gold text-xs font-bold tracking-[0.2em] uppercase mb-4 block">04. Inventario Activo</span>
+                <span className="text-nexura-gold text-xs font-bold tracking-[0.2em] uppercase mb-4 block">IV. Inventario Activo</span>
                 <h2 className="font-serif text-3xl md:text-4xl text-nexura-white mb-6">Blind Teasers</h2>
                 <div className="w-12 h-[2px] bg-nexura-gold mb-8"></div>
                 <p className="text-nexura-white/50 text-sm max-w-xl">Oportunidades verificadas de alto valor, con estructuras simples o especiales. Acceso restringido.</p>

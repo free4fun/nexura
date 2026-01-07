@@ -6,9 +6,7 @@ export default function OperacionesGlobalesPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
             <div>
-              <span className="text-nexura-gold text-xs font-bold tracking-[0.2em] uppercase mb-4 block">
-                01. Ubicación
-              </span>
+              <span className="text-nexura-gold text-xs font-bold tracking-[0.2em] uppercase mb-4 block">V. Ubicación</span>
               <h2 className="font-serif text-3xl md:text-4xl text-nexura-white mb-6">Operaciones Globales</h2>
               <div className="w-12 h-[2px] bg-nexura-gold mb-8"></div>
             </div>
@@ -93,7 +91,7 @@ export default function OperacionesGlobalesPage() {
 
           <div className="mt-20">
             <div className="mb-16">
-              <span className="text-nexura-gold text-xs font-bold tracking-[0.2em] uppercase mb-4 block">02. Síntesis</span>
+              <span className="text-nexura-gold text-xs font-bold tracking-[0.2em] uppercase mb-4 block">VI. Síntesis</span>
               <h2 className="font-serif text-3xl md:text-4xl text-nexura-white mb-6">Contexto</h2>
               <div className="w-12 h-[2px] bg-nexura-gold mb-8"></div>
               <div className="space-y-4">
