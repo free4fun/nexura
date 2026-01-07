@@ -57,8 +57,8 @@ export default function Footer() {
 
                 <p className="text-[10px] text-nexura-white/40 uppercase tracking-widest text-center mb-10">
                     <span className="sm:hidden block">Acceso restringido - Información confidencial</span>
-                    <span className="sm:hidden block mt-1">No constituye oferta pública</span>
-                    <span className="hidden sm:inline">Acceso restringido - Información confidencial - No constituye oferta pública</span>
+                    <span className="sm:hidden block mt-1">No elusión  - No constituye oferta pública</span>
+                    <span className="hidden sm:inline">Acceso restringido - Información confidencial - No elusión - No constituye oferta pública</span>
                 </p>
 
                 <div className="border-t border-nexura-white/5 pt-8">

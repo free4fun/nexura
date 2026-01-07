@@ -169,14 +169,14 @@ export const Philosophy = () => {
                   desc: "Canales privados, exposición mínima y criterio selectivo. El acceso es por referencia, no por volumen."
                 },
                 {
-                    title: "Apalancamiento",
+                    title: "Arquitectura",
                   icon: <Layers className="w-7 h-7 text-nexura-gold shrink-0" strokeWidth={1} />,
-                  desc: "Estructura, información y timing. Operamos sin inventario y sin desgaste operativo innecesario."
+                  desc: "No ejecutamos transacciones: diseñamos la arquitectura que las vuelve inevitables. Cada operación responde a una lógica clara, no al esfuerzo."
                 },
                 {
                     title: "Resolución",
                   icon: <BadgeCheck className="w-7 h-7 text-nexura-gold shrink-0" strokeWidth={1} />,
-                  desc: "Cuando hay fricción, la reducimos. Cuando no la hay, optimizamos la estructura para facilitar el movimiento del valor."
+                  desc: "Cuando existe fricción, la reducimos. Cuando no la hay, estructuramos el escenario para facilitar el movimiento del valor."
                 }
             ].map((item, idx) => (
               <div key={idx} className="group p-6 lg:p-8 ring-1 ring-inset ring-nexura-white/5 md:ring-nexura-white/10 lg:ring-nexura-white/5 bg-nexura-surface hover:ring-nexura-gold/30 transition-all duration-500">
@@ -232,8 +232,7 @@ export const Philosophy = () => {
               Criterio de selección
             </h3>
             <p className="text-sm text-nexura-white/60 font-light leading-relaxed">
-              Nexura interviene en activos y operaciones donde el ticket, la estructura y el impacto justifican un abordaje dedicado.
-              La fricción puede estar presente, pero no es condición excluyente.
+              Nexura interviene en activos y operaciones donde el tamaño, la estructura y el contexto justifican una intervención estratégica. La fricción puede estar presente, pero el criterio principal es que nuestra posición sea determinante para el resultado.
             </p>
           </div>
         </div>
