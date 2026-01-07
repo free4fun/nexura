@@ -42,14 +42,14 @@ export default function Footer() {
                     <h4 className="text-xs uppercase tracking-widest text-nexura-white/40 mb-4">Legal</h4>
                     <ul className="space-y-2">
                         <li><Link href="/legal/terms" className="text-sm text-nexura-white/70 hover:text-nexura-gold transition-colors">Términos de Confidencialidad</Link></li>
-                        <li><Link href="/legal/ncnda" className="text-sm text-nexura-white/70 hover:text-nexura-gold transition-colors">Política de No-Elusión (NCNDA)</Link></li>
+                        <li><Link href="/legal/ncnda" className="text-sm text-nexura-white/70 hover:text-nexura-gold transition-colors">Política de No Elusión (NCNDA)</Link></li>
                     </ul>
                 </div>
                 <div className="md:text-left">
                     <h4 className="text-xs uppercase tracking-widest text-nexura-white/40 mb-4">Ubicación</h4>
                     <ul className="space-y-2">
                         <li><span className="text-sm text-nexura-white/70">Base Legal: Uruguay</span></li>
-                        <li><Link href="/operaciones-globales" className="text-sm text-nexura-white/70 hover:text-nexura-gold transition-colors">Operaciones Globales</Link></li>
+                        <li><Link href="/operaciones-globales" className="text-sm text-nexura-white/70 hover:text-nexura-gold transition-colors">Operaciones Globales Selectivas</Link></li>
                     </ul>
                 </div>
             </div>
