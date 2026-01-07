@@ -4,10 +4,10 @@ import type { IconType } from 'react-icons';
 import {
   LuBuilding2 as Building2,
   LuBriefcase as Briefcase,
+  LuChevronRight as ChevronRight,
   LuCircleAlert as AlertCircle,
   LuCompass as Compass,
   LuFrame as Frame,
-  LuFileText as FileText,
   LuGem as Gem,
   LuFingerprint as Fingerprint,
   LuLock as Lock,
@@ -162,7 +162,7 @@ export default async function DivisionUnidadPage({
               </div>
 
               <div className="flex items-start justify-end pt-1 shrink-0">
-                <content.Icon strokeWidth={1.8} className="text-nexura-gold w-[86px] h-[86px]" />
+                <content.Icon strokeWidth={1.3} className="text-nexura-gold w-[86px] h-[86px]" />
               </div>
             </div>
           </div>
@@ -170,8 +170,8 @@ export default async function DivisionUnidadPage({
           <div className="mt-8">
             <div className="md:max-w-2xl md:mx-auto">
               <div className="bg-nexura-black p-10 hover:bg-nexura-surface transition-colors duration-500 ring-1 ring-inset ring-nexura-white/10 md:ring-nexura-white/15 lg:ring-nexura-white/10">
-                <h2 className="flex items-center gap-2 text-nexura-gold text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase mb-4">
-                  <Compass size={16} strokeWidth={2} className="shrink-0" />
+                <h2 className="flex items-center gap-2 text-nexura-white text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase mb-4">
+                  <Compass size={16} strokeWidth={2} className="shrink-0 text-nexura-gold" />
                   Contexto
                 </h2>
                 <div className="space-y-4">
@@ -186,8 +186,8 @@ export default async function DivisionUnidadPage({
           <div className="max-w-3xl mx-auto lg:max-w-5xl">
             <div className="mt-4 flex flex-col gap-4 md:mt-8 md:grid md:grid-cols-2 md:gap-8 lg:gap-10 md:border-0 md:divide-y-0 md:pr-px lg:pr-0">
               <div className="bg-nexura-black p-10 hover:bg-nexura-surface transition-colors duration-500 ring-1 ring-inset ring-nexura-white/10 md:ring-nexura-white/15 lg:ring-nexura-white/10">
-                <h2 className="flex items-center gap-2 text-nexura-gold text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase mb-4">
-                  <Frame size={16} strokeWidth={2} className="shrink-0" />
+                <h2 className="flex items-center gap-2 text-nexura-white text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase mb-4">
+                  <Frame size={16} strokeWidth={2} className="shrink-0 text-nexura-gold" />
                   Alcance
                 </h2>
                 <p className="text-nexura-white/60 font-light leading-relaxed text-sm md:text-base">
@@ -196,8 +196,8 @@ export default async function DivisionUnidadPage({
               </div>
 
               <div className="bg-nexura-black p-10 hover:bg-nexura-surface transition-colors duration-500 ring-1 ring-inset ring-nexura-white/10 md:ring-nexura-white/15 lg:ring-nexura-white/10">
-                <h2 className="flex items-center gap-2 text-nexura-gold text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase mb-4">
-                  <AlertCircle size={16} strokeWidth={2} className="shrink-0" />
+                <h2 className="flex items-center gap-2 text-nexura-white text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase mb-4">
+                  <AlertCircle size={16} strokeWidth={2} className="shrink-0 text-nexura-gold" />
                   Situación
                 </h2>
                 <p className="text-nexura-white/60 font-light leading-relaxed text-sm md:text-base">
@@ -206,8 +206,8 @@ export default async function DivisionUnidadPage({
               </div>
 
               <div className="bg-nexura-black p-10 hover:bg-nexura-surface transition-colors duration-500 ring-1 ring-inset ring-nexura-white/10 md:ring-nexura-white/15 lg:ring-nexura-white/10">
-                <h2 className="flex items-center gap-2 text-nexura-gold text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase mb-4">
-                  <Shuffle size={16} strokeWidth={2} className="shrink-0" />
+                <h2 className="flex items-center gap-2 text-nexura-white text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase mb-4">
+                  <Shuffle size={16} strokeWidth={2} className="shrink-0 text-nexura-gold" />
                   Enfoque
                 </h2>
                 <p className="text-nexura-white/60 font-light leading-relaxed text-sm md:text-base">
@@ -216,8 +216,8 @@ export default async function DivisionUnidadPage({
               </div>
 
               <div className="bg-nexura-black p-10 hover:bg-nexura-surface transition-colors duration-500 ring-1 ring-inset ring-nexura-white/10 md:ring-nexura-white/15 lg:ring-nexura-white/10">
-                <h2 className="flex items-center gap-2 text-nexura-gold text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase mb-4">
-                  <Lock size={16} strokeWidth={2} className="shrink-0" />
+                <h2 className="flex items-center gap-2 text-nexura-white text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase mb-4">
+                  <Lock size={16} strokeWidth={2} className="shrink-0 text-nexura-gold" />
                   Condición de Acceso
                 </h2>
 
@@ -238,9 +238,10 @@ export default async function DivisionUnidadPage({
               <div className="max-w-xl mx-auto">
                 <Link
                   href="/dossier"
-                  className="block w-full text-center bg-nexura-gold text-nexura-black font-sans font-semibold uppercase tracking-widest py-5 text-sm hover:bg-nexura-goldLight transition-colors"
+                  className="group w-full ring-2 ring-inset ring-nexura-white/20 md:ring-nexura-white/35 lg:ring-nexura-white/20 text-nexura-white text-xs uppercase tracking-widest py-4 hover:bg-nexura-gold hover:ring-nexura-gold hover:text-nexura-black transition-all duration-300 inline-flex items-center justify-center gap-2 font-semibold"
                 >
-                  Solicitar Evaluación
+                  Solicitar Evaluación{' '}
+                  <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>
             </div>

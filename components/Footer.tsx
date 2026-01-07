@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { LuMail, LuUser } from 'react-icons/lu';
+import { LuMail, LuMapPin, LuScale, LuUser } from 'react-icons/lu';
 import { FaLinkedinIn } from 'react-icons/fa6';
 import { SiSubstack } from 'react-icons/si';
 import { useAuth } from '@/context/AuthContext';
@@ -38,15 +38,21 @@ export default function Footer() {
             </div>
             
             <div className="flex flex-col md:flex-row gap-8 md:gap-16 text-center md:text-left">
-                <div className="md:text-left">
-                    <h4 className="text-xs uppercase tracking-widest text-nexura-white/40 mb-4">Legal</h4>
+                <div className="text-left md:text-left">
+                    <h4 className="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-nexura-white/40 mb-4">
+                        <LuScale size={14} className="text-nexura-gold" />
+                        Legal
+                    </h4>
                     <ul className="space-y-2">
                         <li><Link href="/legal/terms" className="nexura-text-link text-sm transition-colors">Términos de Confidencialidad</Link></li>
                         <li><Link href="/legal/ncnda" className="nexura-text-link text-sm transition-colors">Política de No Elusión (NCNDA)</Link></li>
                     </ul>
                 </div>
-                <div className="md:text-left">
-                    <h4 className="text-xs uppercase tracking-widest text-nexura-white/40 mb-4">Ubicación</h4>
+                <div className="text-left md:text-left">
+                    <h4 className="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-nexura-white/40 mb-4">
+                        <LuMapPin size={14} className="text-nexura-gold" />
+                        Ubicación
+                    </h4>
                     <ul className="space-y-2">
                         <li><span className="text-sm text-nexura-white/30">Base Legal: Uruguay</span></li>
                         <li><Link href="/operaciones-globales" className="nexura-text-link text-sm transition-colors">Operaciones Globales Selectivas</Link></li>
@@ -68,7 +74,7 @@ export default function Footer() {
                             <span>contacto@nexura.lat</span>
                         </Link>
 
-                        <div className="flex items-center gap-3">
+                        <div className="flex items-center gap-4">
                             <Link
                                 href="https://www.linkedin.com/company/nexura-lat"
                                 target="_blank"
