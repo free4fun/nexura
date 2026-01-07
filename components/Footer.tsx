@@ -55,13 +55,13 @@ export default function Footer() {
 
                 <div className="border-t border-nexura-white/5 pt-8">
                       <div className="flex flex-col items-center gap-4 md:flex-row-reverse md:items-center md:justify-between">
-                        <a href="mailto:contacto@nexura.lat" className="flex items-center gap-2 text-sm tracking-widest text-nexura-white hover:text-nexura-gold transition-colors">
+                        <Link href="mailto:contacto@nexura.lat" className="flex items-center gap-2 text-sm tracking-widest text-nexura-white hover:text-nexura-gold transition-colors">
                             <LuMail size={18} className="text-nexura-gold" />
                             <span>contacto@nexura.lat</span>
-                        </a>
+                        </Link>
 
                         <div className="flex items-center gap-3">
-                            <a
+                            <Link
                                 href="https://www.linkedin.com/company/nexura-lat"
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -69,8 +69,8 @@ export default function Footer() {
                                 aria-label="LinkedIn"
                             >
                                 <FaLinkedinIn size={18} style={{ color: 'var(--color-nexura-white)' }} />
-                            </a>
-                            <a
+                            </Link>
+                            <Link
                                 href="https://nexura.substack.com/"
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -78,7 +78,7 @@ export default function Footer() {
                                 aria-label="Substack"
                             >
                                 <SiSubstack size={18} style={{ color: 'var(--color-nexura-white)' }} />
-                            </a>
+                            </Link>
                         </div>
                     </div>
 

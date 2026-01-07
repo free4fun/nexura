@@ -118,25 +118,25 @@ export default function Header() {
     <>
       <header className={`fixed w-full z-50 transition-all duration-500 ${isScrolled || pathname !== '/' ? 'bg-nexura-black/95 backdrop-blur-md py-1' : 'bg-transparent py-6'}`}>
         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-          <a
+          <Link
             href="/#hero"
             onClick={(e) => handleNavClick(e, '/#hero')}
             className="flex items-center gap-3 font-serif text-2xl tracking-[0.2em] text-nexura-white hover:text-nexura-gold transition-colors duration-300"
           >
             <img src="/nexura.svg" alt="Nexura Logo" className="h-12 lg:h-14 w-auto" />
             <span className="uppercase tracking-[0.2em] inline md:inline lg:inline">Nexura</span>
-          </a>
+          </Link>
 
           <nav className="hidden md:flex items-center gap-6 lg:gap-8 md:pr-px">
             {navLinks.map((link) => (
-              <a 
+              <Link 
                 key={link.name} 
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
                 className="text-[10px] lg:text-xs uppercase tracking-widest text-nexura-white/70 hover:text-nexura-gold transition-colors duration-300"
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
 
             {hasMounted && isLoggedIn ? (
@@ -169,17 +169,17 @@ export default function Header() {
 
         {isMenuOpen && (
           <div className="absolute top-full left-0 w-full bg-nexura-black border-b border-nexura-white/10 md:hidden flex flex-col p-6 gap-6 shadow-2xl animate-fade-in-down">
-            <a
+            <Link
               href="/#hero"
               onClick={(e) => handleNavClick(e, '/#hero')}
               className="text-left text-sm uppercase tracking-widest text-nexura-white/80"
             >
               Inicio
-            </a>
+            </Link>
             {navLinks.map((link) => (
-              <a key={link.name} href={link.href} onClick={(e) => handleNavClick(e, link.href)} className="text-left text-sm uppercase tracking-widest text-nexura-white/80">
+              <Link key={link.name} href={link.href} onClick={(e) => handleNavClick(e, link.href)} className="text-left text-sm uppercase tracking-widest text-nexura-white/80">
                 {link.name}
-              </a>
+              </Link>
             ))}
             {isLoggedIn ? (
               <>

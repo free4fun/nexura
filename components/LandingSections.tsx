@@ -718,7 +718,7 @@ export const ContactForm = () => {
                     {['< USD 50k', 'USD 50k - 200k', '+ USD 200k'].map((opt) => (
                         <label key={opt} className="cursor-pointer">
                             <input type="radio" name="budget" className="peer sr-only" />
-                            <div className="border border-nexura-white/10 text-nexura-white/60 py-4 text-center text-sm uppercase tracking-wider hover:border-nexura-white/40 peer-checked:border-nexura-gold peer-checked:text-nexura-gold transition-all">
+                        <div className="ring-1 ring-inset ring-nexura-white/10 text-nexura-white/60 py-4 text-center text-sm uppercase tracking-wider hover:ring-nexura-white/40 active:ring-nexura-white/40 peer-checked:ring-nexura-gold peer-checked:text-nexura-gold transition-none">
                                 {opt}
                             </div>
                         </label>
