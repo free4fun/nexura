@@ -21,10 +21,12 @@ export default function Footer() {
     <footer className="bg-nexura-black border-t border-nexura-white/10 pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-8 mb-16">
-            <div className="text-center md:text-left">
-                <img src="/nexura.svg" alt="Nexura Logo" className="h-20 w-auto mb-2 mx-auto" />
-                <span className="block w-fit mx-auto text-[14px] uppercase tracking-[0.3em] text-nexura-white">Nexura Group</span>
-                                <div className="mt-5 flex justify-center">
+            <div className="flex flex-col items-center text-center ">
+                <Link href="/#hero" className="inline-flex flex-col items-center ">
+                    <img src="/nexura.svg" alt="Nexura Logo" className="h-20 w-auto mb-2 mx-auto md:mx-0" />
+                    <span className="block w-fit mx-auto md:mx-0 text-[14px] uppercase tracking-[0.3em] text-nexura-white">Nexura Group</span>
+                </Link>
+                                <div className="mt-5 flex justify-center w-full">
                                     <Link
                                         href={privateAccessHref}
                                         className="box-border inline-flex items-center justify-center gap-2 border border-nexura-gold !text-nexura-gold visited:!text-nexura-gold px-6 py-2 text-xs uppercase tracking-widest hover:bg-nexura-gold hover:!text-nexura-black transition-all duration-300"
