@@ -118,8 +118,8 @@ export const Hero = () => {
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
         <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl leading-relaxed text-nexura-white mb-6 tracking-tight">
-          Capital estratégico.<br/>Activos relevantes.<br/>
-          <span className="text-nexura-gold">Claridad operativa.</span>
+          Capital estratégico<br/>Activos relevantes<br/>
+          <span className="text-nexura-gold">Claridad operativa</span>
         </h1>
         <p className="font-light text-nexura-white/80 max-w-2xl mx-auto text-sm md:text-lg leading-relaxed mb-10 tracking-wide">
           Estructuramos condiciones para que activos de alto valor se muevan de forma eficiente. Intervenimos cuando el ticket, la estructura y el impacto justifican un abordaje dedicado, con o sin fricción operativa.
@@ -165,26 +165,25 @@ export const Philosophy = () => {
             {[
                 {
                     title: "Discreción",
-              icon: <EyeOff className="w-7 h-7 text-nexura-gold" strokeWidth={1} />,
+              icon: <EyeOff className="w-7 h-7 text-nexura-gold shrink-0" strokeWidth={1} />,
                   desc: "Canales privados, exposición mínima y criterio selectivo. El acceso es por referencia, no por volumen."
                 },
                 {
                     title: "Apalancamiento",
-                  icon: <Layers className="w-7 h-7 text-nexura-gold" strokeWidth={1} />,
+                  icon: <Layers className="w-7 h-7 text-nexura-gold shrink-0" strokeWidth={1} />,
                   desc: "Estructura, información y timing. Operamos sin inventario y sin desgaste operativo innecesario."
                 },
                 {
                     title: "Resolución",
-                  icon: <BadgeCheck className="w-7 h-7 text-nexura-gold" strokeWidth={1} />,
+                  icon: <BadgeCheck className="w-7 h-7 text-nexura-gold shrink-0" strokeWidth={1} />,
                   desc: "Cuando hay fricción, la reducimos. Cuando no la hay, optimizamos la estructura para facilitar el movimiento del valor."
                 }
             ].map((item, idx) => (
               <div key={idx} className="group p-6 lg:p-8 ring-1 ring-inset ring-nexura-white/5 md:ring-nexura-white/10 lg:ring-nexura-white/5 bg-nexura-surface hover:ring-nexura-gold/30 transition-all duration-500">
                     <div className="flex items-center gap-2 mb-3">
-                      {item.icon}
-                      <h3 className="font-sans text-xl text-nexura-white group-hover:text-nexura-gold transition-colors">{item.title}</h3>
+                      <h3 className="flex items-center gap-2 text-base uppercase tracking-widest text-nexura-white mb-4">{item.icon}{item.title}</h3>
                     </div>
-                    <p className="text-sm text-nexura-white/60 leading-relaxed font-light">
+                    <p className="text-sm text-nexura-white/60 font-light leading-relaxed">
                         {item.desc}
                     </p>
                 </div>
@@ -203,10 +202,10 @@ export const Philosophy = () => {
 
         <div className="mt-8 grid md:grid-cols-2 gap-6 md:pr-px lg:pr-0">
           <div className="p-8 ring-1 ring-inset ring-nexura-white/5 md:ring-nexura-white/10 lg:ring-nexura-white/5 bg-nexura-surface">
-            <h4 className="flex items-center gap-2 text-xs uppercase tracking-widest text-nexura-white mb-4">
-              <Wrench className="w-4 h-4 text-nexura-gold" />
+            <h3 className="flex items-center gap-2 text-base uppercase tracking-widest text-nexura-white mb-4">
+              <Wrench className="w-7 h-7 text-nexura-gold shrink-0" />
               Qué hacemos
-            </h4>
+            </h3>
             <ul className="space-y-2 text-sm text-nexura-white/60 font-light leading-relaxed">
               <li>Estructuración legal, financiera y operativa para desbloquear activos complejos.</li>
               <li>Operaciones off-market con confidencialidad y criterio.</li>
@@ -214,10 +213,10 @@ export const Philosophy = () => {
             </ul>
           </div>
           <div className="p-8 ring-1 ring-inset ring-nexura-white/5 md:ring-nexura-white/10 lg:ring-nexura-white/5 bg-nexura-surface">
-            <h4 className="flex items-center gap-2 text-xs uppercase tracking-widest text-nexura-white mb-4">
-              <Ban className="w-4 h-4 text-nexura-gold" />
+            <h3 className="flex items-center gap-2 text-base uppercase tracking-widest text-nexura-white mb-4">
+              <Ban className="w-7 h-7 text-nexura-gold shrink-0" />
               Qué no hacemos
-            </h4>
+            </h3>
             <ul className="space-y-2 text-sm text-nexura-white/60 font-light leading-relaxed">
               <li>Captación masiva ni intermediación pública.</li>
               <li>Promesas de retornos o resultados garantizados.</li>
@@ -228,10 +227,10 @@ export const Philosophy = () => {
 
         <div className="mt-6 md:pr-px lg:pr-0">
           <div className="p-8 ring-1 ring-inset ring-nexura-white/5 md:ring-nexura-white/10 lg:ring-nexura-white/5 bg-nexura-surface">
-            <h4 className="flex items-center gap-2 text-xs uppercase tracking-widest text-nexura-white mb-4">
-              <Filter className="w-4 h-4 text-nexura-gold" />
+            <h3 className="flex items-center gap-2 text-base uppercase tracking-widest text-nexura-white mb-4">
+              <Filter className="w-7 h-7 text-nexura-gold shrink-0" />
               Criterio de selección
-            </h4>
+            </h3>
             <p className="text-sm text-nexura-white/60 font-light leading-relaxed">
               Nexura interviene en activos y operaciones donde el ticket, la estructura y el impacto justifican un abordaje dedicado.
               La fricción puede estar presente, pero no es condición excluyente.
@@ -251,18 +250,18 @@ export const Philosophy = () => {
 
         <div className="mt-6 grid md:grid-cols-2 gap-6 md:pr-px lg:pr-0">
           <div className="p-8 ring-1 ring-inset ring-nexura-white/5 md:ring-nexura-white/10 lg:ring-nexura-white/5 bg-nexura-surface">
-            <h4 className="flex items-center gap-2 text-xs uppercase tracking-widest text-nexura-white mb-4">
-              <MapPin className="w-4 h-4 text-nexura-gold" />
+            <h3 className="flex items-center gap-2 text-base uppercase tracking-widest text-nexura-white mb-4">
+              <MapPin className="w-7 h-7 text-nexura-gold shrink-0" />
               Base Legal
-            </h4>
+            </h3>
             <p className="text-sm text-nexura-white/60 font-light leading-relaxed">Uruguay como jurisdicción base para la estructuración legal y contractual de las operaciones.</p>
           </div>
 
           <div className="p-8 ring-1 ring-inset ring-nexura-white/5 md:ring-nexura-white/10 lg:ring-nexura-white/5 bg-nexura-surface">
-            <h4 className="flex items-center gap-2 text-xs uppercase tracking-widest text-nexura-white mb-4">
-              <Globe className="w-4 h-4 text-nexura-gold" />
+            <h3 className="flex items-center gap-2 text-base uppercase tracking-widest text-nexura-white mb-4">
+              <Globe className="w-7 h-7 text-nexura-gold shrink-0" />
               Alcance operativo
-            </h4>
+            </h3>
             <p className="text-sm text-nexura-white/60 font-light leading-relaxed">
               Operaciones transfronterizas en LATAM y Europa, con mandatos globales sujetos a calificación.
             </p>
@@ -285,22 +284,22 @@ export const BusinessUnits = () => {
     {
       title: "Real Estate",
       description: "Activos inmobiliarios de alto valor, con estructuras simples o complejas, dentro y fuera de mercado.",
-      icon: <Building2 size={28} strokeWidth={1} />
+      icon: <Building2 size={28} strokeWidth={1.5} />
     },
     {
       title: "M&A & Business",
       description: "Venta confidencial de empresas operativas y unidades de negocio llave en mano.",
-      icon: <Briefcase size={28} strokeWidth={1} />
+      icon: <Briefcase size={28} strokeWidth={1.5} />
     },
     {
       title: "Luxury Assets",
       description: "Estructuración de uso, rotación o salida para activos de alto valor subutilizados o estratégicos.",
-      icon: <Gem size={28} strokeWidth={1} />
+      icon: <Gem size={28} strokeWidth={1.5} />
     },
     {
       title: "Strategic IP",
       description: "Licenciamiento de marcas, patentes y genética de alto rendimiento (Pedigree).",
-      icon: <Fingerprint size={28} strokeWidth={1} />
+      icon: <Fingerprint size={28} strokeWidth={1.5} />
     }
   ];
 
@@ -341,10 +340,10 @@ export const BusinessUnits = () => {
 
 export const Protocol = () => {
   const steps: StepProps[] = [
-    { fase: "1", title: "Auditoría de Contexto", description: "Evaluamos el activo, el ticket y el escenario para determinar viabilidad y encuadre operativo.", icon: <Search size={18} strokeWidth={1.5} /> },
-    { fase: "2", title: "Estructura de Operación", description: "Definimos el formato adecuado: documental, legal y narrativo, según el perfil del activo y las partes.", icon: <Settings2 size={18} strokeWidth={1.5} /> },
-    { fase: "3", title: "Canal Privado", description: "Registramos interés, validamos perfiles y habilitamos acceso selectivo bajo acuerdos de confidencialidad y no elusión.", icon: <Network size={18} strokeWidth={1.5} /> },
-    { fase: "4", title: "Cierre", description: "Coordinamos a las partes y acompañamos el proceso hasta la transferencia y salida ordenada.", icon: <TrendingUp size={18} strokeWidth={1.5} /> },
+    { fase: "1", title: "Auditoría de Contexto", description: "Evaluamos el activo, el ticket y el escenario para determinar viabilidad y encuadre operativo.", icon: <Search size={28} strokeWidth={1.5} /> },
+    { fase: "2", title: "Estructura de Operación", description: "Definimos el formato adecuado: documental, legal y narrativo, según el perfil del activo y las partes.", icon: <Settings2 size={28} strokeWidth={1.5} /> },
+    { fase: "3", title: "Canal Privado", description: "Registramos interés, validamos perfiles y habilitamos acceso selectivo bajo acuerdos de confidencialidad y no elusión.", icon: <Network size={28} strokeWidth={1.5} /> },
+    { fase: "4", title: "Cierre", description: "Coordinamos a las partes y acompañamos el proceso hasta la transferencia y salida ordenada.", icon: <TrendingUp size={28} strokeWidth={1.5} /> },
   ];
 
   return (
@@ -376,7 +375,7 @@ export const Protocol = () => {
                 </div>
 
                 <div className="text-center px-4">
-                  <h3 className="text-nexura-white font-sans text-lg mb-3">{step.title}</h3>
+                  <h3 className="text-nexura-white font-sans uppercase text-lg mb-3">{step.title}</h3>
                   <div className="w-12 h-[1px] bg-nexura-white/10 mx-auto mb-4"></div>
                   <p className="text-xs text-nexura-white/50 leading-relaxed uppercase tracking-wider">{step.description}</p>
                 </div>
@@ -724,14 +723,14 @@ export const ContactForm = () => {
         <form className="space-y-12">
             <div className="grid md:grid-cols-2 gap-12">
                 <div className="group">
-                    <label className="flex items-center gap-2 text-[10px] uppercase tracking-widest text-nexura-white mb-2">
+                    <label className="flex items-center gap-2 text-xs uppercase tracking-widest text-nexura-white mb-2">
                       <IdCard size={12} className="text-nexura-gold" />
                 Identidad
               </label>
                     <input type="text" placeholder="Nombre y Organización" className="w-full bg-transparent border-b border-nexura-white/20 py-3 text-nexura-white placeholder-nexura-white/30 focus:outline-none focus:border-nexura-gold transition-colors font-light text-lg" />
                 </div>
                 <div className="group">
-                    <label className="flex items-center gap-2 text-[10px] uppercase tracking-widest text-nexura-white mb-2">
+                    <label className="flex items-center gap-2 text-xs uppercase tracking-widest text-nexura-white mb-2">
                       <FormBriefcase size={12} className="text-nexura-gold" />
                 Perfil
               </label>
@@ -748,7 +747,7 @@ export const ContactForm = () => {
             </div>
 
             <div className="group">
-                <label className="flex items-center gap-2 text-[10px] uppercase tracking-widest text-nexura-white mb-2">
+                <label className="flex items-center gap-2 text-xs uppercase tracking-widest text-nexura-white mb-2">
                   <Wallet size={12} className="text-nexura-gold" />
               Capacidad Operativa (Estimada)
             </label>
@@ -765,7 +764,7 @@ export const ContactForm = () => {
             </div>
 
             <div className="group">
-                <label className="flex items-center gap-2 text-[10px] uppercase tracking-widest text-nexura-white mb-2">
+                <label className="flex items-center gap-2 text-xs uppercase tracking-widest text-nexura-white mb-2">
                   <FileText size={12} className="text-nexura-gold" />
                 Contexto
               </label>
