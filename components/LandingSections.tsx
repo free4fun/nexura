@@ -325,25 +325,113 @@ export const BusinessUnits = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-0 md:gap-8 lg:gap-10 border border-nexura-white/10 md:border-0 divide-y divide-nexura-white/10 md:divide-y-0 md:pr-px lg:pr-0">
-          {units.map((unit, idx) => (
-            <div
-              key={idx}
-              className="bg-nexura-black p-10 hover:bg-nexura-surface transition-colors duration-500 group relative overflow-hidden md:ring-1 md:ring-inset md:ring-nexura-white/15 lg:ring-nexura-white/10"
-            >
-              <div className="absolute top-0 right-0 p-6 opacity-20 group-hover:opacity-100 transition-opacity duration-500">
-                <ArrowUpRight className="text-nexura-gold" />
-              </div>
-              <div className="flex items-center gap-4 mb-4">
-                <div className="text-nexura-gold bg-nexura-gold/5 w-14 h-14 rounded-full flex items-center justify-center ring-1 ring-inset ring-nexura-gold/25 shrink-0">
-                  {unit.icon}
-                </div>
-                <h3 className="font-sans text-2xl text-nexura-white">{unit.title}</h3>
-              </div>
-              <p className="text-nexura-white/60 font-light leading-relaxed max-w-sm">
-                {unit.description}
-              </p>
+          <Link
+            href="/unidad/real-estate"
+            className="bg-nexura-black p-10 hover:bg-nexura-surface transition-colors duration-500 group relative overflow-hidden md:ring-1 md:ring-inset md:ring-nexura-white/15 lg:ring-nexura-white/10"
+          >
+            <div className="absolute top-0 right-0 p-6 opacity-20 group-hover:opacity-100 transition-opacity duration-500">
+              <ArrowUpRight className="text-nexura-gold" />
             </div>
-          ))}
+            <div className="flex items-center gap-4 mb-4">
+              <div className="text-nexura-gold bg-nexura-gold/5 w-14 h-14 rounded-full flex items-center justify-center ring-1 ring-inset ring-nexura-gold/25 shrink-0">
+                {units[0].icon}
+              </div>
+              <h3 className="font-sans text-2xl text-nexura-white">{units[0].title}</h3>
+            </div>
+            <p className="text-nexura-white/60 font-light leading-relaxed max-w-sm">
+              {units[0].description}
+            </p>
+          </Link>
+
+          <Link
+            href="/unidad/ma-business"
+            className="bg-nexura-black p-10 hover:bg-nexura-surface transition-colors duration-500 group relative overflow-hidden md:ring-1 md:ring-inset md:ring-nexura-white/15 lg:ring-nexura-white/10"
+          >
+            <div className="absolute top-0 right-0 p-6 opacity-20 group-hover:opacity-100 transition-opacity duration-500">
+              <ArrowUpRight className="text-nexura-gold" />
+            </div>
+            <div className="flex items-center gap-4 mb-4">
+              <div className="text-nexura-gold bg-nexura-gold/5 w-14 h-14 rounded-full flex items-center justify-center ring-1 ring-inset ring-nexura-gold/25 shrink-0">
+                {units[1].icon}
+              </div>
+              <h3 className="font-sans text-2xl text-nexura-white">{units[1].title}</h3>
+            </div>
+            <p className="text-nexura-white/60 font-light leading-relaxed max-w-sm">
+              {units[1].description}
+            </p>
+          </Link>
+
+          <Link
+            href="/unidad/luxury-assets"
+            className="bg-nexura-black p-10 hover:bg-nexura-surface transition-colors duration-500 group relative overflow-hidden md:ring-1 md:ring-inset md:ring-nexura-white/15 lg:ring-nexura-white/10"
+          >
+            <div className="absolute top-0 right-0 p-6 opacity-20 group-hover:opacity-100 transition-opacity duration-500">
+              <ArrowUpRight className="text-nexura-gold" />
+            </div>
+            <div className="flex items-center gap-4 mb-4">
+              <div className="text-nexura-gold bg-nexura-gold/5 w-14 h-14 rounded-full flex items-center justify-center ring-1 ring-inset ring-nexura-gold/25 shrink-0">
+                {units[2].icon}
+              </div>
+              <h3 className="font-sans text-2xl text-nexura-white">{units[2].title}</h3>
+            </div>
+            <p className="text-nexura-white/60 font-light leading-relaxed max-w-sm">
+              {units[2].description}
+            </p>
+          </Link>
+
+          <Link
+            href="/unidad/strategic-ip"
+            className="bg-nexura-black p-10 hover:bg-nexura-surface transition-colors duration-500 group relative overflow-hidden md:ring-1 md:ring-inset md:ring-nexura-white/15 lg:ring-nexura-white/10"
+          >
+            <div className="absolute top-0 right-0 p-6 opacity-20 group-hover:opacity-100 transition-opacity duration-500">
+              <ArrowUpRight className="text-nexura-gold" />
+            </div>
+            <div className="flex items-center gap-4 mb-4">
+              <div className="text-nexura-gold bg-nexura-gold/5 w-14 h-14 rounded-full flex items-center justify-center ring-1 ring-inset ring-nexura-gold/25 shrink-0">
+                {units[3].icon}
+              </div>
+              <h3 className="font-sans text-2xl text-nexura-white">{units[3].title}</h3>
+            </div>
+            <p className="text-nexura-white/60 font-light leading-relaxed max-w-sm">
+              {units[3].description}
+            </p>
+          </Link>
+
+          <Link
+            href="/unidad/talent-image-capital"
+            className="bg-nexura-black p-10 hover:bg-nexura-surface transition-colors duration-500 group relative overflow-hidden md:ring-1 md:ring-inset md:ring-nexura-white/15 lg:ring-nexura-white/10"
+          >
+            <div className="absolute top-0 right-0 p-6 opacity-20 group-hover:opacity-100 transition-opacity duration-500">
+              <ArrowUpRight className="text-nexura-gold" />
+            </div>
+            <div className="flex items-center gap-4 mb-4">
+              <div className="text-nexura-gold bg-nexura-gold/5 w-14 h-14 rounded-full flex items-center justify-center ring-1 ring-inset ring-nexura-gold/25 shrink-0">
+                {units[4].icon}
+              </div>
+              <h3 className="font-sans text-2xl text-nexura-white">{units[4].title}</h3>
+            </div>
+            <p className="text-nexura-white/60 font-light leading-relaxed max-w-sm">
+              {units[4].description}
+            </p>
+          </Link>
+
+          <Link
+            href="/unidad/attention-brokerage"
+            className="bg-nexura-black p-10 hover:bg-nexura-surface transition-colors duration-500 group relative overflow-hidden md:ring-1 md:ring-inset md:ring-nexura-white/15 lg:ring-nexura-white/10"
+          >
+            <div className="absolute top-0 right-0 p-6 opacity-20 group-hover:opacity-100 transition-opacity duration-500">
+              <ArrowUpRight className="text-nexura-gold" />
+            </div>
+            <div className="flex items-center gap-4 mb-4">
+              <div className="text-nexura-gold bg-nexura-gold/5 w-14 h-14 rounded-full flex items-center justify-center ring-1 ring-inset ring-nexura-gold/25 shrink-0">
+                {units[5].icon}
+              </div>
+              <h3 className="font-sans text-2xl text-nexura-white">{units[5].title}</h3>
+            </div>
+            <p className="text-nexura-white/60 font-light leading-relaxed max-w-sm">
+              {units[5].description}
+            </p>
+          </Link>
         </div>
       </div>
     </section>
