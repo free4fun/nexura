@@ -746,7 +746,7 @@ export const ContactForm = () => {
                   />
                   <label htmlFor="contact-accept-terms" className="text-[10px] text-nexura-white/50 uppercase tracking-widest leading-relaxed">
                     He leído y acepto los{' '}
-                    <Link href="/legal/terms" className="text-nexura-gold hover:text-nexura-gold/80 underline underline-offset-4">
+                    <Link href="/legal/terms" className="nexura-text-link transition-colors">
                       Términos de Confidencialidad
                     </Link>
                     .
@@ -762,7 +762,7 @@ export const ContactForm = () => {
                   />
                   <label htmlFor="contact-accept-ncnda" className="text-[10px] text-nexura-white/50 uppercase tracking-widest leading-relaxed">
                     He leído y acepto la{' '}
-                    <Link href="/legal/ncnda" className="text-nexura-gold hover:text-nexura-gold/80 underline underline-offset-4">
+                    <Link href="/legal/ncnda" className="nexura-text-link transition-colors">
                       Política de No Elusión
                     </Link>
                     .

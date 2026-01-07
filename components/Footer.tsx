@@ -41,23 +41,29 @@ export default function Footer() {
                 <div className="md:text-left">
                     <h4 className="text-xs uppercase tracking-widest text-nexura-white/40 mb-4">Legal</h4>
                     <ul className="space-y-2">
-                        <li><Link href="/legal/terms" className="text-sm text-nexura-white/70 hover:text-nexura-gold transition-colors">Términos de Confidencialidad</Link></li>
-                        <li><Link href="/legal/ncnda" className="text-sm text-nexura-white/70 hover:text-nexura-gold transition-colors">Política de No Elusión (NCNDA)</Link></li>
+                        <li><Link href="/legal/terms" className="nexura-text-link text-sm transition-colors">Términos de Confidencialidad</Link></li>
+                        <li><Link href="/legal/ncnda" className="nexura-text-link text-sm transition-colors">Política de No Elusión (NCNDA)</Link></li>
                     </ul>
                 </div>
                 <div className="md:text-left">
                     <h4 className="text-xs uppercase tracking-widest text-nexura-white/40 mb-4">Ubicación</h4>
                     <ul className="space-y-2">
-                        <li><span className="text-sm text-nexura-white/70">Base Legal: Uruguay</span></li>
-                        <li><Link href="/operaciones-globales" className="text-sm text-nexura-white/70 hover:text-nexura-gold transition-colors">Operaciones Globales Selectivas</Link></li>
+                        <li><span className="text-sm text-nexura-white/30">Base Legal: Uruguay</span></li>
+                        <li><Link href="/operaciones-globales" className="nexura-text-link text-sm transition-colors">Operaciones Globales Selectivas</Link></li>
                     </ul>
                 </div>
             </div>
         </div>
 
+                <p className="text-[10px] text-nexura-white/40 uppercase tracking-widest text-center mb-10">
+                    <span className="sm:hidden block">Acceso restringido - Información confidencial</span>
+                    <span className="sm:hidden block mt-1">No constituye oferta pública</span>
+                    <span className="hidden sm:inline">Acceso restringido - Información confidencial - No constituye oferta pública</span>
+                </p>
+
                 <div className="border-t border-nexura-white/5 pt-8">
                       <div className="flex flex-col items-center gap-4 md:flex-row-reverse md:items-center md:justify-between">
-                        <Link href="mailto:contacto@nexura.lat" className="flex items-center gap-2 text-sm tracking-widest text-nexura-white hover:text-nexura-gold transition-colors">
+                                                <Link href="mailto:contacto@nexura.lat" className="flex items-center gap-2 text-sm tracking-widest text-nexura-white hover:text-nexura-gold transition-colors cursor-pointer">
                             <LuMail size={18} className="text-nexura-gold" />
                             <span>contacto@nexura.lat</span>
                         </Link>

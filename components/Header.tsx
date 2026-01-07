@@ -93,7 +93,7 @@ const LoginModal = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
           <div className="mt-3 flex flex-col items-center gap-2">
             <div className="inline-flex items-center gap-2 text-nexura-white/60 text-[10px] uppercase tracking-widest">
               <LuShieldCheck size={12} className="text-green-500" />
-              Autenticación MFA Activa
+              Autenticación MFA
             </div>
           </div>
         </div>
@@ -196,7 +196,7 @@ const LoginModal = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
             </button>
             <Link
               href="mailto:contacto@nexura.lat?subject=Soporte%20-%20Recuperaci%C3%B3n%20de%20acceso%20MFA&body=Hola%20equipo%20de%20Nexura%2C%0A%0ANecesito%20asistencia%20para%20recuperar%20el%20acceso%3A%0A-%20Olvid%C3%A9%20mi%20contrase%C3%B1a%20y%2Fo%0A-%20Perd%C3%AD%20el%20generador%20de%20c%C3%B3digos%20de%20validaci%C3%B3n.%0A%0AGracias."
-              className="block w-full text-[10px] uppercase tracking-widest text-nexura-white/50 hover:text-nexura-gold transition-colors text-center"
+              className="nexura-underline-gold block w-full text-[10px] uppercase tracking-widest text-nexura-white/50 hover:text-nexura-gold transition-colors text-center"
             >
               Necesito asistencia para acceder
             </Link>
@@ -283,7 +283,7 @@ export default function Header() {
                 key={link.name} 
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
-                className="text-[10px] lg:text-xs uppercase tracking-widest text-nexura-white/70 hover:text-nexura-gold transition-colors duration-300"
+                className="text-[10px] lg:text-xs uppercase tracking-widest text-nexura-white/70 hover:text-nexura-gold transition-colors duration-300 cursor-pointer"
               >
                 {link.name}
               </Link>
@@ -291,7 +291,7 @@ export default function Header() {
 
             {hasMounted && isLoggedIn ? (
               <div className="flex items-center gap-6">
-                <Link href="/dashboard" className="text-[10px] uppercase tracking-widest text-nexura-white/40 flex items-center gap-2 hover:text-nexura-gold">
+                <Link href="/dashboard" className="text-[10px] uppercase tracking-widest text-nexura-white/40 flex items-center gap-2 hover:text-nexura-gold transition-colors cursor-pointer">
                     <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
                   Dashboard
                  </Link>
@@ -322,12 +322,17 @@ export default function Header() {
             <Link
               href="/#hero"
               onClick={(e) => handleNavClick(e, '/#hero')}
-              className="text-left text-sm uppercase tracking-widest text-nexura-white/80"
+              className="text-left text-sm uppercase tracking-widest text-nexura-white/80 hover:text-nexura-gold transition-colors cursor-pointer"
             >
               Inicio
             </Link>
             {navLinks.map((link) => (
-              <Link key={link.name} href={link.href} onClick={(e) => handleNavClick(e, link.href)} className="text-left text-sm uppercase tracking-widest text-nexura-white/80">
+              <Link
+                key={link.name}
+                href={link.href}
+                onClick={(e) => handleNavClick(e, link.href)}
+                className="text-left text-sm uppercase tracking-widest text-nexura-white/80 hover:text-nexura-gold transition-colors cursor-pointer"
+              >
                 {link.name}
               </Link>
             ))}
@@ -336,7 +341,7 @@ export default function Header() {
                 <Link
                   href="/dashboard"
                   onClick={() => setIsMenuOpen(false)}
-                  className="text-left text-sm uppercase tracking-widest text-nexura-white/80"
+                  className="text-left text-sm uppercase tracking-widest text-nexura-white/80 hover:text-nexura-gold transition-colors cursor-pointer"
                 >
                   Dashboard
                 </Link>

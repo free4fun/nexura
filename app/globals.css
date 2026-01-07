@@ -95,3 +95,40 @@ body {
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
+
+/* Text links (site-wide) */
+.nexura-text-link {
+  color: color-mix(in srgb, var(--color-nexura-white) 78%, transparent);
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-color: color-mix(in srgb, var(--color-nexura-gold) 45%, transparent);
+  text-underline-offset: 4px;
+  cursor: pointer;
+}
+
+.nexura-text-link:visited {
+  color: color-mix(in srgb, var(--color-nexura-white) 70%, transparent);
+}
+
+.nexura-text-link:hover,
+.nexura-text-link:visited:hover {
+  color: var(--color-nexura-gold);
+  text-decoration-color: var(--color-nexura-gold);
+}
+
+.nexura-text-link:focus-visible {
+  outline: 1px solid color-mix(in srgb, var(--color-nexura-gold) 70%, transparent);
+  outline-offset: 3px;
+}
+
+/* Underline-only helper for special cases (keeps existing text color) */
+.nexura-underline-gold {
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-color: color-mix(in srgb, var(--color-nexura-gold) 55%, transparent);
+  text-underline-offset: 4px;
+}
+
+.nexura-underline-gold:hover {
+  text-decoration-color: var(--color-nexura-gold);
+}
