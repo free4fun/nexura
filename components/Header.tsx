@@ -1,10 +1,10 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { LuMenu, LuX, LuUser, LuLogOut, LuLock } from 'react-icons/lu';
 import { useAuth } from '@/context/AuthContext';
+import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 
 const LoginModal = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) => {
   const { login } = useAuth();
@@ -112,6 +112,8 @@ export default function Header() {
     }
   };
 
+  const privateAccessHref = hasMounted && isLoggedIn ? '/dashboard' : '/?login=1';
+
   return (
     <>
       <header className={`fixed w-full z-50 transition-all duration-500 ${isScrolled || pathname !== '/' ? 'bg-nexura-black/95 backdrop-blur-md py-1' : 'bg-transparent py-6'}`}>
@@ -153,7 +155,7 @@ export default function Header() {
             ) : (
               <button 
                 onClick={() => setIsLoginOpen(true)}
-                className="border border-nexura-gold text-nexura-gold px-4 lg:px-6 py-2 text-[10px] lg:text-xs uppercase tracking-widest hover:bg-nexura-gold hover:text-nexura-black transition-all duration-300 flex items-center gap-2"
+                className="ring-1 ring-inset ring-nexura-gold text-nexura-gold px-4 lg:px-6 py-2 text-[10px] lg:text-xs uppercase tracking-widest hover:bg-nexura-gold hover:text-nexura-black transition-all duration-300 flex items-center gap-2"
               >
                 <LuUser size={14} /> Acceso Privado
               </button>

@@ -45,7 +45,10 @@ export default function Footer() {
                 </div>
                 <div className="md:text-left">
                     <h4 className="text-xs uppercase tracking-widest text-nexura-white/40 mb-4">Ubicación</h4>
-                    <span className="text-sm text-nexura-white/70">Operaciones Globales</span>
+                    <ul className="space-y-2">
+                        <li><span className="text-sm text-nexura-white/70">Base Legal: Uruguay</span></li>
+                        <li><Link href="/operaciones-globales" className="text-sm text-nexura-white/70 hover:text-nexura-gold transition-colors">Operaciones Globales</Link></li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -54,7 +57,7 @@ export default function Footer() {
                       <div className="flex flex-col items-center gap-4 md:flex-row-reverse md:items-center md:justify-between">
                         <a href="mailto:contacto@nexura.lat" className="flex items-center gap-2 text-sm tracking-widest text-nexura-white hover:text-nexura-gold transition-colors">
                             <LuMail size={18} className="text-nexura-gold" />
-                            contacto@nexura.lat
+                            <span>contacto@nexura.lat</span>
                         </a>
 
                         <div className="flex items-center gap-3">
