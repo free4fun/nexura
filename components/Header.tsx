@@ -122,7 +122,7 @@ export default function Header() {
             className="flex items-center gap-3 font-serif text-2xl tracking-[0.2em] text-nexura-white hover:text-nexura-gold transition-colors duration-300"
           >
             <img src="/nexura.svg" alt="Nexura Logo" className="h-12 lg:h-14 w-auto" />
-            <span className="uppercase tracking-[0.2em] inline md:hidden lg:inline">Nexura</span>
+            <span className="uppercase tracking-[0.2em] inline md:inline lg:inline">Nexura</span>
           </a>
 
           <nav className="hidden md:flex items-center gap-6 lg:gap-8 md:pr-px">

@@ -50,41 +50,39 @@ export default function Footer() {
             </div>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-between items-center border-t border-nexura-white/5 pt-8">
-            <p className="text-[10px] text-nexura-white/40 uppercase tracking-widest mb-4 md:mb-0">
-                © {new Date().getFullYear()} Nexura Group. All Rights Reserved.
-            </p>
-                        <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6">
-                            <a
-                                href="mailto:contacto@nexura.lat"
-                                className="flex items-center gap-2 text-xs tracking-widest text-nexura-white hover:text-nexura-gold transition-colors"
-                            >
-                                <LuMail size={18} className="text-nexura-gold" />
-                                contacto@nexura.lat
-                            </a>
+                <div className="border-t border-nexura-white/5 pt-8">
+                      <div className="flex flex-col items-center gap-4 md:flex-row-reverse md:items-center md:justify-between">
+                        <a href="mailto:contacto@nexura.lat" className="flex items-center gap-2 text-sm tracking-widest text-nexura-white hover:text-nexura-gold transition-colors">
+                            <LuMail size={18} className="text-nexura-gold" />
+                            contacto@nexura.lat
+                        </a>
 
-                            <div className="flex items-center gap-3">
-                                <a
-                                    href="https://www.linkedin.com/company/nexura-lat"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="w-7 h-7 rounded-full border border-linkedin/60 bg-linkedin flex items-center justify-center hover:border-linkedin transition-colors"
-                                    aria-label="LinkedIn"
-                                >
-                                    <FaLinkedinIn size={18} style={{ color: 'var(--color-nexura-white)' }} />
-                                </a>
-                                <a
-                                    href="https://nexura.substack.com/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="w-7 h-7 rounded-full border border-substack/60 bg-substack flex items-center justify-center hover:border-substack transition-colors"
-                                    aria-label="Substack"
-                                >
-                                    <SiSubstack size={18} style={{ color: 'var(--color-nexura-white)' }} />
-                                </a>
-                            </div>
+                        <div className="flex items-center gap-3">
+                            <a
+                                href="https://www.linkedin.com/company/nexura-lat"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="w-7 h-7 rounded-full border border-linkedin/60 bg-linkedin flex items-center justify-center hover:border-linkedin transition-colors"
+                                aria-label="LinkedIn"
+                            >
+                                <FaLinkedinIn size={18} style={{ color: 'var(--color-nexura-white)' }} />
+                            </a>
+                            <a
+                                href="https://nexura.substack.com/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="w-7 h-7 rounded-full border border-substack/60 bg-substack flex items-center justify-center hover:border-substack transition-colors"
+                                aria-label="Substack"
+                            >
+                                <SiSubstack size={18} style={{ color: 'var(--color-nexura-white)' }} />
+                            </a>
                         </div>
-        </div>
+                    </div>
+
+                    <p className="text-[10px] text-nexura-white/40 uppercase tracking-widest mt-6 text-center">
+                        © {new Date().getFullYear()} Nexura Group. All Rights Reserved.
+                    </p>
+                </div>
       </div>
     </footer>
   );
