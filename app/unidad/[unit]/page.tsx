@@ -235,12 +235,14 @@ export default async function DivisionUnidadPage({
             </div>
 
             <div className="pt-10">
-              <Link
-                href="/dossier"
-                className="block w-full text-center bg-nexura-gold text-nexura-black font-sans font-semibold uppercase tracking-widest py-5 text-sm hover:bg-nexura-goldLight transition-colors"
-              >
-                Solicitar Evaluación
-              </Link>
+              <div className="max-w-xl mx-auto">
+                <Link
+                  href="/dossier"
+                  className="block w-full text-center bg-nexura-gold text-nexura-black font-sans font-semibold uppercase tracking-widest py-5 text-sm hover:bg-nexura-goldLight transition-colors"
+                >
+                  Solicitar Evaluación
+                </Link>
+              </div>
             </div>
           </div>
         </div>
