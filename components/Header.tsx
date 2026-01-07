@@ -78,8 +78,8 @@ const LoginModal = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
       <div className="absolute inset-0 bg-nexura-black/90 backdrop-blur-sm" onClick={handleClose}></div>
-      <div className="relative z-10 bg-nexura-surface border border-nexura-gold/20 p-8 md:p-12 max-w-md w-full shadow-2xl animate-fade-in-up">
-        <div className="absolute top-4 left-4 inline-flex items-center gap-2 px-3 py-1 border border-nexura-red/30 bg-nexura-red/10 text-nexura-red text-[10px] uppercase tracking-widest">
+      <div className="relative z-10 bg-nexura-surface ring-1 ring-inset ring-nexura-gold/20 p-8 md:p-12 max-w-md w-full shadow-2xl animate-fade-in-up">
+        <div className="absolute top-4 left-4 inline-flex items-center gap-2 px-3 py-1 ring-1 ring-inset ring-nexura-red/30 bg-nexura-red/10 text-nexura-red text-[10px] uppercase tracking-widest">
           Demo
         </div>
         <button onClick={handleClose} className="absolute top-4 right-4 text-nexura-white/40 hover:text-nexura-gold transition-colors">
@@ -100,7 +100,7 @@ const LoginModal = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
 
         <form onSubmit={handleLogin} className="space-y-6">
           {authError && (
-            <div className="border border-nexura-red/40 bg-nexura-red/10 p-4 text-nexura-red text-xs uppercase tracking-widest">
+            <div className="ring-1 ring-inset ring-nexura-red/40 bg-nexura-red/10 p-4 text-nexura-red text-xs uppercase tracking-widest">
               {authError}
             </div>
           )}
@@ -114,7 +114,7 @@ const LoginModal = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
                   setAuthError(null);
                   setCredentialId(e.target.value);
                 }}
-                className="w-full bg-nexura-black border border-nexura-white/10 p-3 text-nexura-white focus:outline-none focus:border-nexura-gold transition-colors font-mono text-sm"
+                className="w-full bg-nexura-black ring-1 ring-inset ring-nexura-white/10 p-3 text-nexura-white focus:outline-none focus:ring-nexura-gold transition-colors font-mono text-sm"
                 placeholder="NEX-ID"
               />
             </div>
@@ -127,12 +127,12 @@ const LoginModal = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
                   setAuthError(null);
                   setAccessKey(e.target.value);
                 }}
-                className="w-full bg-nexura-black border border-nexura-white/10 p-3 text-nexura-white focus:outline-none focus:border-nexura-gold transition-colors font-mono text-sm"
+                className="w-full bg-nexura-black ring-1 ring-inset ring-nexura-white/10 p-3 text-nexura-white focus:outline-none focus:ring-nexura-gold transition-colors font-mono text-sm"
                 placeholder="••••••••"
               />
             </div>
 
-            <div className="border border-nexura-white/10 bg-nexura-black/30 p-4">
+            <div className="ring-1 ring-inset ring-nexura-white/10 bg-nexura-black/30 p-4">
               <p className="text-[10px] uppercase tracking-widest text-nexura-gold">Código de validación</p>
 
               <div className="mt-4 flex items-center justify-center gap-1 sm:gap-2 w-full max-w-[17rem] mx-auto">
@@ -180,7 +180,7 @@ const LoginModal = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
                         maxLength={1}
                         required
                         pattern="[0-9]"
-                        className="w-8 h-10 sm:w-10 sm:h-11 bg-nexura-black border border-nexura-white/10 text-nexura-white focus:outline-none focus:border-nexura-gold transition-colors font-mono text-sm sm:text-base text-center"
+                        className="w-8 h-10 sm:w-10 sm:h-11 bg-nexura-black ring-1 ring-inset ring-nexura-white/10 text-nexura-white focus:outline-none focus:ring-nexura-gold transition-colors font-mono text-sm sm:text-base text-center"
                         aria-label={`Código de validación (dígito ${idx + 1})`}
                       />
                     </React.Fragment>
@@ -345,7 +345,7 @@ export default function Header() {
                 >
                   Dashboard
                 </Link>
-                <button onClick={() => { logout(); setIsMenuOpen(false); }} className="text-center w-full bg-red-900/20 border border-red-900/50 text-red-400 px-6 py-3 text-xs uppercase tracking-widest font-semibold">
+                <button onClick={() => { logout(); setIsMenuOpen(false); }} className="text-center w-full bg-red-900/20 ring-1 ring-inset ring-red-900/50 text-red-400 px-6 py-3 text-xs uppercase tracking-widest font-semibold">
                   Cerrar Sesión
                 </button>
               </>

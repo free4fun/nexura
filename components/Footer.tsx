@@ -73,7 +73,7 @@ export default function Footer() {
                                 href="https://www.linkedin.com/company/nexura-lat"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="w-7 h-7 rounded-full border border-linkedin/60 bg-linkedin flex items-center justify-center hover:border-linkedin transition-colors"
+                                className="w-7 h-7 rounded-full ring-1 ring-inset ring-linkedin/60 bg-linkedin flex items-center justify-center hover:ring-linkedin transition-colors"
                                 aria-label="LinkedIn"
                             >
                                 <FaLinkedinIn size={18} style={{ color: 'var(--color-nexura-white)' }} />
@@ -82,7 +82,7 @@ export default function Footer() {
                                 href="https://nexura.substack.com/"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="w-7 h-7 rounded-full border border-substack/60 bg-substack flex items-center justify-center hover:border-substack transition-colors"
+                                className="w-7 h-7 rounded-full ring-1 ring-inset ring-substack/60 bg-substack flex items-center justify-center hover:ring-substack transition-colors"
                                 aria-label="Substack"
                             >
                                 <SiSubstack size={18} style={{ color: 'var(--color-nexura-white)' }} />

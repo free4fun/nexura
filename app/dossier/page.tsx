@@ -40,7 +40,7 @@ function DossierContent() {
         </div>
 
         <form className="space-y-8">
-            <div className="bg-nexura-surface p-8 border border-nexura-white/5">
+            <div className="bg-nexura-surface p-8 ring-1 ring-inset ring-nexura-white/5">
             <h3 className="text-nexura-white font-sans text-xl mb-6">Validación de Perfil</h3>
                 
                 <div className="space-y-6">

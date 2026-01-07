@@ -33,7 +33,7 @@ export default function OperacionesGlobalesPage() {
                 <LuScale className="w-4 h-4 text-nexura-gold" />
                 Base Legal
               </h3>
-              <p className="text-sm text-nexura-white/60 font-light leading-relaxed">Uruguay</p>
+              <p className="text-sm text-nexura-white/60 font-light leading-relaxed">República Oriental del Uruguay</p>
             </div>
             <div className="p-8 ring-1 ring-inset ring-nexura-white/5 md:ring-nexura-white/10 lg:ring-nexura-white/5 bg-nexura-surface">
               <h3 className="flex items-center gap-2 text-xs uppercase tracking-widest text-nexura-white mb-4">

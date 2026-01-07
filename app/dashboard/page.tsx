@@ -57,7 +57,7 @@ export default function Dashboard() {
           <div>
             <div className="flex flex-wrap items-center gap-3 mb-3">
               <span className="text-nexura-gold text-xs font-bold tracking-[0.2em] uppercase">Acceso Privado - Estado de Cartera</span>
-              <span className="inline-flex items-center px-3 py-1 border border-nexura-red/30 bg-nexura-red/10 text-nexura-red text-[10px] uppercase tracking-widest">
+              <span className="inline-flex items-center px-3 py-1 ring-1 ring-inset ring-nexura-red/30 bg-nexura-red/10 text-nexura-red text-[10px] uppercase tracking-widest">
                 Demo
               </span>
             </div>
@@ -112,7 +112,7 @@ export default function Dashboard() {
             <>
               {/* Mobile: una sola línea (sin bloques) */}
               <div className="md:hidden mb-10">
-                <div className="bg-nexura-surface border border-nexura-white/5">
+                <div className="bg-nexura-surface ring-1 ring-inset ring-nexura-white/5">
                   <div className="grid grid-cols-4 divide-x divide-nexura-white/10">
                     {stats.map((stat, i) => (
                       <div key={i} className="px-2 py-3 text-center">
@@ -134,9 +134,9 @@ export default function Dashboard() {
               {/* Desktop: cards */}
               <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 mb-12">
                 {stats.map((stat, i) => (
-                  <div key={i} className="bg-nexura-surface border border-nexura-white/5 p-6 rounded-sm">
+                  <div key={i} className="bg-nexura-surface ring-1 ring-inset ring-nexura-white/5 p-6 rounded-sm">
                     <div className="flex flex-col items-center justify-center text-center gap-5">
-                      <div className="w-12 h-12 bg-nexura-gold/10 border border-nexura-gold/20 rounded-full flex items-center justify-center text-nexura-gold">
+                      <div className="w-12 h-12 bg-nexura-gold/10 ring-1 ring-inset ring-nexura-gold/20 rounded-full flex items-center justify-center text-nexura-gold">
                         {stat.iconDesktop}
                       </div>
                       <div className="text-3xl font-sans text-nexura-white leading-none">
@@ -153,7 +153,7 @@ export default function Dashboard() {
           );
         })()}
 
-          <div className="bg-nexura-black border border-nexura-white/10 p-8">
+          <div className="bg-nexura-black ring-1 ring-inset ring-nexura-white/10 p-8">
             <h3 className="text-xl md:text-2xl font-serif text-nexura-white mb-8 border-b border-nexura-white/5 pb-4">Documentación Activa</h3>
             <p className="text-center lg:text-left text-sm md:text-base text-nexura-white/50 font-light mb-8">
              La información se habilita de forma progresiva según el estado de cada operación.
@@ -167,7 +167,7 @@ export default function Dashboard() {
                 (() => {
                   const meta = getFileContext(file.name);
                   return (
-                <div key={idx} className="flex flex-col md:flex-row items-center justify-between p-4 hover:bg-nexura-white/5 transition-colors border border-transparent hover:border-nexura-white/5 group cursor-pointer">
+                <div key={idx} className="flex flex-col md:flex-row items-center justify-between p-4 hover:bg-nexura-white/5 transition-colors ring-1 ring-inset ring-transparent hover:ring-nexura-white/5 group cursor-pointer">
                     <div className="flex items-center gap-4 w-full md:w-auto">
                         <div className="w-11 h-11 md:w-12 md:h-12 bg-nexura-white/5 flex items-center justify-center text-nexura-gold">
                            <FileText size={22} className="md:hidden" strokeWidth={1} />
